@@ -1,0 +1,126 @@
+.breadcrumb {
+  position: relative;
+  padding-block: 165px 160px;
+  z-index: 1;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: hsl(0, 0%, 0%, 0.8);
+    z-index: -1;
+  }
+
+  @include md-screen {
+    padding-block: 60px 60px;
+  }
+
+  @include sm-screen {
+    padding-block: 40px 40px;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 0px;
+    color: hsl(var(--white));
+    text-align: center;
+    line-height: 1.25;
+    flex-shrink: 0;
+
+    @include md-screen {
+      font-size: 36px;
+    }
+
+    @include sm-screen {
+      font-size: 32px;
+    }
+  }
+
+  &__menu {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 16px;
+
+      li {
+        color: hsl(var(--white));
+        font-size: 16px;
+
+        @include msm-screen {
+          font-size: 15px;
+        }
+
+        a {
+          color: hsl(var(--white));
+
+          &:hover {
+            color: hsl(var(--base));
+          }
+        }
+
+        span {
+          color: hsl(var(--white));
+        }
+
+        &:first-of-type a {
+          display: flex;
+          gap: 8px;
+
+          &:before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f015";
+            font-weight: 900;
+            font-size: 14px;
+          }
+        }
+
+        &:not(:first-of-type) {
+          display: flex;
+          gap: 16px;
+
+          &:before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f054";
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+// TODO: Needs removing
+.animate--thumb {
+  .element1 {
+    position: absolute;
+    top: -28%;
+    left: 35%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .element2 {
+    position: absolute;
+    top: -10%;
+    left: 35%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

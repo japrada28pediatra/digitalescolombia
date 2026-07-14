@@ -1,0 +1,52 @@
+.custom--tabs {
+
+
+    padding: 12px 0px;
+    border-radius: 12px;
+
+    li {
+        margin: 0px 8px 8px 0px;
+
+   
+
+        .btn-check:active+.btn,
+        .btn-check:checked+.btn,
+        .btn.active,
+        .btn.show,
+        .btn:active:hover {
+            color: hsl(var(--white));
+            background: hsl(var(--white));
+            border: 1px solid hsl(var(--white)/0.1) !important;
+        }
+
+
+        .btn {
+            color: hsl(var(--white)) !important;
+            border: 1px solid hsl(var(--white)/0.1) !important;
+            padding: 8px 16px;
+            outline: none !important;
+        }
+
+        .btn-check:active+.btn,
+        .btn-check:checked+.btn,
+        .btn.active,
+        .btn.show,
+        .btn:active {
+            color: hsl(var(--white)) !important;
+            background: hsl(var(--base)) !important;
+            font-weight: 600;
+            border: 1px solid hsl(var(--white)/0.1) !important;
+        }
+
+        
+      
+    }
+
+    &.nav-tabs {
+        border-bottom: 1px solid hsl(var(--white)/0.1) !important;
+        border-radius: 0px;
+        margin-bottom: 36px !important;
+    }
+
+
+}

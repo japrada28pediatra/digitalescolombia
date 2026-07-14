@@ -1,0 +1,42 @@
+// Gap classes
+$gap-values: 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64,
+	68, 72, 74, 76, 78, 80, 82, 84, 86, 88;
+
+/* Base gap classes */
+@each $gap in $gap-values {
+	.gap--#{$gap} {
+		gap: #{$gap}px !important;
+	}
+}
+
+@media (max-width: 1366px) {
+	@each $gap in $gap-values {
+		.gap--#{$gap} {
+			gap: #{($gap * 0.9)}px !important; // 10%
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	@each $gap in $gap-values {
+		.gap--#{$gap} {
+			gap: #{($gap * 0.8)}px !important; // 20%
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	@each $gap in $gap-values {
+		.gap--#{$gap} {
+			gap: #{($gap * 0.7)}px !important; // 30%
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	@each $gap in $gap-values {
+		.gap--#{$gap} {
+			gap: #{($gap * 0.6)}px !important; // 40%
+		}
+	}
+}

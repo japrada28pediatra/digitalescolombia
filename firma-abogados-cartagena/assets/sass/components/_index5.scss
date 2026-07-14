@@ -1,0 +1,19 @@
+.social-links-banner {
+  .social-item {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: hsl(var(--grey));
+    color: #fff;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: hsl(var(--base));
+      color: hsl(var(--white)) !important;
+    }
+  }
+}

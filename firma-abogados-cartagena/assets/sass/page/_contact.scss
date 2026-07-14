@@ -1,0 +1,138 @@
+// contact section right content
+.contact--section {
+  background-color: #f8f8f8;
+
+  .title {
+    margin-bottom: 110px;
+
+    img {
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+    }
+
+    @include md-screen {
+      margin-bottom: 40px
+    }
+
+  }
+}
+
+.contact--from-wrap {
+  select {
+    padding-top: 14px;
+    color: hsl(var(--black) / 0.5);
+    padding-left: 0px;
+
+  }
+
+  .form--control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid hsl(var(--dark) / 0.15);
+  }
+
+  .row>div,
+  button,
+  h3:not(:first-of-type) {
+    margin-top: 48px;
+
+    @include md-screen {
+      margin-top: 30px;
+    }
+
+    @include msm-screen {
+      margin-top: 20px;
+    }
+  }
+}
+
+.contact-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-support-card {
+  padding: 40px;
+  background-color: hsl(var(--black));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  @include md-screen {
+    padding: 30px;
+  }
+
+  .icon {
+    width: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    height: 50px;
+    flex-shrink: 0;
+    font-size: 24px;
+    color: hsl(var(--base));
+    background-color: hsl(var(--white));
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-family: var(--body-font);
+    color: hsl(var(--white));
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    @include md-screen {
+      font-size: 16px;
+    }
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 24px;
+
+    li {
+      color: hsl(var(--light-grey));
+
+      &:not(:last-of-type) {
+        margin-bottom: 16px;
+      }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: hsl(var(--base));
+
+        }
+      }
+    }
+  }
+}
+
+.chunk-map {
+  overflow: hidden;
+
+  .container-fluid {
+    height: 600px;
+
+    @include md-screen {
+      height: 300px;
+    }
+
+    @include sm-screen {
+      height: 250px;
+    }
+
+    @include msm-screen {
+      height: 200px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopify Studio | Agencia Shopify premium para ecommerce que vende mas</title>
+<meta content="Agencia Shopify premium para desarrollo, rediseño, migraciones, performance, UX ecommerce, CRO, Liquid custom y soporte mensual." name="description"/>
+<meta content="agencia Shopify, desarrollo Shopify, experto Shopify, Liquid Shopify, migracion Shopify, CRO ecommerce, optimizacion Shopify, soporte Shopify" name="keywords"/>
+<meta content="noindex, follow" name="robots"/>
+<link href="https://digitalescolombia.com/" rel="canonical"/>
+<meta content="Shopify Studio | Ecommerce engineering for brands that sell" property="og:title"/>
+<meta content="Disenamos, desarrollamos y optimizamos tiendas Shopify con foco en velocidad, UX mobile, conversion y administracion limpia." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://digitalescolombia.com/" property="og:url"/>
+<meta content="https://digitalescolombia.com/assets/shopify-studio-cinematic.webp" property="og:image"/>
+<meta content="#05070b" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#05070b',
+            graphite: '#10151d',
+            mineral: '#d9e0e8',
+            fog: '#f3f6f8',
+            shopify: '#95BF47',
+            leaf: '#6f993a',
+            aqua: '#23c7d9',
+            coral: '#ff6b76',
+            amber: '#f4b23e'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            premium: '0 30px 120px rgba(5, 7, 11, 0.18)',
+            green: '0 26px 80px rgba(149, 191, 71, 0.25)',
+            innerpanel: 'inset 0 1px 0 rgba(255, 255, 255, 0.12)'
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #05070b;
+      color: #05070b;
+      letter-spacing: 0;
+    }
+    ::selection { background: #95BF47; color: #05070b; }
+    .grain {
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.15));
+    }
+    .hero-scrim {
+      background:
+        linear-gradient(90deg, rgba(5,7,11,.96) 0%, rgba(5,7,11,.9) 34%, rgba(5,7,11,.38) 66%, rgba(5,7,11,.78) 100%),
+        linear-gradient(180deg, rgba(5,7,11,.42) 0%, rgba(5,7,11,.98) 100%);
+    }
+    .premium-border { border: 1px solid rgba(255,255,255,.12); }
+    .glass-dark {
+      background: rgba(13, 18, 25, .58);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+      backdrop-filter: blur(18px);
+    }
+    .glass-light {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(217,224,232,.86);
+      backdrop-filter: blur(18px);
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #6f993a;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+    .kicker::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: #95BF47;
+      border-radius: 999px;
+    }
+    .text-balance { text-wrap: balance; }
+    .card-rise {
+      transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease, background .32s ease;
+    }
+    .card-rise:hover {
+      transform: translateY(-9px);
+      box-shadow: 0 30px 90px rgba(5, 7, 11, .16);
+      border-color: rgba(149,191,71,.72);
+    }
+    .hero-mode {
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+      transition: transform .24s ease, border-color .24s ease, background .24s ease;
+    }
+    .hero-mode::after {
+      content: "";
+      position: absolute;
+      inset: auto 12px 10px 12px;
+      height: 2px;
+      border-radius: 999px;
+      background: transparent;
+      transition: background .24s ease;
+    }
+    .hero-mode.is-active {
+      transform: translateY(-4px);
+      border-color: rgba(149,191,71,.82);
+      background: rgba(255,255,255,.13);
+    }
+    .hero-mode.is-active::after { background: #95BF47; }
+    .orbital-line {
+      background: linear-gradient(90deg, transparent, rgba(149,191,71,.9), rgba(35,199,217,.8), transparent);
+      height: 1px;
+    }
+    .marquee-track { animation: marquee 32s linear infinite; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .swiper-pagination-bullet { background: rgba(16,21,29,.35); opacity: 1; }
+    .swiper-pagination-bullet-active { background: #95BF47 !important; }
+    .caseSwiper .swiper-slide { height: auto; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .28s ease;
+    }
+    .faq-item.active .faq-answer { max-height: 260px; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); color: #95BF47; }
+    .cursor-glow {
+      position: fixed;
+      width: 320px;
+      height: 320px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(149,191,71,.14), transparent 62%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      opacity: .8;
+      mix-blend-mode: screen;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .cursor-glow { display: none; }
+      .hero-scrim {
+        background:
+          linear-gradient(180deg, rgba(5,7,11,.94) 0%, rgba(5,7,11,.84) 48%, rgba(5,7,11,.98) 100%);
+      }
+    }
+  </style>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Shopify Studio",
+    "url": "https://digitalescolombia.com/",
+    "description": "Agencia Shopify premium especializada en desarrollo, rediseño, migraciones, optimización de velocidad, UX ecommerce, CRO, Liquid custom y soporte mensual.",
+    "areaServed": "Latinoamerica",
+    "serviceType": ["Desarrollo Shopify", "Rediseño Shopify", "Migración a Shopify", "Optimización ecommerce", "CRO", "Soporte Shopify"],
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/68 text-white backdrop-blur-xl">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<a aria-label="Shopify Studio" class="flex items-center gap-3" href="#inicio">
+<span class="grid h-11 w-11 place-items-center rounded-md bg-shopify text-xl font-black text-ink shadow-green">S</span>
+<span>
+<span class="block text-base font-black leading-none">Shopify Studio</span>
+<span class="mt-1 block text-[11px] font-bold uppercase tracking-[.18em] text-mineral/70">commerce engineering</span>
+</span>
+</a>
+<nav class="hidden items-center gap-7 text-sm font-bold text-mineral/80 lg:flex">
+<a class="hover:text-shopify" href="#servicios">Servicios</a>
+<a class="hover:text-shopify" href="#sistema">Sistema</a>
+<a class="hover:text-shopify" href="#casos">Casos</a>
+<a class="hover:text-shopify" href="#proceso">Proceso</a>
+<a class="hover:text-shopify" href="#planes">Planes</a>
+<a class="hover:text-shopify" href="#faq">FAQ</a>
+</nav>
+<a class="hidden items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-black text-ink transition hover:bg-shopify sm:inline-flex" href="https://wa.me/5491112345678?text=Hola,%20quiero%20una%20propuesta%20para%20mi%20Shopify" target="_blank">
+<i class="h-4 w-4" data-lucide="message-circle"></i>
+        Hablemos
+      </a>
+<button aria-label="Abrir menu" class="grid h-11 w-11 place-items-center rounded-md border border-white/15 lg:hidden" id="menuBtn">
+<i class="h-5 w-5" data-lucide="menu"></i>
+</button>
+</div>
+<div class="hidden border-t border-white/10 bg-ink px-4 pb-5 text-white lg:hidden" id="mobileMenu">
+<nav class="mx-auto grid max-w-7xl gap-1 py-4 text-sm font-bold text-mineral/80">
+<a class="rounded-md px-3 py-3 hover:bg-white/10" href="#servicios">Servicios</a>
+<a class="rounded-md px-3 py-3 hover:bg-white/10" href="#sistema">Sistema</a>
+<a class="rounded-md px-3 py-3 hover:bg-white/10" href="#casos">Casos</a>
+<a class="rounded-md px-3 py-3 hover:bg-white/10" href="#planes">Planes</a>
+<a class="rounded-md px-3 py-3 hover:bg-white/10" href="#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+<main id="inicio">
+<section class="relative min-h-screen overflow-hidden bg-ink pt-24 text-white">
+<img alt="Estudio premium de ecommerce con dashboards Shopify y analitica" class="absolute inset-0 h-full w-full object-cover" src="assets/shopify-studio-cinematic.webp"/>
+<div class="hero-scrim absolute inset-0"></div>
+<div class="grain absolute inset-0 opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-shopify/70 to-transparent"></div>
+<div class="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.08fr_.92fr] lg:px-8">
+<div data-aos="fade-up">
+<div class="inline-flex items-center gap-3 rounded-md border border-white/12 bg-white/8 px-4 py-2 text-sm font-bold text-mineral/90 backdrop-blur">
+<span class="h-2 w-2 rounded-full bg-shopify"></span>
+            Shopify development, CRO and performance
+          </div>
+<h1 class="mt-7 max-w-5xl text-balance text-5xl font-black leading-[.98] sm:text-6xl lg:text-6xl">
+            Tu tienda Shopify no necesita mas parches. Necesita direccion.
+          </h1>
+<p class="mt-7 max-w-2xl text-lg leading-8 text-mineral/84 sm:text-xl">
+            Disenamos y desarrollamos ecommerce con criterio de negocio: velocidad, UX mobile, paginas de producto que persuaden, medicion clara y codigo que tu equipo puede administrar.
+          </p>
+<div class="mt-7 min-h-8 text-lg font-black text-shopify">
+<span id="typed"></span>
+</div>
+<div class="mt-9 flex flex-col gap-3 sm:flex-row">
+<a class="inline-flex items-center justify-center gap-2 rounded-md bg-shopify px-7 py-4 font-black text-ink shadow-green transition hover:bg-white" href="#contacto">
+<i class="h-5 w-5" data-lucide="arrow-up-right"></i>
+              Pedir diagnostico
+            </a>
+<a class="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-white/8 px-7 py-4 font-black text-white backdrop-blur transition hover:bg-white hover:text-ink" href="#sistema">
+<i class="h-5 w-5" data-lucide="scan-search"></i>
+              Ver metodo
+            </a>
+</div>
+</div>
+<aside class="grid gap-4 lg:justify-end" data-aos="fade-left" data-aos-delay="160">
+<div class="glass-dark max-w-lg overflow-hidden rounded-xl" data-tilt="" id="heroConsole">
+<div class="relative h-40 overflow-hidden border-b border-white/10 sm:h-44">
+<img alt="Panel visual interactivo de auditoria Shopify" class="h-full w-full object-cover opacity-[.88] transition duration-500" id="consoleImage" src="assets/shopify-audit-visual.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+<div class="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-4">
+<div>
+<p class="text-xs font-black uppercase tracking-[.18em] text-shopify" id="consoleKicker">speed system</p>
+<h2 class="mt-2 text-3xl font-black" id="consoleTitle">Store Health</h2>
+</div>
+<span class="rounded-md bg-shopify px-3 py-2 text-xs font-black text-ink" id="consoleStatus">LIVE</span>
+</div>
+</div>
+<div class="p-5">
+<p class="text-sm font-semibold leading-6 text-mineral/72" id="consoleCopy">
+                Detectamos peso de apps, recursos criticos y friccion mobile para que la tienda se sienta rapida antes de pedir mas presupuesto en trafico.
+              </p>
+<div class="mt-5 grid grid-cols-3 gap-3">
+<div class="rounded-md bg-white/8 p-4">
+<p class="text-xs text-mineral/55" id="metricOneLabel">LCP</p>
+<p class="mt-2 text-3xl font-black" id="metricOneValue">2.1s</p>
+</div>
+<div class="rounded-md bg-white/8 p-4">
+<p class="text-xs text-mineral/55" id="metricTwoLabel">UX</p>
+<p class="mt-2 text-3xl font-black" id="metricTwoValue">A+</p>
+</div>
+<div class="rounded-md bg-white/8 p-4">
+<p class="text-xs text-mineral/55" id="metricThreeLabel">Apps</p>
+<p class="mt-2 text-3xl font-black" id="metricThreeValue">-31%</p>
+</div>
+</div>
+<div class="mt-6 space-y-4">
+<div>
+<div class="mb-2 flex justify-between text-sm font-bold"><span id="barOneLabel">Critical load</span><span id="barOneValue">91%</span></div>
+<div class="h-2 rounded-full bg-white/10"><span class="block h-2 rounded-full bg-shopify transition-all duration-500" id="barOne" style="width:91%"></span></div>
+</div>
+<div>
+<div class="mb-2 flex justify-between text-sm font-bold"><span id="barTwoLabel">Mobile buying path</span><span id="barTwoValue">87%</span></div>
+<div class="h-2 rounded-full bg-white/10"><span class="block h-2 rounded-full bg-aqua transition-all duration-500" id="barTwo" style="width:87%"></span></div>
+</div>
+<div>
+<div class="mb-2 flex justify-between text-sm font-bold"><span id="barThreeLabel">Tracking confidence</span><span id="barThreeValue">76%</span></div>
+<div class="h-2 rounded-full bg-white/10"><span class="block h-2 rounded-full bg-amber transition-all duration-500" id="barThree" style="width:76%"></span></div>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Modos del diagnostico Shopify" class="grid max-w-lg grid-cols-3 gap-3 text-sm font-black" role="tablist">
+<button aria-selected="true" class="hero-mode glass-dark rounded-xl p-4 is-active" data-mode="speed" type="button">
+<i class="h-5 w-5 text-aqua" data-lucide="gauge"></i>
+<p class="mt-3">Speed</p>
+<span class="mt-1 block text-xs font-semibold text-mineral/50">Core vitals</span>
+</button>
+<button aria-selected="false" class="hero-mode glass-dark rounded-xl p-4" data-mode="liquid" type="button">
+<i class="h-5 w-5 text-shopify" data-lucide="code-2"></i>
+<p class="mt-3">Liquid</p>
+<span class="mt-1 block text-xs font-semibold text-mineral/50">Theme logic</span>
+</button>
+<button aria-selected="false" class="hero-mode glass-dark rounded-xl p-4" data-mode="cro" type="button">
+<i class="h-5 w-5 text-amber" data-lucide="line-chart"></i>
+<p class="mt-3">CRO</p>
+<span class="mt-1 block text-xs font-semibold text-mineral/50">Buying path</span>
+</button>
+</div>
+</aside>
+</div>
+</section>
+<section class="overflow-hidden border-y border-white/10 bg-ink py-5 text-mineral/70">
+<div class="flex w-[2600px] marquee-track">
+<div class="flex w-[1300px] items-center justify-around text-xs font-black uppercase tracking-[.22em]">
+<span>Shopify</span><span>Liquid</span><span>Hydrogen</span><span>Metafields</span><span>CRO</span><span>GA4</span><span>Core Web Vitals</span><span>Checkout UX</span>
+</div>
+<div class="flex w-[1300px] items-center justify-around text-xs font-black uppercase tracking-[.22em]">
+<span>Shopify</span><span>Liquid</span><span>Hydrogen</span><span>Metafields</span><span>CRO</span><span>GA4</span><span>Core Web Vitals</span><span>Checkout UX</span>
+</div>
+</div>
+</section>
+<section class="bg-fog py-20 lg:py-28" id="servicios">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
+<div data-aos="fade-up">
+<span class="kicker">Servicios</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight text-ink sm:text-6xl">Construimos la tienda que sostiene la venta, no solo la foto linda.</h2>
+</div>
+<p class="max-w-2xl text-lg leading-8 text-slate-600" data-aos="fade-up" data-aos-delay="100">
+            Una tienda Shopify premium no se mide solo por verse bien. Tiene que cargar rapido, ordenar el catalogo, explicar el producto, medir bien y permitir que el equipo opere sin miedo.
+          </p>
+</div>
+<div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+<article class="card-rise rounded-xl border border-mineral bg-white p-7" data-aos="fade-up">
+<i class="h-9 w-9 text-leaf" data-lucide="layout-dashboard"></i>
+<h3 class="mt-6 text-xl font-black">Shopify desde cero</h3>
+<p class="mt-3 leading-7 text-slate-600">Estructura, theme, home, PDP, colecciones, carrito, configuracion, SEO base y preparacion para campanas.</p>
+</article>
+<article class="card-rise rounded-xl border border-mineral bg-white p-7" data-aos="fade-up" data-aos-delay="80">
+<i class="h-9 w-9 text-coral" data-lucide="pen-tool"></i>
+<h3 class="mt-6 text-xl font-black">Rediseño de alto impacto</h3>
+<p class="mt-3 leading-7 text-slate-600">Jerarquia visual, confianza, mobile first, arquitectura de contenido y experiencia de compra sin ruido.</p>
+</article>
+<article class="card-rise rounded-xl border border-mineral bg-white p-7" data-aos="fade-up" data-aos-delay="160">
+<i class="h-9 w-9 text-aqua" data-lucide="zap"></i>
+<h3 class="mt-6 text-xl font-black">Performance real</h3>
+<p class="mt-3 leading-7 text-slate-600">Imagenes, scripts, apps, carga critica, LCP, responsive y decisiones que bajan friccion.</p>
+</article>
+<article class="card-rise rounded-xl border border-mineral bg-white p-7" data-aos="fade-up">
+<i class="h-9 w-9 text-amber" data-lucide="database"></i>
+<h3 class="mt-6 text-xl font-black">Migraciones cuidadas</h3>
+<p class="mt-3 leading-7 text-slate-600">Productos, variantes, colecciones, URLs, redirecciones, metafields y orden operativo.</p>
+</article>
+<article class="card-rise rounded-xl border border-mineral bg-white p-7" data-aos="fade-up" data-aos-delay="80">
+<i class="h-9 w-9 text-leaf" data-lucide="braces"></i>
+<h3 class="mt-6 text-xl font-black">Liquid custom</h3>
+<p class="mt-3 leading-7 text-slate-600">Secciones, bloques, templates, lógicas de producto, contenido dinamico e integraciones livianas.</p>
+</article>
+<article class="card-rise rounded-xl border border-mineral bg-white p-7" data-aos="fade-up" data-aos-delay="160">
+<i class="h-9 w-9 text-coral" data-lucide="activity"></i>
+<h3 class="mt-6 text-xl font-black">CRO y soporte</h3>
+<p class="mt-3 leading-7 text-slate-600">Roadmap mensual, mejoras, bugs, tracking, nuevas secciones y experimentos con criterio.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="bg-white py-20 lg:py-28" id="sistema">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
+<div data-aos="fade-right">
+<span class="kicker">Sistema ecommerce</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight text-ink sm:text-6xl">La conversion se rompe en lugares pequenos.</h2>
+<p class="mt-6 text-lg leading-8 text-slate-600">Por eso auditamos la tienda como una cadena completa: desde el anuncio hasta la PDP, el carrito, la velocidad, el tracking y la administracion interna.</p>
+<div class="mt-8 grid gap-3 sm:grid-cols-2">
+<div class="rounded-xl border border-mineral bg-fog p-5"><p class="font-black">Menos apps innecesarias</p><p class="mt-2 text-sm leading-6 text-slate-600">Menos peso, menos conflictos, menos dependencia.</p></div>
+<div class="rounded-xl border border-mineral bg-fog p-5"><p class="font-black">Producto mejor explicado</p><p class="mt-2 text-sm leading-6 text-slate-600">Beneficios, objeciones, variantes y confianza.</p></div>
+</div>
+</div>
+<div class="relative" data-aos="fade-left">
+<div class="orbital-line absolute left-8 right-8 top-1/2"></div>
+<div class="grid gap-4 sm:grid-cols-2">
+<div class="glass-light rounded-xl p-6 shadow-premium">
+<p class="text-xs font-black uppercase tracking-[.18em] text-leaf">friccion</p>
+<h3 class="mt-4 text-2xl font-black">Lo que bloquea ventas</h3>
+<ul class="mt-5 space-y-3 text-sm font-semibold text-slate-700">
+<li>Theme lento y pesado</li>
+<li>PDP sin argumentos</li>
+<li>Variantes confusas</li>
+<li>Tracking incompleto</li>
+<li>Catalogo dificil de operar</li>
+</ul>
+</div>
+<div class="glass-light rounded-xl p-6 shadow-premium sm:mt-16">
+<p class="text-xs font-black uppercase tracking-[.18em] text-leaf">direccion</p>
+<h3 class="mt-4 text-2xl font-black">Lo que dejamos listo</h3>
+<ul class="mt-5 space-y-3 text-sm font-semibold text-slate-700">
+<li>Arquitectura clara</li>
+<li>Mobile path simple</li>
+<li>Bloques administrables</li>
+<li>Velocidad cuidada</li>
+<li>Roadmap de mejoras</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-ink py-20 text-white lg:py-28" id="casos">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+<div data-aos="fade-up">
+<span class="kicker !text-shopify">Casos de uso</span>
+<h2 class="mt-4 max-w-4xl text-balance text-4xl font-black leading-tight sm:text-6xl">No todas las tiendas necesitan lo mismo. Todas necesitan criterio.</h2>
+</div>
+<div class="flex gap-3">
+<button aria-label="Anterior" class="case-prev grid h-11 w-11 place-items-center rounded-md border border-white/15 transition hover:bg-white hover:text-ink"><i class="h-5 w-5" data-lucide="arrow-left"></i></button>
+<button aria-label="Siguiente" class="case-next grid h-11 w-11 place-items-center rounded-md border border-white/15 transition hover:bg-white hover:text-ink"><i class="h-5 w-5" data-lucide="arrow-right"></i></button>
+</div>
+</div>
+<div class="mt-12 overflow-hidden rounded-xl border border-white/12 bg-white/5 shadow-premium" data-aos="zoom-in">
+<img alt="Visual premium de casos ecommerce para moda, beauty, B2B y hogar en Shopify" class="h-[260px] w-full object-cover sm:h-[360px] lg:h-[430px]" loading="lazy" src="assets/shopify-cases-visual.webp"/>
+</div>
+<div class="swiper caseSwiper mt-8 !overflow-visible">
+<div class="swiper-wrapper">
+<article class="swiper-slide glass-dark rounded-xl p-7">
+<span class="text-xs font-black uppercase tracking-[.18em] text-shopify">Moda</span>
+<h3 class="mt-5 text-2xl font-black">Variantes, talles y confianza antes del carrito</h3>
+<p class="mt-4 leading-7 text-mineral/72">Ordenamos PDP, guias de talle, colecciones, filtros y bloques de decision para bajar dudas en mobile.</p>
+<div class="mt-7 grid grid-cols-2 gap-3 text-sm font-black"><span class="rounded-md bg-white/8 p-3">+24% add to cart</span><span class="rounded-md bg-white/8 p-3">PDP modular</span></div>
+</article>
+<article class="swiper-slide glass-dark rounded-xl p-7">
+<span class="text-xs font-black uppercase tracking-[.18em] text-aqua">Beauty</span>
+<h3 class="mt-5 text-2xl font-black">Lanzamiento rapido sin perder calidad</h3>
+<p class="mt-4 leading-7 text-mineral/72">Home editorial, bundles, reviews, ingredientes, suscripcion, tracking base y campanas listas.</p>
+<div class="mt-7 grid grid-cols-2 gap-3 text-sm font-black"><span class="rounded-md bg-white/8 p-3">21 dias</span><span class="rounded-md bg-white/8 p-3">GA4 base</span></div>
+</article>
+<article class="swiper-slide glass-dark rounded-xl p-7">
+<span class="text-xs font-black uppercase tracking-[.18em] text-amber">B2B</span>
+<h3 class="mt-5 text-2xl font-black">Catalogos grandes que no se vuelven caos</h3>
+<p class="mt-4 leading-7 text-mineral/72">Metafields, filtros, colecciones, SKUs, precios y estructura para operar sin planillas eternas.</p>
+<div class="mt-7 grid grid-cols-2 gap-3 text-sm font-black"><span class="rounded-md bg-white/8 p-3">+800 SKUs</span><span class="rounded-md bg-white/8 p-3">Metafields</span></div>
+</article>
+<article class="swiper-slide glass-dark rounded-xl p-7">
+<span class="text-xs font-black uppercase tracking-[.18em] text-coral">Home &amp; Deco</span>
+<h3 class="mt-5 text-2xl font-black">Imagen pesada, compra lenta, venta perdida</h3>
+<p class="mt-4 leading-7 text-mineral/72">Optimizamos imagenes, carga critica, secciones visuales y navegacion para productos de alto detalle.</p>
+<div class="mt-7 grid grid-cols-2 gap-3 text-sm font-black"><span class="rounded-md bg-white/8 p-3">96 score</span><span class="rounded-md bg-white/8 p-3">LCP mejorado</span></div>
+</article>
+<article class="swiper-slide glass-dark rounded-xl p-7">
+<span class="text-xs font-black uppercase tracking-[.18em] text-shopify">Migracion</span>
+<h3 class="mt-5 text-2xl font-black">Mover plataforma sin destruir SEO ni operacion</h3>
+<p class="mt-4 leading-7 text-mineral/72">Redirecciones, productos, colecciones, contenido clave, configuraciones y checklist de lanzamiento.</p>
+<div class="mt-7 grid grid-cols-2 gap-3 text-sm font-black"><span class="rounded-md bg-white/8 p-3">URLs cuidadas</span><span class="rounded-md bg-white/8 p-3">QA launch</span></div>
+</article>
+</div>
+<div class="swiper-pagination !relative !bottom-auto mt-8"></div>
+</div>
+</div>
+</section>
+<section class="bg-fog py-20 lg:py-28">
+<div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[.76fr_1.24fr] lg:items-center lg:px-8">
+<div data-aos="fade-right">
+<span class="kicker">Auditoria visual</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight sm:text-6xl">Medimos lo que normalmente se tapa con una app mas.</h2>
+<p class="mt-6 text-lg leading-8 text-slate-600">El diagnostico cruza performance, experiencia mobile, claridad de producto, apps instaladas y medicion. No es una lista bonita: es un mapa de donde se escapa la venta.</p>
+</div>
+<div data-aos="fade-left">
+<div class="overflow-hidden rounded-xl bg-ink shadow-premium">
+<img alt="Dashboard premium de auditoria Shopify, performance, UX mobile y CRO" class="h-[260px] w-full object-cover sm:h-[360px]" loading="lazy" src="assets/shopify-audit-visual.webp"/>
+</div>
+<div class="mt-4 grid gap-4 sm:grid-cols-2">
+<div class="rounded-xl bg-ink p-6 text-white shadow-premium" data-aos="zoom-in">
+<i class="h-8 w-8 text-shopify" data-lucide="scan-line"></i>
+<p class="mt-6 text-5xl font-black"><span class="counter" data-target="54">0</span></p>
+<p class="mt-2 text-mineral/70">puntos de revision UX, SEO y performance.</p>
+</div>
+<div class="rounded-xl bg-white p-6 shadow-premium" data-aos="zoom-in" data-aos-delay="80">
+<i class="h-8 w-8 text-aqua" data-lucide="smartphone"></i>
+<p class="mt-6 text-5xl font-black"><span class="counter" data-target="70">0</span>%</p>
+<p class="mt-2 text-slate-600">del analisis se concentra en mobile y carrito.</p>
+</div>
+<div class="rounded-xl bg-white p-6 shadow-premium" data-aos="zoom-in">
+<i class="h-8 w-8 text-amber" data-lucide="package-check"></i>
+<p class="mt-6 text-5xl font-black"><span class="counter" data-target="12">0</span></p>
+<p class="mt-2 text-slate-600">bloques minimos para una PDP persuasiva.</p>
+</div>
+<div class="rounded-xl bg-ink p-6 text-white shadow-premium" data-aos="zoom-in" data-aos-delay="80">
+<i class="h-8 w-8 text-coral" data-lucide="plug-zap"></i>
+<p class="mt-6 text-5xl font-black">-<span class="counter" data-target="31">0</span>%</p>
+<p class="mt-2 text-mineral/70">peso operativo al reducir apps y scripts.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-20 lg:py-28" id="proceso">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+<span class="kicker justify-center">Proceso</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight sm:text-6xl">Un proceso claro para decisiones caras.</h2>
+</div>
+<div class="mt-12 overflow-hidden rounded-xl border border-mineral bg-fog shadow-premium" data-aos="zoom-in">
+<img alt="Mesa de estrategia ecommerce con wireframes, arquitectura Shopify y checklist de lanzamiento" class="h-[260px] w-full object-cover sm:h-[380px] lg:h-[460px]" loading="lazy" src="assets/shopify-process-visual.webp"/>
+</div>
+<div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+<div class="rounded-xl border border-mineral bg-fog p-7" data-aos="fade-up"><span class="text-6xl font-black text-shopify">01</span><h3 class="mt-6 text-xl font-black">Diagnostico</h3><p class="mt-3 leading-7 text-slate-600">Objetivos, estado de tienda, fricciones, catalogo, stack de apps y prioridades.</p></div>
+<div class="rounded-xl border border-mineral bg-fog p-7" data-aos="fade-up" data-aos-delay="80"><span class="text-6xl font-black text-shopify">02</span><h3 class="mt-6 text-xl font-black">Direccion</h3><p class="mt-3 leading-7 text-slate-600">Arquitectura, jerarquia, roadmap y decisiones de alcance con impacto real.</p></div>
+<div class="rounded-xl border border-mineral bg-fog p-7" data-aos="fade-up" data-aos-delay="160"><span class="text-6xl font-black text-shopify">03</span><h3 class="mt-6 text-xl font-black">Build</h3><p class="mt-3 leading-7 text-slate-600">Liquid, secciones, responsive, performance, tracking y contenido administrable.</p></div>
+<div class="rounded-xl border border-mineral bg-fog p-7" data-aos="fade-up" data-aos-delay="240"><span class="text-6xl font-black text-shopify">04</span><h3 class="mt-6 text-xl font-black">Launch</h3><p class="mt-3 leading-7 text-slate-600">QA, checkout, redirecciones, SEO tecnico, handoff y backlog de crecimiento.</p></div>
+</div>
+</div>
+</section>
+<section class="bg-fog py-20 lg:py-28" id="planes">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+<span class="kicker justify-center">Planes</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight sm:text-6xl">Tres formas de entrar. Una misma exigencia.</h2>
+</div>
+<div class="mt-14 grid gap-5 lg:grid-cols-3">
+<article class="card-rise rounded-xl border border-mineral bg-white p-8" data-aos="fade-up">
+<p class="text-xs font-black uppercase tracking-[.18em] text-leaf">Start</p>
+<h3 class="mt-4 text-3xl font-black">Lanzar bien</h3>
+<p class="mt-4 leading-7 text-slate-600">Para marcas que necesitan una tienda Shopify profesional sin empezar con deuda tecnica.</p>
+<ul class="mt-7 space-y-3 text-sm font-bold text-slate-700"><li>Setup Shopify</li><li>Theme adaptado</li><li>Home, PDP y colecciones</li><li>SEO tecnico base</li><li>Checklist launch</li></ul>
+<a class="mt-8 inline-flex w-full justify-center rounded-md bg-ink px-6 py-4 font-black text-white hover:bg-leaf" href="#contacto">Consultar</a>
+</article>
+<article class="card-rise relative rounded-xl border-2 border-shopify bg-ink p-8 text-white shadow-green" data-aos="fade-up" data-aos-delay="90">
+<span class="absolute -top-4 left-6 rounded-md bg-shopify px-4 py-2 text-xs font-black text-ink">Recomendado</span>
+<p class="text-xs font-black uppercase tracking-[.18em] text-shopify">Growth</p>
+<h3 class="mt-4 text-3xl font-black">Vender mejor</h3>
+<p class="mt-4 leading-7 text-mineral/75">Para tiendas activas que necesitan rediseño, CRO, performance y orden operativo.</p>
+<ul class="mt-7 space-y-3 text-sm font-bold text-mineral/85"><li>Rediseño premium</li><li>PDP de conversion</li><li>Metafields y secciones</li><li>Performance</li><li>Tracking base</li></ul>
+<a class="mt-8 inline-flex w-full justify-center rounded-md bg-shopify px-6 py-4 font-black text-ink hover:bg-white" href="#contacto">Solicitar propuesta</a>
+</article>
+<article class="card-rise rounded-xl border border-mineral bg-white p-8" data-aos="fade-up" data-aos-delay="180">
+<p class="text-xs font-black uppercase tracking-[.18em] text-leaf">Pro</p>
+<h3 class="mt-4 text-3xl font-black">Escalar con codigo</h3>
+<p class="mt-4 leading-7 text-slate-600">Para operaciones con necesidades avanzadas, integraciones, Liquid custom y soporte continuo.</p>
+<ul class="mt-7 space-y-3 text-sm font-bold text-slate-700"><li>Liquid avanzado</li><li>Integraciones</li><li>Carrito custom</li><li>Auditoria CRO</li><li>Soporte prioritario</li></ul>
+<a class="mt-8 inline-flex w-full justify-center rounded-md bg-ink px-6 py-4 font-black text-white hover:bg-leaf" href="#contacto">Hablar con experto</a>
+</article>
+</div>
+</div>
+</section>
+<section class="bg-white py-20 lg:py-28">
+<div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:px-8">
+<div data-aos="fade-right">
+<span class="kicker">Testimonios</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight sm:text-6xl">Cuando Shopify se ordena, el equipo tambien respira.</h2>
+</div>
+<div class="swiper testimonialSwiper rounded-xl bg-ink p-8 text-white shadow-premium" data-aos="fade-left">
+<div class="swiper-wrapper">
+<blockquote class="swiper-slide"><p class="text-2xl font-black leading-10">"La tienda se ve mas premium, pero lo importante fue que mobile dejo de ser una pelea. El cambio en producto y carrito se noto enseguida."</p><footer class="mt-7 text-sm font-black text-shopify">Founder, moda DTC</footer></blockquote>
+<blockquote class="swiper-slide"><p class="text-2xl font-black leading-10">"Nos sacaron apps que nadie queria tocar, ordenaron metafields y dejaron secciones que el equipo puede administrar sin romper nada."</p><footer class="mt-7 text-sm font-black text-shopify">Ecommerce Manager, retail</footer></blockquote>
+<blockquote class="swiper-slide"><p class="text-2xl font-black leading-10">"La auditoria fue incomoda en el mejor sentido. Vimos exactamente donde se perdia confianza antes del carrito."</p><footer class="mt-7 text-sm font-black text-shopify">CMO, beauty brand</footer></blockquote>
+</div>
+<div class="swiper-pagination !relative !bottom-auto mt-8"></div>
+</div>
+</div>
+</section>
+<section class="bg-fog py-20 lg:py-28" id="faq">
+<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+<div class="text-center" data-aos="fade-up">
+<span class="kicker justify-center">FAQ</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight sm:text-6xl">Antes de pedir propuesta.</h2>
+</div>
+<div class="mt-12 space-y-4">
+<div class="faq-item rounded-xl border border-mineral bg-white p-6"><button class="faq-question flex w-full items-center justify-between gap-5 text-left"><span class="text-lg font-black">¿Trabajan sobre mi theme actual?</span><i class="faq-icon h-6 w-6 shrink-0 transition" data-lucide="plus"></i></button><div class="faq-answer"><p class="pt-4 leading-7 text-slate-600">Si. Podemos mejorar un theme existente, crear secciones nuevas, limpiar codigo, ordenar metafields y optimizar mobile sin rehacer todo desde cero.</p></div></div>
+<div class="faq-item rounded-xl border border-mineral bg-white p-6"><button class="faq-question flex w-full items-center justify-between gap-5 text-left"><span class="text-lg font-black">¿Pueden migrar desde otra plataforma?</span><i class="faq-icon h-6 w-6 shrink-0 transition" data-lucide="plus"></i></button><div class="faq-answer"><p class="pt-4 leading-7 text-slate-600">Si. Migramos desde WooCommerce, Tiendanube, Wix u otros origenes cuidando productos, colecciones, variantes, URLs, redirecciones y estructura SEO.</p></div></div>
+<div class="faq-item rounded-xl border border-mineral bg-white p-6"><button class="faq-question flex w-full items-center justify-between gap-5 text-left"><span class="text-lg font-black">¿La web queda facil de administrar?</span><i class="faq-icon h-6 w-6 shrink-0 transition" data-lucide="plus"></i></button><div class="faq-answer"><p class="pt-4 leading-7 text-slate-600">Ese es parte del trabajo. Priorizamos secciones editables, metafields bien pensados y documentacion breve para que no dependas de codigo para cada ajuste.</p></div></div>
+<div class="faq-item rounded-xl border border-mineral bg-white p-6"><button class="faq-question flex w-full items-center justify-between gap-5 text-left"><span class="text-lg font-black">¿El formulario envia directo a WhatsApp?</span><i class="faq-icon h-6 w-6 shrink-0 transition" data-lucide="plus"></i></button><div class="faq-answer"><p class="pt-4 leading-7 text-slate-600">Si. Arma el mensaje con tus datos y lo abre en WhatsApp. Mas adelante se puede conectar con CRM, email o backend propio.</p></div></div>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-ink py-20 text-white lg:py-28" id="contacto">
+<div class="grain absolute inset-0 opacity-40"></div>
+<div class="relative mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[.86fr_1.14fr] lg:items-start lg:px-8">
+<div data-aos="fade-right">
+<span class="kicker !text-shopify">Contacto</span>
+<h2 class="mt-4 text-balance text-4xl font-black leading-tight sm:text-6xl">Si tu Shopify ya vende, merece una base mas seria.</h2>
+<p class="mt-6 text-lg leading-8 text-mineral/75">Cuéntanos en que etapa estas y armamos el primer diagnostico: lanzamiento, rediseño, migracion, performance o soporte mensual.</p>
+<div class="mt-9 grid gap-4 text-sm font-bold text-mineral/80">
+<a class="inline-flex items-center gap-3 hover:text-shopify" href="mailto:hola@tudominio.com"><i class="h-5 w-5" data-lucide="mail"></i> hola@tudominio.com</a>
+<a class="inline-flex items-center gap-3 hover:text-shopify" href="https://wa.me/5491112345678" target="_blank"><i class="h-5 w-5" data-lucide="message-circle"></i> WhatsApp directo</a>
+<span class="inline-flex items-center gap-3"><i class="h-5 w-5" data-lucide="globe-2"></i> Atencion online para Latinoamerica</span>
+</div>
+</div>
+<form class="glass-light rounded-xl p-6 text-ink shadow-premium sm:p-8" data-aos="fade-left" id="contactForm">
+<div class="grid gap-5">
+<div class="grid gap-5 sm:grid-cols-2">
+<label class="grid gap-2 text-sm font-black">Nombre<input class="rounded-md border border-mineral px-4 py-4 font-semibold outline-none focus:ring-2 focus:ring-shopify" name="nombre" placeholder="Tu nombre" required=""/></label>
+<label class="grid gap-2 text-sm font-black">Email<input class="rounded-md border border-mineral px-4 py-4 font-semibold outline-none focus:ring-2 focus:ring-shopify" name="email" placeholder="tu@email.com" type="email"/></label>
+</div>
+<label class="grid gap-2 text-sm font-black">Servicio<select class="rounded-md border border-mineral px-4 py-4 font-semibold outline-none focus:ring-2 focus:ring-shopify" name="servicio"><option>Crear tienda Shopify</option><option>Rediseñar tienda Shopify</option><option>Optimizar velocidad</option><option>Migrar a Shopify</option><option>Liquid custom</option><option>Soporte mensual</option></select></label>
+<label class="grid gap-2 text-sm font-black">Mensaje<textarea class="rounded-md border border-mineral px-4 py-4 font-semibold outline-none focus:ring-2 focus:ring-shopify" name="mensaje" placeholder="Cuéntanos que quieres mejorar..." rows="5"></textarea></label>
+<button class="inline-flex items-center justify-center gap-2 rounded-md bg-shopify px-6 py-4 font-black text-ink transition hover:bg-ink hover:text-white" type="submit"><i class="h-5 w-5" data-lucide="send"></i> Enviar por WhatsApp</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<footer class="border-t border-white/10 bg-ink py-10 text-white">
+<div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-4 text-sm font-semibold text-mineral/55 sm:px-6 md:flex-row lg:px-8">
+<p>© 2026 Shopify Studio. Ecommerce engineering, UX and performance.</p>
+<div class="flex gap-5"><a class="hover:text-shopify" href="#servicios">Servicios</a><a class="hover:text-shopify" href="#planes">Planes</a><a class="hover:text-shopify" href="#contacto">Contacto</a></div>
+</div>
+</footer>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+<script>
+    lucide.createIcons();
+    AOS.init({
+      duration: 620,
+      once: true,
+      easing: 'ease-out-cubic',
+      offset: 80,
+      disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+    window.addEventListener('load', () => AOS.refreshHard());
+
+    new Typed('#typed', {
+      strings: ['Menos apps. Mas criterio.', 'PDPs que responden objeciones.', 'Mobile primero, siempre.', 'Liquid custom sin deuda tecnica.'],
+      typeSpeed: 38,
+      backSpeed: 20,
+      backDelay: 1200,
+      loop: true
+    });
+
+    gsap.from('header', { y: -80, opacity: 0, duration: .8, ease: 'power3.out' });
+    gsap.from('.glass-dark', { y: 28, opacity: 0, duration: .9, stagger: .1, delay: .35, ease: 'power3.out' });
+
+    const cursorGlow = document.getElementById('cursorGlow');
+    window.addEventListener('mousemove', (event) => {
+      cursorGlow.style.left = event.clientX + 'px';
+      cursorGlow.style.top = event.clientY + 'px';
+    });
+
+    const consoleModes = {
+      speed: {
+        image: 'assets/shopify-audit-visual.webp',
+        kicker: 'speed system',
+        title: 'Store Health',
+        status: 'LIVE',
+        copy: 'Detectamos peso de apps, recursos criticos y friccion mobile para que la tienda se sienta rapida antes de pedir mas presupuesto en trafico.',
+        metrics: [['LCP', '2.1s'], ['UX', 'A+'], ['Apps', '-31%']],
+        bars: [['Critical load', '91%'], ['Mobile buying path', '87%'], ['Tracking confidence', '76%']]
+      },
+      liquid: {
+        image: 'assets/shopify-process-visual.webp',
+        kicker: 'liquid custom',
+        title: 'Theme Logic',
+        status: 'BUILD',
+        copy: 'Creamos secciones, bloques y metafields administrables para que el equipo pueda operar la tienda sin romper el theme ni depender de apps extra.',
+        metrics: [['Sections', '14'], ['Apps', '-6'], ['Admin', 'Easy']],
+        bars: [['Reusable blocks', '94%'], ['Metafield structure', '88%'], ['Code maintainability', '82%']]
+      },
+      cro: {
+        image: 'assets/shopify-cases-visual.webp',
+        kicker: 'conversion path',
+        title: 'Revenue UX',
+        status: 'CRO',
+        copy: 'Reordenamos la ruta de compra: producto, variantes, confianza, carrito y microcopy para reducir dudas antes del checkout.',
+        metrics: [['ATC', '+24%'], ['PDP', '12'], ['Path', '-18%']],
+        bars: [['PDP clarity', '91%'], ['Objection handling', '84%'], ['Checkout readiness', '79%']]
+      }
+    };
+
+    const consoleRefs = {
+      image: document.getElementById('consoleImage'),
+      kicker: document.getElementById('consoleKicker'),
+      title: document.getElementById('consoleTitle'),
+      status: document.getElementById('consoleStatus'),
+      copy: document.getElementById('consoleCopy'),
+      metricLabels: [document.getElementById('metricOneLabel'), document.getElementById('metricTwoLabel'), document.getElementById('metricThreeLabel')],
+      metricValues: [document.getElementById('metricOneValue'), document.getElementById('metricTwoValue'), document.getElementById('metricThreeValue')],
+      barLabels: [document.getElementById('barOneLabel'), document.getElementById('barTwoLabel'), document.getElementById('barThreeLabel')],
+      barValues: [document.getElementById('barOneValue'), document.getElementById('barTwoValue'), document.getElementById('barThreeValue')],
+      bars: [document.getElementById('barOne'), document.getElementById('barTwo'), document.getElementById('barThree')]
+    };
+
+    function setConsoleMode(modeName) {
+      const mode = consoleModes[modeName];
+      if (!mode) return;
+
+      document.querySelectorAll('.hero-mode').forEach((button) => {
+        const isActive = button.dataset.mode === modeName;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-selected', String(isActive));
+      });
+
+      gsap.to('#heroConsole', {
+        opacity: .78,
+        y: 8,
+        duration: .16,
+        ease: 'power2.out',
+        onComplete: () => {
+          consoleRefs.image.src = mode.image;
+          consoleRefs.kicker.textContent = mode.kicker;
+          consoleRefs.title.textContent = mode.title;
+          consoleRefs.status.textContent = mode.status;
+          consoleRefs.copy.textContent = mode.copy;
+
+          mode.metrics.forEach((metric, index) => {
+            consoleRefs.metricLabels[index].textContent = metric[0];
+            consoleRefs.metricValues[index].textContent = metric[1];
+          });
+
+          mode.bars.forEach((bar, index) => {
+            consoleRefs.barLabels[index].textContent = bar[0];
+            consoleRefs.barValues[index].textContent = bar[1];
+            consoleRefs.bars[index].style.width = bar[1];
+          });
+
+          gsap.to('#heroConsole', { opacity: 1, y: 0, duration: .24, ease: 'power2.out' });
+        }
+      });
+    }
+
+    document.querySelectorAll('.hero-mode').forEach((button) => {
+      button.addEventListener('click', () => setConsoleMode(button.dataset.mode));
+    });
+
+    new Swiper('.caseSwiper', {
+      slidesPerView: 1.05,
+      spaceBetween: 18,
+      loop: true,
+      pagination: { el: '.caseSwiper .swiper-pagination', clickable: true },
+      navigation: { nextEl: '.case-next', prevEl: '.case-prev' },
+      breakpoints: { 768: { slidesPerView: 2.1 }, 1120: { slidesPerView: 3.15 } }
+    });
+
+    new Swiper('.testimonialSwiper', {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: { delay: 4500 },
+      pagination: { el: '.testimonialSwiper .swiper-pagination', clickable: true }
+    });
+
+    let countersStarted = false;
+    function startCounters() {
+      if (countersStarted) return;
+      countersStarted = true;
+      document.querySelectorAll('.counter').forEach((el) => {
+        const value = Number(el.dataset.target || 0);
+        new countUp.CountUp(el, value, { duration: 2.1, separator: '' }).start();
+      });
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) startCounters();
+    }, { threshold: .25 });
+    document.querySelectorAll('.counter').forEach((el) => observer.observe(el));
+
+    VanillaTilt.init(document.querySelectorAll('[data-tilt]'), { max: 7, speed: 520, glare: true, 'max-glare': .14 });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        document.querySelectorAll('.faq-item').forEach((faq) => {
+          if (faq !== item) faq.classList.remove('active');
+        });
+        item.classList.toggle('active');
+      });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const message = [
+        'Hola, quiero una propuesta para mi Shopify.',
+        'Nombre: ' + (form.get('nombre') || ''),
+        'Email: ' + (form.get('email') || ''),
+        'Servicio: ' + (form.get('servicio') || ''),
+        'Mensaje: ' + (form.get('mensaje') || '')
+      ].join('\n');
+      window.open('https://wa.me/5491112345678?text=' + encodeURIComponent(message), '_blank');
+    });
+  </script>
+<section class="dc-internal-links" style="padding:28px 0;background:#fff;border-top:1px solid #e5e7eb;"><div style="max-width:1100px;margin:0 auto;padding:0 20px;"><h2 style="font-size:1.35rem;margin-bottom:12px;">Explorar servicios relacionados</h2><p style="margin-bottom:12px;">También podés revisar otros recursos del ecosistema Digitales Colombia:</p><p><a href="/marketing-digital-colombia.html">Marketing digital</a> · <a href="/salud-en-colombia.html">Salud en Colombia</a> · <a href="/abogados-en-colombia.html">Abogados en Colombia</a> · <a href="/servicios-locales-bogota.html">Servicios locales Bogotá</a> · <a href="/alojamientos-y-turismo-colombia.html">Alojamientos y turismo</a></p></div></section>
+<a class="dc-floating-whatsapp" href="https://wa.me/5491112345678" aria-label="Consultar por WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#22c55e;color:#07131f;padding:12px 16px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.18);">WhatsApp</a>
+</body>
+</html>

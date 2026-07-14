@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------
+[Main Stylesheet]
+
+Project:        Atroly
+Version:        1.1
+Last change:    01 Aug 2025
+Primary use:    LAW Firm
+
+[Table of contents]
+
+1. Variables and Colors
+2. Global Styles
+3. Utility Classes
+4. Components
+5. Layout
+    01. Preloader
+    02. Hero Section
+    03. Footer Section
+    04. Breadcrumb Section
+    05. Counter Card
+    06. Tap To Top
+    07. Sidebar Menu
+    08. Header
+    09. Section Content
+    10. How It Works
+    11. Login
+    12. Product Details
+    13. Testimonial
+    14. Why Choose Us
+    15. Marqee Section
+    16. About Section
+    17. Newsletter Section
+6. Pages
+    01. Blog Page
+    02. Blog Details  
+    03. Contact Page  
+    04. Sign Up       
+    05. Dashboard     
+    06. About         
+    07. Cookie        
+    08. Coming Soon   
+    09. Error 404 Page
+    10. Home 4        
+    11. Home 3        
+    12. Home 2        
+    13. Home 1        
+-------------------------------------------------------------------*/
+
+// abstract
+@import 'abstract/index';
+
+// Base
+/*----  Utility Classes  ----*/
+@import 'base/index';
+/*---- / Utility Classes  ----*/
+
+// Component
+/*----  Components  ----*/
+@import 'components/index';
+/*---- / Components  ----*/
+
+// layout
+/*----  Layout  ----*/
+@import 'layouts/index';
+/*---- / Layout  ----*/
+
+// All Pages
+/*----  Pages  ----*/
+@import 'page/index';
+/*---- / Pages  ----*/

@@ -1,0 +1,102 @@
+.law--firm {
+  position: relative;
+
+  p {
+    color: hsl(var(--dark-grey));
+  }
+
+  .title-wrap h2.title {
+    margin-top: 28px;
+    margin-left: -35px;
+
+    @include md-screen {
+      margin-top: 32px;
+      margin-left: 0;
+    }
+  }
+
+  .ceo--info {
+    display: flex;
+    align-items: center;
+
+    @include msm-screen {
+      justify-content: center;
+    }
+
+    .thumb--wrap {
+      width: 88px;
+      aspect-ratio: 1;
+
+      @include md-screen {
+        width: 65px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .name {
+      font-size: 18px;
+    }
+  }
+
+  .firm-content--box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include msm-screen {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .element--wrap {
+    top: 15%;
+    right: 12%;
+  }
+
+  .thumb--wrap {
+
+    .thumb--one {
+      top: 23%;
+      right: 0%;
+
+      @include md-screen {
+        top: 15%;
+        right: 15%;
+        text-align: left;
+      }
+
+      @include sm-screen {
+        top: 10%;
+      }
+
+    }
+
+    .thumb--two {
+      @include md-screen {
+        text-align: right;
+      }
+    }
+
+    @include md-screen {
+      text-align: center;
+
+      .thumb--one,
+      .thumb--two {
+        max-width: 50%;
+
+        img {
+          max-height: 400px;
+        }
+      }
+    }
+
+
+  }
+}

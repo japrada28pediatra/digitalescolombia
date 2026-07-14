@@ -1,0 +1,133 @@
+.hero-follow--box {
+  .text--base-two {
+    &:hover {
+      color: hsl(var(--base-two-hover)) !important;
+    }
+  }
+}
+
+.partner-section {
+  &.bg--pure-black {
+    .partner-slider {
+      .partner--thumb {
+        transition: all 0.3s ease-in-out;
+
+        img {
+          filter: brightness(0) invert(1);
+          background-color: transparent;
+        }
+
+        &:hover {
+          background-color: #ddd;
+
+          img {
+            filter: brightness(0.1);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.solution--two {
+  .solution--btn {
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+
+.service-section--two .btn.style--two {
+  &:hover {
+    color: hsl(var(--base-two-hover)) !important;
+  }
+}
+
+.homepage_two {
+  --base: var(--base-two);
+  --base-d-200: var(--base-two-hover);
+  --black: var(--pure-black);
+}
+
+.why-choose--two {
+  .chunk-fluid__mr {
+    margin-right: var(--fluid-margin);
+  }
+
+  .chunk-fluid__ml {
+    margin-left: var(--fluid-margin);
+  }
+
+  .subtitle,
+  p,
+  li {
+    color: hsl(var(--dark-grey));
+  }
+
+  .counter-box--wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    max-width: calc(430px + 1.5rem);
+
+    @include md-screen {
+      margin-left: var(--fluid-margin);
+      grid-template-columns: 1fr 1fr;
+      max-width: calc(var(--fluid-partial-width) - var(--fluid-margin));
+      width: 100%;
+      padding-right: 1.5rem;
+      gap: 1rem;
+      margin-top: 36px;
+    }
+
+    @include msm-screen {
+      // grid-template-columns: 1fr 1fr;
+      padding-right: 0;
+      padding-left: 1.5rem;
+    }
+  }
+
+
+  .video {
+    display: grid;
+    place-items: center;
+    min-height: 607px;
+    padding: 0px;
+    width: 100%;
+
+    @include md-screen {
+      min-height: 400px;
+    }
+
+    @include msm-screen {
+      min-height: 300px;
+    }
+
+  }
+
+  .play-video {
+    &:hover {
+      color: hsl(var(--base-two-hover));
+    }
+  }
+}
+
+.homepage_two.appoint-now {
+  margin-top: 90px;
+
+  @include md-screen {
+    margin-top: 0px;
+  }
+
+  @include msm-screen {
+    .thumb--elements img {
+      object-position: center;
+    }
+  }
+
+  .btn {
+    background-color: hsl(var(--pure-black));
+  }
+}

@@ -1,0 +1,16 @@
+.testimonial-card--2 {
+	.desc {
+		max-width: 872px;
+	}
+	.author-image {
+		margin-bottom: 16px;
+		text-align: center;
+		img {
+			border-radius: 70px;
+			width: 70px;
+			height: 70px;
+			object-fit: cover;
+			flex-shrink: 0;
+		}
+	}
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digitalescolombia.com/agencia-seo-geo-colombia/sitemap.xml

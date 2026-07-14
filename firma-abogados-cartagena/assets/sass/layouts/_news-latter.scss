@@ -1,0 +1,24 @@
+// stay tune box
+.newslatter-section{
+  .element--thumb{
+    right: 10%;
+    bottom: -20%;
+  }
+
+}
+
+.stay-tune-box{
+
+    position: relative;
+    border: 1px solid transparent;
+
+    .tune-box-title{
+        color: hsl(var(--black));
+    }
+    .tune-box-subtitle{
+        color: hsl(var(--black));
+    }
+}
+
+
+

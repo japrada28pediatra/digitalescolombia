@@ -1,0 +1,10 @@
+.chunk-testimonial__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @include sm-screen {
+    grid-template-columns: 1fr;
+  }
+}

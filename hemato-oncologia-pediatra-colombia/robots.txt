@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digitalescolombia.com/hemato-oncologia-pediatra-colombia/sitemap.xml

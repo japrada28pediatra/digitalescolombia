@@ -1,0 +1,15 @@
+.error-page {
+  overflow: hidden;
+
+  .error-image {
+    width: 100%;
+    text-align: center;
+
+    img {
+      @include md-screen {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+/*----  Blog Grid View  ----*/
+@import 'blog-page';
+/*---- / Blog Grid View  ----*/
+
+/*----  Blog Details  ----*/
+@import 'blog-details';
+
+@import 'blog-sidebar';
+/*---- / Blog Details  ----*/
+
+/*----  Contact Page  ----*/
+@import 'contact';
+/*---- / Contact Page  ----*/
+
+/*----  Sign Up  ----*/
+@import 'signup';
+/*---- / Sign Up  ----*/
+
+/*----  Dashboard  ----*/
+@import 'dashboard-body';
+/*---- / Dashboard  ----*/
+
+/*----  About  ----*/
+@import 'about';
+/*---- / About  ----*/
+
+/*----  Testimonial  ----*/
+@import 'testimonial';
+/*---- / Testimonial  ---*/
+
+/*----  Cookie  ----*/
+@import 'coockie';
+/*---- / Cookie  ----*/
+
+/*----  Coming Soon  ----*/
+@import 'coming-soon';
+/*---- / Coming Soon  ----*/
+
+/*----  Gallery  ----*/
+@import 'gallery';
+/*---- / Gallery  ----*/
+
+// responsive
+@import 'responsive';
+
+/*----  Error 404 Page  ----*/
+@import '404';
+/*---- / Error 404 Page  ----*/
+
+/*----  Home 4 ----*/
+@import 'index4';
+/*---- / Home 4 ----*/
+
+/*----  Home 3 ----*/
+@import 'index3';
+/*---- / Home 3 ----*/
+
+/*----  Home 2 ----*/
+@import 'index2';
+/*---- / Home 2 ----*/
+
+
+/*----  Home 1 ----*/
+.legal-solution {
+  .solution--btn {
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+
+.firststep--section {
+  position: relative;
+}
+
+.firststep--section .firststep--section-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  /* Also 50% black */
+  z-index: -1;
+}
+
+.working-process {
+  .process-list {
+    li.row {
+      max-width: 560px;
+      gap: 16px;
+      margin-bottom: 40px;
+
+      @include md-screen {
+        max-width: 100%;
+        gap: 0px;
+        margin-bottom: 20px;
+      }
+
+      .title {
+        color: hsla(var(--dark-grey) / 1);
+        line-height: 1.6;
+        margin-bottom: 16px;
+
+        @include md-screen {
+          margin-bottom: 8px;
+        }
+      }
+
+      .subtitle {
+        color: hsla(var(--dl-grey) / 1);
+      }
+
+      .markar-style {
+        width: 50px;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        font-family: var(--heading-font);
+        font-size: 22px;
+      }
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid hsla(0, 0%, 93%, 1);
+        padding-bottom: 40px;
+
+        @include md-screen {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*---- / Home 1 ----*/

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digitalescolombia.com/hotel-en-guaduas/sitemap.xml

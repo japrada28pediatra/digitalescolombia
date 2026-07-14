@@ -1,0 +1,47 @@
+.chunk-pagination {
+  &__wrap {
+    margin-top: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include md-screen {
+      margin-top: 18px;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+
+        li {
+          a {
+            border: 1px solid hsl(var(--base));
+            height: 60px;
+            width: 60px;
+            display: grid;
+            place-items: center;
+            color: hsl(var(--dark-grey));
+
+            &.active {
+              background-color: hsl(var(--base));
+              color: hsl(var(--white));
+            }
+
+            &:hover {
+              color: hsl(var(--white));
+              background-color: hsl(var(--base-d-200));
+            }
+
+            @include md-screen {
+              height: 35px;
+              width: 35px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

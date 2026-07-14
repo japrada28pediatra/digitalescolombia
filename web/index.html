@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Diseño web en Colombia, SEO y WordPress | Digitales Colombia</title>
+  <meta name="description" content="Diseño web en Colombia, SEO local y WordPress para empresas que quieren vender más. Sitios rápidos, claros, responsive y preparados para posicionar en Google." />
+  <link rel="canonical" href="https://digitalescolombia.com/web/" />
+
+  <meta property="og:title" content="Diseño web en Colombia, SEO y WordPress | Digitales Colombia" />
+  <meta property="og:description" content="Sitios rápidos, claros y preparados para generar consultas desde Google, WhatsApp y campañas digitales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://digitalescolombia.com/web/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Diseño web en Colombia, SEO y WordPress" />
+  <meta name="twitter:description" content="Webs profesionales para empresas colombianas que quieren más visibilidad, confianza y consultas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #10231f;
+      --bg-darker: #07130f;
+      --bg-light: #fffdf5;
+      --white: #ffffff;
+      --text-dark: #14231b;
+      --text-muted: #5f6f66;
+      --text-light: #e5e7eb;
+      --border-light: #e7e0c9;
+      --border-dark: rgba(255, 255, 255, 0.12);
+      --accent: #f8c400;
+      --accent-2: #1f6feb;
+      --accent-3: #d9272e;
+      --radius-sm: 8px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+      --shadow-soft: 0 18px 46px rgba(20, 35, 27, 0.12);
+      --shadow-dark: 0 30px 90px rgba(0, 0, 0, 0.35);
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #b77900;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow.dark {
+      color: #ffd84d;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 0.98;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 850px;
+    }
+
+    .section-text {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 22px 0 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #07130f;
+      background: linear-gradient(135deg, #ffd84d, #f8c400 48%, #ffffff);
+      box-shadow: 0 16px 36px rgba(248, 196, 0, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 22px 48px rgba(248, 196, 0, 0.36);
+    }
+
+    .btn-secondary {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--text-dark);
+      border-color: var(--border-light);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .btn-light:hover {
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(7, 19, 15, 0.84);
+      backdrop-filter: blur(18px);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0;
+      color: #fff;
+      position: relative;
+      z-index: 102;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #f8c400 0 45%, #1f6feb 45% 72%, #d9272e 72%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(248, 196, 0, 0.2);
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .desktop-nav a {
+      transition: color 0.2s ease;
+    }
+
+    .desktop-nav a:hover {
+      color: #fff;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 102;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 7, 18, 0.96);
+      backdrop-filter: blur(18px);
+      z-index: 101;
+      display: none;
+      padding: 110px 24px 32px;
+    }
+
+    .mobile-menu.is-open {
+      display: block;
+    }
+
+    .mobile-menu nav {
+      display: grid;
+      gap: 20px;
+    }
+
+    .mobile-menu a {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .mobile-menu .btn {
+      margin-top: 28px;
+      width: 100%;
+    }
+
+    .hero {
+      min-height: 100svh;
+      padding: 112px 0 64px;
+      background:
+        linear-gradient(90deg, rgba(248, 196, 0, 0.2) 0 24%, rgba(31, 111, 235, 0.14) 24% 42%, rgba(217, 39, 46, 0.12) 42% 58%, transparent 58%),
+        linear-gradient(180deg, #07130f 0%, #10231f 58%, #14231b 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 82%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 72px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-kicker span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 22px var(--accent-2);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 4.45vw, 56px);
+      line-height: 1;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 880px;
+    }
+
+    .hero h1 strong {
+      background: linear-gradient(135deg, #ffffff 10%, #ffd84d 38%, #69a1ff 70%, #ff7b80 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      margin: 22px 0 0;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.73);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-trust {
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .dashboard {
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045));
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-dark);
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .dashboard::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(248, 196, 0, 0.08) 0 33%, rgba(31, 111, 235, 0.08) 33% 66%, rgba(217, 39, 46, 0.08) 66%);
+      pointer-events: none;
+    }
+
+    .dashboard-top {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px 22px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .dashboard-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #99f6e4;
+    }
+
+    .dashboard-status span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2dd4bf;
+      box-shadow: 0 0 18px #2dd4bf;
+    }
+
+    .dashboard-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .metric-card {
+      min-height: 150px;
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .metric-card.large {
+      grid-column: span 2;
+      min-height: 190px;
+    }
+
+    .metric-card h3 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .metric-number {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: 0;
+      margin: 0;
+      color: #fff;
+    }
+
+    .metric-label {
+      margin: 8px 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .mock-bars {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .mock-bars span {
+      display: block;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .mock-bars span::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: var(--w);
+      border-radius: inherit;
+      background: linear-gradient(90deg, #f8c400, #1f6feb, #d9272e);
+    }
+
+    .floating-pill {
+      position: absolute;
+      z-index: 3;
+      right: -18px;
+      bottom: 52px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(3, 7, 18, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      font-size: 13px;
+      font-weight: 800;
+      backdrop-filter: blur(16px);
+    }
+
+    .contact-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 120;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: linear-gradient(135deg, #1f6feb, #0f4fb7);
+      box-shadow: 0 18px 42px rgba(31, 111, 235, 0.34);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .contact-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 52px rgba(31, 111, 235, 0.42);
+    }
+
+    .authority-grid {
+      margin-top: 54px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card,
+    .benefit-card,
+    .service-card,
+    .case-card,
+    .process-card {
+      border: 1px solid var(--border-light);
+      background: #fff;
+      border-radius: var(--radius-md);
+      box-shadow: 0 12px 34px rgba(15, 23, 42, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .feature-card:hover,
+    .benefit-card:hover,
+    .service-card:hover,
+    .case-card:hover,
+    .process-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+      border-color: rgba(248, 196, 0, 0.45);
+    }
+
+    .feature-card {
+      padding: 26px;
+    }
+
+    .icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f4fb7;
+      background: rgba(248, 196, 0, 0.18);
+      margin-bottom: 22px;
+    }
+
+    .feature-card h3,
+    .benefit-card h3,
+    .service-card h3,
+    .case-card h3,
+    .process-card h3 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .feature-card p,
+    .benefit-card p,
+    .service-card p,
+    .case-card p,
+    .process-card p {
+      margin: 12px 0 0;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    .dark-section {
+      background:
+        linear-gradient(90deg, rgba(248, 196, 0, 0.12) 0 32%, rgba(31, 111, 235, 0.1) 32% 66%, rgba(217, 39, 46, 0.1) 66%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 42%),
+        var(--bg-darker);
+      color: #fff;
+    }
+
+    .dark-section .section-text {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .services-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 30px;
+      min-height: 280px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.045));
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: none;
+      color: #fff;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 4px;
+      background: linear-gradient(90deg, #f8c400 0 45%, #1f6feb 45% 72%, #d9272e 72%);
+    }
+
+    .service-card.main {
+      grid-column: span 2;
+    }
+
+    .service-card.secondary {
+      grid-column: span 3;
+      min-height: 220px;
+    }
+
+    .service-card .icon-box {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card p {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .service-link {
+      position: absolute;
+      left: 30px;
+      bottom: 26px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .split-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .split-card {
+      padding: 34px;
+      border-radius: var(--radius-lg);
+      background: #fff;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 16px 45px rgba(15, 23, 42, 0.06);
+    }
+
+    .split-card h3 {
+      font-size: 28px;
+      letter-spacing: 0;
+      margin: 0 0 26px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .check-list i {
+      flex: 0 0 auto;
+      width: 23px;
+      height: 23px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(79, 140, 255, 0.1);
+      color: var(--accent);
+      margin-top: -1px;
+    }
+
+    .process-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .process-card {
+      padding: 24px;
+      position: relative;
+    }
+
+    .process-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #fff;
+      background: linear-gradient(135deg, #f8c400 0 42%, #1f6feb 42% 72%, #d9272e 72%);
+      margin-bottom: 22px;
+    }
+
+    .seo-block {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .city-panel {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow-dark);
+    }
+
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .city-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .city-link:hover {
+      background: rgba(255, 255, 255, 0.14);
+      transform: translateY(-2px);
+    }
+
+    .benefits-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .benefit-card {
+      padding: 26px;
+    }
+
+    .cases-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .case-card {
+      overflow: hidden;
+    }
+
+    .case-visual {
+      min-height: 190px;
+      padding: 18px;
+      background:
+        linear-gradient(135deg, rgba(248, 196, 0, 0.26), rgba(31, 111, 235, 0.2) 55%, rgba(217, 39, 46, 0.18)),
+        #10231f;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .case-browser {
+      height: 18px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .case-browser span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.36);
+    }
+
+    .case-lines {
+      display: grid;
+      gap: 10px;
+    }
+
+    .case-lines span {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .case-body {
+      padding: 26px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(248, 196, 0, 0.18);
+      color: #8a6000;
+      font-weight: 900;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .faq-wrap {
+      max-width: 900px;
+      margin: 56px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-align: left;
+      cursor: pointer;
+      color: var(--text-dark);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .faq-question svg {
+      flex: 0 0 auto;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-question[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 24px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .faq-answer.is-open {
+      display: block;
+    }
+
+    .cta-section {
+      padding: 110px 0;
+      background: #fff;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      padding: 68px;
+      background:
+        linear-gradient(90deg, rgba(248, 196, 0, 0.18) 0 35%, rgba(31, 111, 235, 0.14) 35% 66%, rgba(217, 39, 46, 0.14) 66%),
+        linear-gradient(135deg, #07130f, #14231b);
+      color: #fff;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .cta-box h2 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .cta-box p {
+      margin: 22px 0 0;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.75;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .cta-note {
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 80px 0 34px;
+      background: var(--bg-darker);
+      color: #fff;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(4, 1fr);
+      gap: 38px;
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.58);
+      line-height: 1.7;
+      margin: 18px 0 0;
+      max-width: 360px;
+    }
+
+    .footer h3 {
+      margin: 0 0 18px;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .footer ul {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      margin-top: 54px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.44);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+
+    @media (max-width: 1024px) {
+      .hero-inner,
+      .seo-block {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        max-width: 620px;
+      }
+
+      .authority-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-card.main,
+      .service-card.secondary {
+        grid-column: span 1;
+      }
+
+      .benefits-grid,
+      .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .desktop-nav,
+      .header-actions .btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .section {
+        padding: 82px 0;
+      }
+
+      .hero {
+        padding: 112px 0 66px;
+      }
+
+      .hero-inner {
+        gap: 46px;
+      }
+
+      .hero h1 {
+        font-size: clamp(34px, 9.8vw, 48px);
+        line-height: 1;
+      }
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .dashboard-grid,
+      .split-grid,
+      .city-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-card.large {
+        grid-column: auto;
+      }
+
+      .authority-grid,
+      .services-grid,
+      .process-grid,
+      .benefits-grid,
+      .cases-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-pill {
+        right: 14px;
+        bottom: 22px;
+      }
+
+      .contact-float {
+        right: 16px;
+        bottom: 16px;
+        width: 54px;
+        height: 54px;
+      }
+
+      .cta-box {
+        padding: 42px 26px;
+        border-radius: 14px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .header-inner {
+        height: 70px;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: clamp(32px, 12vw, 48px);
+      }
+
+      .split-card,
+      .service-card,
+      .feature-card,
+      .benefit-card,
+      .case-body {
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Digitales Colombia",
+    "url": "https://digitalescolombia.com/web/",
+    "description": "Agencia de diseño web, SEO y WordPress para empresas, profesionales y marcas en Colombia.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Digitales Colombia",
+    "url": "https://digitalescolombia.com/web/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://digitalescolombia.com/web?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una página web profesional en Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El costo depende del alcance, la cantidad de secciones, el nivel de diseño, las funcionalidades y la estrategia SEO necesaria. Podemos trabajar desde una landing profesional hasta un sitio completo preparado para escalar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Trabajan con empresas de cualquier ciudad de Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Trabajamos con empresas, profesionales y marcas en Bogotá, Medellín, Cali, Barranquilla, Cartagena y otras ciudades de Colombia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Pueden mejorar una web existente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Podemos auditar una web actual, detectar problemas de diseño, velocidad, SEO o conversión, y proponer mejoras concretas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacen páginas en WordPress?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Diseñamos, optimizamos y mantenemos sitios WordPress, incluyendo webs institucionales, landing pages y sitios con Elementor o WooCommerce."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿También trabajan SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. La estructura de cada sitio se piensa desde el inicio para facilitar la indexación, mejorar el contenido y preparar la web para competir en Google."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda un proyecto web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del tamaño del proyecto. Una landing puede resolverse más rápido, mientras que un sitio completo con estrategia SEO y varias páginas internas requiere más planificación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Pueden crear landings por ciudad o servicio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Podemos crear una estructura escalable de landings SEO por servicio, ciudad o línea de negocio, cuidando que cada página tenga contenido útil y diferente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El sitio queda preparado para Google?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Trabajamos estructura semántica, velocidad, etiquetas meta, contenido, enlaces internos y datos estructurados cuando corresponde."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="https://digitalescolombia.com/web/" class="logo" aria-label="Digitales Colombia">
+        <span class="logo-mark">
+          <i data-lucide="sparkles" size="18"></i>
+        </span>
+        Digitales Colombia
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#seo-colombia">SEO Colombia</a>
+        <a href="#landings">Landings</a>
+        <a href="#turismo">Turismo</a>
+        <a href="#blog">Blog</a>
+        <a href="#faqs">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-secondary">Solicitar diagnóstico</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <i data-lucide="menu" size="22"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav aria-label="Navegación mobile">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#seo-colombia">SEO Colombia</a>
+        <a href="#landings">Landings</a>
+        <a href="#turismo">Turismo</a>
+        <a href="#blog">Blog</a>
+        <a href="#faqs">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-kicker reveal">
+            <span></span>
+            Agencia web para empresas colombianas
+          </div>
+
+          <h1 class="reveal">
+            Diseño web en <strong>Colombia</strong> para vender más desde Google y WhatsApp
+          </h1>
+
+          <p class="hero-text reveal">
+            Creamos páginas web profesionales, rápidas y pensadas para generar confianza desde el primer clic.
+            Unimos diseño, SEO local, WordPress y copy comercial para que tu negocio sea más fácil de encontrar,
+            entender y contactar en Colombia.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="#contacto" class="btn btn-primary">
+              Solicitar diagnóstico gratuito
+              <i data-lucide="arrow-right" size="18"></i>
+            </a>
+            <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+          </div>
+
+          <p class="hero-trust reveal">
+            Bogotá · Medellín · Cali · Barranquilla · Cartagena · Todo Colombia
+          </p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="dashboard">
+            <div class="dashboard-top">
+              <span>Panel de crecimiento</span>
+              <span class="dashboard-status"><span></span> SEO ready</span>
+            </div>
+
+            <div class="dashboard-grid">
+              <article class="metric-card large">
+                <h3>Estructura digital</h3>
+                <p class="metric-number">+ claridad</p>
+                <p class="metric-label">
+                  Mensajes, servicios y llamados a la acción ordenados para que el usuario entienda rápido qué ofreces.
+                </p>
+                <div class="mock-bars">
+                  <span style="--w: 82%;"></span>
+                  <span style="--w: 64%;"></span>
+                  <span style="--w: 74%;"></span>
+                </div>
+              </article>
+
+              <article class="metric-card">
+                <h3>Consultas</h3>
+                <p class="metric-number">CTA</p>
+                <p class="metric-label">Botones y recorridos pensados para contacto.</p>
+              </article>
+
+              <article class="metric-card">
+                <h3>Base técnica</h3>
+                <p class="metric-number">SEO</p>
+                <p class="metric-label">HTML semántico, velocidad y estructura escalable.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="floating-pill">Mobile first · WordPress · Colombia</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="autoridad">
+      <div class="container">
+        <span class="eyebrow reveal">Estrategia digital</span>
+        <h2 class="section-title reveal">Tu web debería trabajar todos los días para tu negocio</h2>
+        <p class="section-text reveal">
+          Una página web en Colombia no debería quedarse como una tarjeta de presentación. Debe ayudarte a explicar
+          tus servicios, aparecer en búsquedas relevantes y convertir visitas en conversaciones comerciales.
+        </p>
+
+        <div class="authority-grid">
+          <article class="feature-card reveal">
+            <div class="icon-box"><i data-lucide="pen-tool" size="22"></i></div>
+            <h3>Diseño estratégico</h3>
+            <p>Diseñamos pensando en claridad, confianza y conversión, no solo en estética.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box"><i data-lucide="search" size="22"></i></div>
+            <h3>SEO desde la estructura</h3>
+            <p>Organizamos contenidos, títulos, enlaces y secciones para competir mejor en Google.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box"><i data-lucide="zap" size="22"></i></div>
+            <h3>Sitios rápidos y claros</h3>
+            <p>Priorizamos rendimiento, experiencia mobile y navegación simple.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box"><i data-lucide="target" size="22"></i></div>
+            <h3>Pensado para convertir</h3>
+            <p>Cada sección debe ayudar al usuario a entender, confiar y avanzar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="servicios">
+      <div class="container">
+        <span class="eyebrow dark reveal">Servicios</span>
+        <h2 class="section-title reveal">Diseño web, SEO y WordPress para empresas en Colombia</h2>
+        <p class="section-text reveal">
+          Combinamos diseño, desarrollo, contenido y SEO para crear sitios preparados para competir en Google Colombia,
+          recibir tráfico de calidad y convertir visitas en clientes potenciales.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card main reveal">
+            <div class="icon-box"><i data-lucide="layout-template" size="22"></i></div>
+            <h3>Diseño web y SEO</h3>
+            <p>Sitios profesionales para empresas, marcas y profesionales que necesitan presencia digital clara, moderna y orientada a resultados en Colombia.</p>
+            <a class="service-link" href="#servicios">Ver diseño web en Colombia <i data-lucide="arrow-right" size="16"></i></a>
+          </article>
+
+          <article class="service-card main reveal" id="medicos">
+            <div class="icon-box"><i data-lucide="stethoscope" size="22"></i></div>
+            <h3>Webs para médicos</h3>
+            <p>Páginas web para médicos, clínicas y consultorios que necesitan transmitir confianza, mostrar servicios y facilitar el contacto con pacientes.</p>
+            <a class="service-link" href="diseno-web-para-medicos-colombia.html">Ver webs para médicos <i data-lucide="arrow-right" size="16"></i></a>
+          </article>
+
+          <article class="service-card main reveal" id="wordpress">
+            <div class="icon-box"><i data-lucide="blocks" size="22"></i></div>
+            <h3>WordPress</h3>
+            <p>Diseño, optimización y mantenimiento de sitios WordPress para empresas que necesitan una web rápida, segura y fácil de administrar.</p>
+            <a class="service-link" href="diseno-wordpress-colombia.html">Ver servicios WordPress <i data-lucide="arrow-right" size="16"></i></a>
+          </article>
+
+          <article class="service-card secondary reveal">
+            <div class="icon-box"><i data-lucide="mouse-pointer-click" size="22"></i></div>
+            <h3>Landing pages</h3>
+            <p>Páginas enfocadas en campañas, servicios puntuales, lanzamientos y captación de leads por WhatsApp o formulario.</p>
+            <a class="service-link" href="blog/landing-pages-que-convierten-en-colombia.html">Ver landing pages <i data-lucide="arrow-right" size="16"></i></a>
+          </article>
+
+          <article class="service-card secondary reveal">
+            <div class="icon-box"><i data-lucide="shield-check" size="22"></i></div>
+            <h3>Mantenimiento web</h3>
+            <p>Soporte, mejoras, seguridad y optimización continua para sitios existentes.</p>
+            <a class="service-link" href="blog/mantenimiento-web-en-colombia.html">Ver mantenimiento <i data-lucide="arrow-right" size="16"></i></a>
+          </article>
+          <article class="service-card secondary reveal">
+            <div class="icon-box"><i data-lucide="palmtree" size="22"></i></div>
+            <h3>Turismo</h3>
+            <p>Sitios para hoteles, tours, glampings y negocios turísticos que necesitan reservas y SEO local.</p>
+            <a class="service-link" href="diseno-web-para-turismo-colombia.html">Ver turismo en Colombia <i data-lucide="arrow-right" size="16"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow reveal">Problema y solución</span>
+        <h2 class="section-title reveal">Muchas empresas tienen una web, pero no una herramienta comercial</h2>
+        <p class="section-text reveal">
+          Una página lenta, desactualizada o mal estructurada puede hacer que pierdas consultas todos los días.
+          Nuestro enfoque combina diseño, contenido, SEO técnico y experiencia de usuario para que tu sitio
+          no solo se vea bien, sino que también trabaje para tu negocio.
+        </p>
+
+        <div class="split-grid">
+          <article class="split-card reveal">
+            <h3>Problemas comunes</h3>
+            <ul class="check-list">
+              <li><i data-lucide="x" size="14"></i> Web lenta o antigua</li>
+              <li><i data-lucide="x" size="14"></i> Mensaje poco claro</li>
+              <li><i data-lucide="x" size="14"></i> Mala experiencia mobile</li>
+              <li><i data-lucide="x" size="14"></i> Poca visibilidad en Google</li>
+              <li><i data-lucide="x" size="14"></i> Pocas consultas desde la web</li>
+            </ul>
+          </article>
+
+          <article class="split-card reveal">
+            <h3>Cómo lo resolvemos</h3>
+            <ul class="check-list">
+              <li><i data-lucide="check" size="14"></i> Estructura clara</li>
+              <li><i data-lucide="check" size="14"></i> Diseño orientado a conversión</li>
+              <li><i data-lucide="check" size="14"></i> SEO técnico desde el inicio</li>
+              <li><i data-lucide="check" size="14"></i> Contenido útil y profesional</li>
+              <li><i data-lucide="check" size="14"></i> CTAs visibles y estratégicos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proceso" style="background:#fff;">
+      <div class="container">
+        <span class="eyebrow reveal">Proceso</span>
+        <h2 class="section-title reveal">Un proceso claro para construir una web que pueda crecer</h2>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <span class="process-number">1</span>
+            <h3>Diagnóstico</h3>
+            <p>Analizamos tu negocio, tu web actual y tus oportunidades digitales.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span class="process-number">2</span>
+            <h3>Estrategia</h3>
+            <p>Definimos estructura, mensajes, servicios, keywords y objetivos.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span class="process-number">3</span>
+            <h3>Diseño y desarrollo</h3>
+            <p>Creamos una web profesional, responsive y preparada para SEO.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span class="process-number">4</span>
+            <h3>Optimización</h3>
+            <p>Mejoramos velocidad, contenido, indexación y conversión.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span class="process-number">5</span>
+            <h3>Lanzamiento</h3>
+            <p>Publicamos, medimos y seguimos optimizando.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="seo-colombia">
+      <div class="container seo-block">
+        <div>
+          <span class="eyebrow dark reveal">SEO Colombia</span>
+          <h2 class="section-title reveal">Una estrategia pensada para competir en Google en Colombia</h2>
+          <p class="section-text reveal">
+            Creamos páginas y estructuras SEO preparadas para posicionar servicios por país, departamento y ciudad.
+            Esto permite captar búsquedas locales como diseño web en Bogotá, agencia SEO en Medellín, páginas web
+            en Cali o mantenimiento WordPress en Barranquilla.
+          </p>
+          <p class="section-text reveal">
+            La estructura puede escalar progresivamente hacia nuevas ciudades, servicios y páginas especializadas
+            sin perder claridad, intención comercial ni calidad de contenido.
+          </p>
+        </div>
+
+        <div class="city-panel reveal">
+          <div class="city-grid">
+            <a class="city-link" href="diseno-web-bogota.html">Bogotá <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-medellin.html">Medellín <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-cali.html">Cali <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-barranquilla.html">Barranquilla <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-cartagena.html">Cartagena <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-bucaramanga.html">Bucaramanga <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-pereira.html">Pereira <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-manizales.html">Manizales <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-armenia.html">Armenia <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-cucuta.html">Cúcuta <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-ibague.html">Ibagué <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-santa-marta.html">Santa Marta <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-villavicencio.html">Villavicencio <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-pasto.html">Pasto <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-neiva.html">Neiva <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-monteria.html">Montería <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-valledupar.html">Valledupar <i data-lucide="arrow-up-right" size="16"></i></a>
+            <a class="city-link" href="diseno-web-popayan.html">Popayán <i data-lucide="arrow-up-right" size="16"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="landings">
+      <div class="container">
+        <span class="eyebrow reveal">Landings SEO</span>
+        <h2 class="section-title reveal">40 páginas SEO para captar búsquedas comerciales y turísticas en Colombia</h2>
+        <p class="section-text reveal">
+          Creamos landings independientes con copy específico, FAQs completas, breadcrumbs y datos estructurados.
+          Cada página ataca una intención distinta: ciudad, servicio nacional o turismo.
+        </p>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal"><h3><a href="diseno-web-bogota.html">Diseño web en Bogotá</a></h3><p>Landing local para empresas B2B, servicios corporativos, salud y educación.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-medellin.html">Diseño web en Medellín</a></h3><p>Presencia digital para marcas modernas, tecnología y servicios profesionales.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-cali.html">Diseño web en Cali</a></h3><p>Webs rápidas y claras para comercios, servicios locales y marcas regionales.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-barranquilla.html">Diseño web en Barranquilla</a></h3><p>Estructura profesional para logística, construcción, salud y servicios.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-cartagena.html">Diseño web en Cartagena</a></h3><p>Landing para turismo, inmobiliarias, restaurantes, eventos y servicios premium.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-bucaramanga.html">Diseño web en Bucaramanga</a></h3><p>Web administrable para empresas regionales, salud, educación y comercio.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-para-medicos-colombia.html">Diseño web para médicos</a></h3><p>Hub para clínicas, consultorios y especialistas que necesitan una presencia confiable.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-para-turismo-colombia.html">Diseño web para turismo</a></h3><p>Hub para hoteles, tours, glampings y operadores turísticos que quieren más reservas.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-pereira.html">Diseño web en Pereira</a></h3><p>Captación local para negocios del Eje Cafetero con intención comercial.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-manizales.html">Diseño web en Manizales</a></h3><p>Contenido ordenado para educación, salud, tecnología y servicios.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-armenia.html">Diseño web en Armenia</a></h3><p>Landing para turismo, hoteles, inmobiliarias, comercios y servicios.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-cucuta.html">Diseño web en Cúcuta</a></h3><p>Presencia profesional para comercio, logística y servicios fronterizos.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-ibague.html">Diseño web en Ibagué</a></h3><p>SEO local para salud, educación, comercios e inmobiliarias.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-santa-marta.html">Diseño web en Santa Marta</a></h3><p>Landing para turismo, reservas, operadores, restaurantes y servicios locales.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-villavicencio.html">Diseño web en Villavicencio</a></h3><p>Webs para agroindustria, comercio, salud, construcción y turismo regional.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-pasto.html">Diseño web en Pasto</a></h3><p>Confianza digital para comercio, educación, turismo cultural y servicios.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-neiva.html">Diseño web en Neiva</a></h3><p>Páginas enfocadas en servicios, cotizaciones y consultas locales.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-monteria.html">Diseño web en Montería</a></h3><p>Presencia digital para salud, ganadería, comercio y empresas regionales.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-valledupar.html">Diseño web en Valledupar</a></h3><p>Webs para turismo, cultura, salud, comercio y servicios regionales.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-web-popayan.html">Diseño web en Popayán</a></h3><p>Contenido claro para educación, turismo cultural, salud y organizaciones.</p></article>
+          <article class="benefit-card reveal"><h3><a href="agencia-seo-colombia.html">Agencia SEO en Colombia</a></h3><p>Landing nacional para posicionamiento orgánico, SEO local y estructura de contenidos.</p></article>
+          <article class="benefit-card reveal"><h3><a href="diseno-wordpress-colombia.html">Diseño WordPress en Colombia</a></h3><p>Landing para sitios administrables, rápidos, seguros y preparados para SEO.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="turismo">
+      <div class="container">
+        <span class="eyebrow dark reveal">Turismo Colombia</span>
+        <h2 class="section-title reveal">Diseño web para turismo en destinos clave de Colombia</h2>
+        <p class="section-text reveal">
+          Landings para hoteles, tours, restaurantes, operadores, experiencias, alojamientos y negocios turísticos
+          que necesitan reservas directas, SEO local y confianza antes del viaje.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-bogota.html">Turismo en Bogotá</a></h3><p>Eventos, gastronomía, museos, alojamiento y viajes de negocios.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-cartagena.html">Turismo en Cartagena</a></h3><p>Hoteles boutique, tours históricos, bodas, restaurantes y experiencias premium.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-medellin.html">Turismo en Medellín</a></h3><p>Tours urbanos, eventos, cultura, alojamiento y turismo médico.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-cali.html">Turismo en Cali</a></h3><p>Salsa, gastronomía, eventos, academias y experiencias nocturnas.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-barranquilla.html">Turismo en Barranquilla</a></h3><p>Carnaval, eventos, hoteles, restaurantes y turismo de negocios.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-santa-marta.html">Turismo en Santa Marta</a></h3><p>Playas, Tayrona, Minca, Ciudad Perdida, hoteles y tours de naturaleza.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-san-andres.html">Turismo en San Andrés</a></h3><p>Hoteles, posadas, buceo, tours marítimos y experiencias de playa.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-pereira.html">Turismo en Pereira</a></h3><p>Eje Cafetero, fincas, termales, café, hoteles y experiencias familiares.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-bucaramanga.html">Turismo en Bucaramanga</a></h3><p>Aventura, parapente, cañones, hoteles y rutas por Santander.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-leticia.html">Turismo en Leticia</a></h3><p>Amazonas, lodges, tours de selva, avistamiento y expediciones.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-ibague.html">Turismo en Ibagué</a></h3><p>Turismo musical, naturaleza, gastronomía, hoteles y eventos culturales.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-armenia.html">Turismo en Armenia</a></h3><p>Parques temáticos, glamping, café, fincas y descanso familiar.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-manizales.html">Turismo en Manizales</a></h3><p>Termales, montaña, café, ferias, hoteles y experiencias culturales.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-villa-de-leyva.html">Turismo en Villa de Leyva</a></h3><p>Hoteles, bodas, escapadas románticas, historia y naturaleza.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-mompox.html">Turismo en Mompox</a></h3><p>Patrimonio, hoteles boutique, gastronomía, río y recorridos históricos.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-popayan.html">Turismo en Popayán</a></h3><p>Turismo religioso, gastronomía, patrimonio, guías y eventos culturales.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-pasto.html">Turismo en Pasto</a></h3><p>Carnaval, La Cocha, cultura, hoteles, gastronomía y rutas regionales.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-neiva.html">Turismo en Neiva</a></h3><p>Tatacoa, San Pedro, hoteles, operadores y rutas regionales.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-monteria.html">Turismo en Montería</a></h3><p>Río Sinú, gastronomía, cultura sabanera, eventos y experiencias rurales.</p></article>
+          <article class="service-card secondary reveal"><h3><a href="diseno-web-turismo-valledupar.html">Turismo en Valledupar</a></h3><p>Festival Vallenato, cultura musical, hoteles, ríos y experiencias regionales.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow reveal">Beneficios</span>
+        <h2 class="section-title reveal">Beneficios de trabajar con una agencia orientada a SEO y conversión</h2>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="icon-box"><i data-lucide="message-square-text" size="22"></i></div>
+            <h3>Más claridad</h3>
+            <p>Tu cliente entiende rápido qué haces, cómo lo ayudas y cómo contactarte.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box"><i data-lucide="trending-up" size="22"></i></div>
+            <h3>Mejor posicionamiento</h3>
+            <p>Una estructura preparada para crecer con páginas, ciudades y servicios.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box"><i data-lucide="inbox" size="22"></i></div>
+            <h3>Más consultas</h3>
+            <p>CTAs visibles y recorridos pensados para generar oportunidades reales.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box"><i data-lucide="megaphone" size="22"></i></div>
+            <h3>Lista para campañas</h3>
+            <p>Una web adaptable a Google Ads, Meta Ads, landings y acciones comerciales.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box"><i data-lucide="smartphone" size="22"></i></div>
+            <h3>Experiencia mobile</h3>
+            <p>Diseño responsive cuidado para usuarios que navegan desde el celular.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="icon-box"><i data-lucide="layers-3" size="22"></i></div>
+            <h3>Escalable</h3>
+            <p>Base preparada para sumar landings por ciudad, servicio o línea de negocio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos" style="background:#fff;">
+      <div class="container">
+        <span class="eyebrow reveal">Proyectos</span>
+        <h2 class="section-title reveal">Proyectos pensados para verse bien y funcionar mejor</h2>
+        <p class="section-text reveal">
+          Diseñamos sitios con foco en claridad, rendimiento y conversión. Cada proyecto debe ayudar
+          a explicar mejor el negocio y facilitar el contacto.
+        </p>
+
+        <div class="cases-grid">
+          <article class="case-card reveal">
+            <div class="case-visual">
+              <div class="case-browser"><span></span><span></span><span></span></div>
+              <div class="case-lines">
+                <span style="width:78%;"></span>
+                <span style="width:56%;"></span>
+                <span style="width:88%;"></span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="badge">Institucional</span>
+              <h3>Sitio institucional</h3>
+              <p>Arquitectura clara para presentar servicios, generar confianza y abrir conversaciones comerciales.</p>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-visual">
+              <div class="case-browser"><span></span><span></span><span></span></div>
+              <div class="case-lines">
+                <span style="width:66%;"></span>
+                <span style="width:86%;"></span>
+                <span style="width:52%;"></span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="badge">Captación</span>
+              <h3>Landing de conversión</h3>
+              <p>Página enfocada en un servicio, una oferta y una acción clara para campañas o SEO.</p>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-visual">
+              <div class="case-browser"><span></span><span></span><span></span></div>
+              <div class="case-lines">
+                <span style="width:84%;"></span>
+                <span style="width:48%;"></span>
+                <span style="width:70%;"></span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="badge">Médicos</span>
+              <h3>Web médica profesional</h3>
+              <p>Diseño pensado para transmitir confianza, ordenar servicios y facilitar turnos o consultas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="container">
+        <span class="eyebrow reveal">Blog Colombia</span>
+        <h2 class="section-title reveal">Guías para mejorar tu web, SEO y conversión</h2>
+        <p class="section-text reveal">
+          Contenido pensado para empresas colombianas que quieren tomar mejores decisiones sobre diseño web,
+          WordPress, SEO local, landings y mantenimiento.
+        </p>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <h3><a href="blog/diseno-web-en-colombia.html">Diseño web en Colombia</a></h3>
+            <p>Qué necesita una empresa para competir en internet con una web clara y profesional.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/seo-local-para-empresas-colombianas.html">SEO local para empresas</a></h3>
+            <p>Cómo aparecer en búsquedas por ciudad y captar clientes con intención comercial.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/wordpress-para-empresas-en-colombia.html">WordPress para empresas</a></h3>
+            <p>Buenas prácticas para una web administrable, rápida y preparada para SEO.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/landing-pages-que-convierten-en-colombia.html">Landing pages que convierten</a></h3>
+            <p>Estructura para campañas, servicios y captación de leads en Colombia.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/webs-para-medicos-en-colombia.html">Webs para médicos</a></h3>
+            <p>Cómo transmitir confianza y facilitar citas o consultas desde una página médica.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/mantenimiento-web-en-colombia.html">Mantenimiento web</a></h3>
+            <p>Por qué una web necesita seguridad, velocidad, actualizaciones y mejora continua.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/diseno-web-en-bogota.html">Diseño web en Bogotá</a></h3>
+            <p>Claves para competir en una ciudad con alta oferta de servicios y empresas.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/diseno-web-en-medellin.html">Diseño web en Medellín</a></h3>
+            <p>Presencia digital para marcas, negocios y servicios profesionales en Medellín.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/errores-de-diseno-web-que-bajan-conversiones.html">Errores de conversión</a></h3>
+            <p>Problemas de diseño que hacen perder consultas aunque la web reciba visitas.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3><a href="blog/cuanto-cuesta-una-pagina-web-en-colombia.html">Cuánto cuesta una web</a></h3>
+            <p>Factores que influyen en el precio de una página web profesional en Colombia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faqs">
+      <div class="container">
+        <span class="eyebrow reveal">FAQs</span>
+        <h2 class="section-title reveal" style="text-align:center; margin-inline:auto;">Preguntas frecuentes</h2>
+
+        <div class="faq-wrap reveal">
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿Cuánto cuesta una página web profesional en Colombia?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              El costo depende del alcance, la cantidad de secciones, el nivel de diseño, las funcionalidades y la estrategia SEO necesaria. Podemos trabajar desde una landing profesional hasta un sitio completo preparado para escalar.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿Trabajan con empresas de cualquier ciudad de Colombia?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Sí. Trabajamos con empresas, profesionales y marcas en Bogotá, Medellín, Cali, Barranquilla, Cartagena y otras ciudades de Colombia.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿Pueden mejorar una web existente?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Sí. Podemos auditar una web actual, detectar problemas de diseño, velocidad, SEO o conversión, y proponer mejoras concretas.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿Hacen páginas en WordPress?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Sí. Diseñamos, optimizamos y mantenemos sitios WordPress, incluyendo webs institucionales, landing pages y sitios con Elementor o WooCommerce.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿También trabajan SEO?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Sí. La estructura de cada sitio se piensa desde el inicio para facilitar la indexación, mejorar el contenido y preparar la web para competir en Google.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿Cuánto tarda un proyecto web?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Depende del tamaño del proyecto. Una landing puede resolverse más rápido, mientras que un sitio completo con estrategia SEO y varias páginas internas requiere más planificación.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿Pueden crear landings por ciudad o servicio?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Sí. Podemos crear una estructura escalable de landings SEO por servicio, ciudad o línea de negocio, cuidando que cada página tenga contenido útil y diferente.
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              ¿El sitio queda preparado para Google?
+              <i data-lucide="chevron-down" size="20"></i>
+            </button>
+            <div class="faq-answer">
+              Sí. Trabajamos estructura semántica, velocidad, etiquetas meta, contenido, enlaces internos y datos estructurados cuando corresponde.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contacto">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>¿Quieres convertir tu web en una herramienta real de ventas?</h2>
+          <p>
+            Podemos revisar tu situación actual y proponerte una estructura clara para mejorar tu presencia digital,
+            captar más consultas y preparar tu negocio para crecer en Google.
+          </p>
+
+          <div class="cta-actions">
+            <a href="mailto:hola@digitalescolombia.com" class="btn btn-primary">
+              Solicitar diagnóstico gratuito
+              <i data-lucide="arrow-right" size="18"></i>
+            </a>
+            <span class="cta-note">Diagnóstico inicial · Estrategia clara · Sin compromiso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="https://digitalescolombia.com/web/" class="logo">
+            <span class="logo-mark">
+              <i data-lucide="sparkles" size="18"></i>
+            </span>
+            Digitales Colombia
+          </a>
+          <p>
+            Agencia de diseño web, SEO y WordPress para empresas, profesionales y marcas en Colombia.
+          </p>
+        </div>
+
+        <div>
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="#servicios">Diseño web</a></li>
+            <li><a href="agencia-seo-colombia.html">SEO</a></li>
+            <li><a href="diseno-wordpress-colombia.html">WordPress</a></li>
+            <li><a href="#landings">Landings SEO</a></li>
+            <li><a href="blog/mantenimiento-web-en-colombia.html">Mantenimiento web</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Líneas</h3>
+          <ul>
+            <li><a href="#servicios">General</a></li>
+            <li><a href="#medicos">Médicos</a></li>
+            <li><a href="diseno-wordpress-colombia.html">WordPress</a></li>
+            <li><a href="#landings">Landings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Ciudades</h3>
+          <ul>
+            <li><a href="diseno-web-bogota.html">Bogotá</a></li>
+            <li><a href="diseno-web-medellin.html">Medellín</a></li>
+            <li><a href="diseno-web-cali.html">Cali</a></li>
+            <li><a href="diseno-web-barranquilla.html">Barranquilla</a></li>
+            <li><a href="diseno-web-cartagena.html">Cartagena</a></li>
+            <li><a href="diseno-web-bucaramanga.html">Bucaramanga</a></li>
+            <li><a href="diseno-web-pereira.html">Pereira</a></li>
+            <li><a href="diseno-web-santa-marta.html">Santa Marta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:hola@digitalescolombia.com">hola@digitalescolombia.com</a></li>
+            <li><a href="#contacto">Solicitar diagnóstico</a></li>
+            <li><a href="#landings">Landings SEO</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Digitales Colombia. Todos los derechos reservados.</span>
+        <span>Diseño web, SEO y WordPress en Colombia.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="contact-float"
+    href="mailto:hola@digitalescolombia.com"
+    aria-label="Contactar a Digitales Colombia"
+  >
+    <i data-lucide="mail" size="28"></i>
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      const header = document.getElementById("siteHeader");
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+
+      function updateHeader() {
+        if (window.scrollY > 20) {
+          header.classList.add("is-scrolled");
+        } else {
+          header.classList.remove("is-scrolled");
+        }
+      }
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      function closeMenu() {
+        document.body.classList.remove("menu-open");
+        mobileMenu.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i data-lucide="menu" size="22"></i>';
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+      }
+
+      function openMenu() {
+        document.body.classList.add("menu-open");
+        mobileMenu.classList.add("is-open");
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.innerHTML = '<i data-lucide="x" size="22"></i>';
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+      }
+
+      menuToggle.addEventListener("click", function () {
+        const isOpen = mobileMenu.classList.contains("is-open");
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+
+      const faqButtons = document.querySelectorAll(".faq-question");
+
+      faqButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const answer = button.nextElementSibling;
+          const isOpen = button.getAttribute("aria-expanded") === "true";
+
+          faqButtons.forEach(function (otherButton) {
+            otherButton.setAttribute("aria-expanded", "false");
+            otherButton.nextElementSibling.classList.remove("is-open");
+          });
+
+          if (!isOpen) {
+            button.setAttribute("aria-expanded", "true");
+            answer.classList.add("is-open");
+          }
+        });
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (window.gsap && !reduceMotion) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".hero .reveal", {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: "power3.out"
+        });
+
+        gsap.to(".dashboard", {
+          y: -12,
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut"
+        });
+
+        gsap.utils.toArray(".section .reveal, .cta-box.reveal").forEach(function (element) {
+          gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            duration: 0.85,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 86%",
+              once: true
+            }
+          });
+        });
+      } else {
+        document.querySelectorAll(".reveal").forEach(function (element) {
+          element.style.opacity = "1";
+          element.style.transform = "none";
+        });
+      }
+    });
+  </script>
+<section class="dc-internal-links" style="padding:28px 0;background:#fff;border-top:1px solid #e5e7eb;"><div style="max-width:1100px;margin:0 auto;padding:0 20px;"><h2 style="font-size:1.35rem;margin-bottom:12px;">Explorar servicios relacionados</h2><p style="margin-bottom:12px;">También podés revisar otros recursos del ecosistema Digitales Colombia:</p><p><a href="/marketing-digital-colombia.html">Marketing digital</a> · <a href="/salud-en-colombia.html">Salud en Colombia</a> · <a href="/abogados-en-colombia.html">Abogados en Colombia</a> · <a href="/servicios-locales-bogota.html">Servicios locales Bogotá</a> · <a href="/alojamientos-y-turismo-colombia.html">Alojamientos y turismo</a></p></div></section>
+<a class="dc-floating-whatsapp" href="https://wa.me/573180435023" aria-label="Consultar por WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#22c55e;color:#07131f;padding:12px 16px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.18);">WhatsApp</a>
+</body>
+</html>

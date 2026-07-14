@@ -1,0 +1,1498 @@
+/*------------------------------------------------------------------
+* Project:        Fitrainer - Gym & Fitness Design HTML Templates
+* Author:         HtmlDesign Templates
+* URL:            https://themeforest.net/user/htmldesigntemplates/portfolio
+* Created:        01/05/2026
+-------------------------------------------------------------------*/
+
+/*
+
+1.Default CSS
+2.Header CSS
+3.Banner CSS
+4.About Us CSS
+5.Feature CSS
+6.Ad Banner CSS
+7.Service CSS
+8.Teams CSS
+9.Testimonial CSS
+10.Price CSS
+11.Blog CSS
+12.Contact CSS
+13.Footer CSS
+14.Homepage 2 CSS
+15.About Us Page CSS
+16.Trainer Detail Page CSS
+17.Faq Page CSS
+18.Testimonial Page CSS
+19.Error Page CSS
+20.Search Page CSS
+21.Coming Soon Page CSS
+22.Blog List Page CSS
+23.Shop Page CSS
+24.Contact Us Page CSS
+25.Homepage 3 Page CSS
+26.Dashboard CSS
+
+*/
+
+
+/*1. Tools & helpers*/
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+/*2. Base styles*/
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'components';
+
+/* Header */
+header {
+  .header-right {
+    .social-link{
+      a i{
+        @include social-link;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $white-color;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      border-left: none !important;
+      border-top: 1px solid $grey-color;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  .header-nav, .header-btn {
+      .nav-link {
+        color: $text-color;
+        padding: 20px 15px;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      .nav-link.show, .nav-link.active {
+        color: $primary-color;
+      }
+      
+      .nav-item.no-after::after {
+        display: none;
+      }
+
+      .nav-item {
+        .dropdown-menu>li>a {
+          font-size: 16px;
+          padding: 12px 30px;
+          background-color: $grey-color;
+          color: $text-color;
+          font-weight: 500;
+          border-bottom: 1px dashed #87878726;
+        }
+        .dropdown-menu>li>a:hover, .dropdown-menu>li>a.active{
+          background-color: $primary-color;
+          color: #ffffff;
+          border: $grey-color !important;
+        }
+      }
+  }
+
+  
+  @media (min-width: 1180px) {
+    .navbar-nav .dropdown-menu{
+      position: absolute;
+      top: auto;
+    }
+
+    .dropdown-menu{
+      display: block;
+      opacity: 0;
+      visibility:hidden;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+      opacity: 1 ;
+      visibility: visible;
+      transition:all .3s ease-in-out;
+    }
+    
+    .dropdown>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+    }
+
+    ul.dropdown-menu {
+      max-height: 630px !important; 
+      overflow-y: auto !important;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    .dropdown-item.active{
+      background-color: $secondary-color;
+    }
+  }
+
+
+  @media (max-width: 1180px){
+    div#slicknav-mobile, .dropdown-toggle::after  {
+      display: block;
+    }
+
+    .header-top, .mt_search ,.slicknav_nav .slicknav_arrow,  .navbar-button, .navbar-sticky-in, #responsive-menu {
+      display: none;
+    }
+
+    .slicknav_menu {
+      display: block;
+    }
+
+    .nav-link{
+      padding: 12px 36px !important;
+      margin: 0 !important;
+    }
+
+    .slicknav_btn{
+      position: absolute;
+      right: 70px;
+    }
+
+    .slicknav_btn.slicknav_open:before, .slicknav_btn.slicknav_collapsed:before {
+      left : -800px;
+      top: 134px;
+      padding: 8px;
+      position: absolute;
+      color: $primary-color;
+    }
+
+    .dropdown-menu {
+      border-radius: 0 !important;
+    }
+
+    .slicknav_btn.slicknav_open:before{
+      color: $secondary-color;
+    }
+
+    .slicknav_nav {
+      top: 182px;
+      left: 0;
+      background-color: #F5F5F5;
+      position: absolute;
+      z-index: 2;
+      height: 280px;
+      overflow: auto;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    } 
+
+    .slicknav_nav a:hover, li.nav-item.dropdown.slicknav_parent.slicknav_open > a > a {
+      background-color: $primary-color !important;
+      color: #fff !important;
+    }
+
+    .slicknav_nav a, .dropdown-menu>li>a{
+      font-size: 16px;
+      background-color: #F5F5F5;
+      color: #33373d;
+      text-transform: capitalize !important;
+      border: none !important;
+      font-weight: 400 !important;
+    }
+
+    .dropdown-menu>li>a{
+      padding-left: 50px !important;
+      border-top: 1px solid #FBFBFB !important;
+    }
+    
+    .header-btn {
+      .dropdown:hover>.dropdown-menu, ul.dropdown-menu{
+        right: 0 !important;
+      }
+    }
+
+    .dropdown-toggle::after{
+      display: none;
+    }
+
+    .slicknav_nav .active, .fa-angle-up:before{
+      background-color: $primary-color;
+      color: #fff !important;
+    }
+
+    .dropdown-toggle::after {
+      display: inline-block;
+      margin-left: .255em;
+      vertical-align: .255em;
+      content: "";
+      border-top: .3em solid;
+      border-right: .3em solid transparent;
+      border-bottom: 0;
+      border-left: .3em solid transparent;
+    }
+
+    .header-nav-inner {
+      border: none !important;
+    }
+
+    .header-btn  .nav-link:hover{
+      background-color: transparent !important;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .slicknav_nav .slicknav_item a {
+        pointer-events: none;
+    }
+  }
+  
+   @media (max-width: 1600px) {
+    .header-btn {
+      .dropdown:hover>.dropdown-menu, ul.dropdown-menu{
+        right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 996px) {
+    .slicknav_btn.slicknav_open:before, .slicknav_btn.slicknav_collapsed:before {
+      top: 110px;
+      left: -700px;
+    }
+
+    .slicknav_nav {
+      top: 165px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header .header-nav .header-logo img {
+      width: 160px;
+    }
+    .slicknav_btn.slicknav_open:before, .slicknav_btn.slicknav_collapsed:before {
+      top: 90px;
+      left: -310px;
+    }
+    .slicknav_nav {
+      top: 145px;
+    }
+    header  .header-btn .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+  }
+
+}
+
+/* Banner Section CSS */
+.banner {
+
+  .banner-slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 20px 20px;
+
+  }
+  border-radius: 0px 0px 20px 20px;
+
+  .overlay {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .banner-image-wrapper {
+    right: 10%;
+  }
+  
+  .banner-right {
+    // background-image: url(../image/circle-bg1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 80%;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 1400px){
+    .banner-image-wrapper {
+      right: 5%;
+    }
+  }
+
+  @media (max-width: 1200px){
+    .banner-image-wrapper {
+      right: 0%;
+    }
+  }
+
+  @media (max-width: 996px) {
+    .banner-right {
+      img {
+        width: 20%;
+      }
+    }
+    .banner-image-wrapper {
+      right: 10%;
+
+      .circle-container .circle {
+        top: 80%;
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .banner-right {
+      img {
+        width: 40%;
+      }
+    }
+    .banner-image-wrapper {
+      right: 0%;
+
+      .circle-container {
+        height: 500px;
+      }   
+    }
+  }
+}
+
+/* About */ 
+ @media (max-width: 768px) {
+  .about-us .about-image-right {
+    margin-left: 0 !important;
+  }
+ }
+
+/* Feature Section CSS */
+.feature {
+  background-image: linear-gradient(180deg, #0C0C0E 0%, #1D1E21 100%);
+
+  .overlay {
+    background-image: url(../image/sportswoman-exercise-workout-in-gym-fitness-traini-2023-04-25-05-01-20-utc1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+  }
+
+  .feature-box {
+    padding: 40px;
+    transition:all .3s ease-in-out;
+
+    &:hover {
+      border-color: $primary-color !important;
+      transition:all .3s ease-in-out;
+    }
+  }
+}
+
+/* Ad Banner */
+.ad-banner {
+  background-image: linear-gradient(90deg, #1D1E21 30%, #DC1D24 100%);
+  .circle-container {
+      overflow: visible;
+  }    
+
+  .circle-container {
+    .circle {
+      width: 340px;
+      height: 340px;
+      top: 35%;
+    }
+  } 
+
+  @media (max-width: 996px) {
+    img {
+      margin-top: 0 !important;
+    } 
+    .circle-container {
+      overflow: hidden;
+      .circle {
+        top: 40%;
+        width: 250px;
+        height: 250px;
+      }
+    } 
+  }
+
+  @media (max-width: 786px) {
+    .circle-container {
+      overflow: hidden;
+      .circle {
+        top: 40%;
+        width: 340px;
+        height: 340px;
+      }
+    }  
+  }
+}
+
+/* Service */ 
+.service {
+  .overlay {
+    background-image: url(../image/funfact-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    background-color: transparent;
+  }
+  .service-box {
+    padding: 40px;
+    img {
+      transition: all .3s ease-in-out;
+    }
+     &:hover {
+      background-color: $primary-color !important;
+      color: $white-color !important;
+      transition: all .3s ease-in-out;
+      a, h3{
+        color: $white-color !important;
+      }
+      .service-icon {
+        img:first-child {
+          opacity: 0;
+          transition: all .3s ease-in-out;
+        }
+        img:last-child {
+          opacity: 1 !important;
+          transition: all .3s ease-in-out;
+        }
+      }
+     }
+  }
+}
+
+/* Teams Section CSS */
+.team {
+  .team-box {
+    .social-link{
+      a i{
+        @include social-link;
+        transition: all .3s ease-in-out;
+        background-color: $primary-color;
+        color: $white-color;
+
+        &:hover {
+          background-color: $secondary-color !important;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+
+    .team-image {
+      img {
+        filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+        transition: all .3s ease-in-out;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.9;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+/* Testimonial Section CSS */
+.testimonial {
+  background-image: url(../image/fitness-gym-2021-11-02-02-16-08-utc1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border-radius: inherit;
+    background-color: inherit;
+  }
+
+  .divider-wave {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpath d='M0,6c6,0,6,13,12,13S18,6,24,6'/%3E%3C/svg%3E");
+  }
+  
+  .overlay {
+    background-image: linear-gradient(90deg, #1D1E21 0%, #0C0C0E 100%);
+    opacity: 0.8;
+  }
+
+  .testimonial-top {
+    background-color: #FFFFFF12;
+
+    .testimonial-icon {
+      i {
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+      }
+    }
+  }
+
+  .slick-slide.slick-active {
+    .testimonial-top {
+      background-color: #DC1D24 !important;
+      margin-top: 40px;
+      margin-left: -50px;
+      border-color: #DC1D24 !important;
+
+      .testimonial-icon i {
+        background-color: #fff !important;
+      }
+    }
+  }
+
+  .slick-slide.slick-current.slick-active {
+    .testimonial-top {
+      background-color: transparent !important;
+      margin: 0;
+      border-color: #D9D9D978 !important;
+
+      .testimonial-icon i {
+        background-color: #ffffff50 !important;
+      }
+    }
+  }
+
+  .title-sperator1 {
+    &::after {
+      border-block-start: 2px solid $white-color;
+    }
+  }
+}
+
+/* Price Section CSS */
+.price {
+  .pricing-title {
+    .divider-wave {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpath d='M0,6c6,0,6,13,12,13S18,6,24,6'/%3E%3C/svg%3E");
+    }
+
+    .title-sperator {
+       &::after, &::before {
+        border-block-start: 2px solid $white-color;
+       }
+    }
+  }
+}
+
+/* Blog Section CSS */
+.blog {
+  .blog-box {
+    .blog-image {
+      .overlay {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, .35), transparent 75%);
+        opacity: 1;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 0;
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+}
+
+
+/* Contact Qoute */
+.contact-qoute {
+  .title-sperator1 {
+    &::after {
+      border-block-start: 2px solid $white-color;
+    }
+  }
+} 
+
+
+/* Footer Section CSS */
+footer {
+  background-image: linear-gradient(180deg, #1D1E21 0%, #0C0C0E 100%);
+  .footer-bottom {
+    .social-link{
+      a i{
+        @include social-link;
+        transition: all .3s ease-in-out;
+        background-color: #DC1D2459;
+        color: $white-color;
+
+        &:hover {
+          background-color: $primary-color !important;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+/* ========================================= */
+
+/*             Index 1 Page CSS             */
+
+/* ======================================== */
+.index1 {
+
+  // Banner Section CSS
+  .banner{
+    background-image: url(../image/gym-workout-morning-2022-11-02-04-12-58-utc.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .title-sperator {
+      &::after, &::before {
+        border-block-start: 2px solid $white-color;
+      }
+    }
+
+    .banner-image {
+      background-image: url(../image/circle-bg1.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .overlay {
+      background-image: linear-gradient(180deg, #A3050B 0%, #0C0C0E 100%);
+      opacity: 0.7;
+    }
+    
+    @media (min-width: 1400px) {
+      h1 {
+        font-size: 90px;
+      }
+    }
+  }
+
+  // Fitness Type Section CSS
+  .fitness-type {
+    background-image: linear-gradient(180deg, #0C0C0E 0%, #1D1E21 100%);
+
+    .overlay {
+      background-image: url(../image/sportswoman-exercise-workout-in-gym-fitness-traini-2023-04-25-05-01-20-utc1.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      background-attachment: fixed;
+      background-size: cover;     
+    }
+  }
+
+  // About Us setion CSS
+  .about-us {
+    .about-stats {
+      @media (max-width: 786px) {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  //Why Us section CSS
+  .why-us {
+    background-image: url(../image/confident-sportswoman-with-dumbbell-dark.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .title-sperator1 {
+      &::after {
+        border-block-start: 2px solid $white-color;
+      }
+    }
+    .divider-wave {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpath d='M0,6c6,0,6,13,12,13S18,6,24,6'/%3E%3C/svg%3E");
+    }
+  }
+
+  // Testimonial Section CSS
+  .testimonial1 {
+    .testimonial-icon {
+      i {
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+      }
+    }
+
+    @media (min-width: 786px) {
+      .slick-slide.slick-current.slick-active.slick-center {
+        margin-top: 40px !important;
+
+        .testimonial-top {
+          background-color: #DC1D24 !important;
+          border-color: #DC1D24 !important;
+          p{
+            color: $white-color;
+          }
+
+          .testimonial-icon i {
+            background-color: #fff !important;
+          }
+        }
+      }
+    }
+    
+  }
+
+  // Partner Section CSS
+  .partner {
+    background-image: linear-gradient(90deg, #1D1E21 0%, #A3050B 100%);
+
+    .title-sperator {
+      &::after, &::before {
+        border-block-start: 2px solid $white-color;
+      }
+    }
+  }
+}
+
+
+/* ========================================= */
+
+/*            About Us Page CSS             */
+
+/* ======================================== */
+.breadcrumb {
+  background-image: url(../image/gym-workout-morning-2022-11-02-04-12-58-utc.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media (min-width: 1400px) {
+    h2 {
+      font-size: 48px;
+    }
+  }
+  
+}
+
+/* ========================================= */
+
+/*         Trainer Detail Page CSS          */
+
+/* ======================================== */
+.trainer-detail {
+  .trainer-socials {
+    .social-link{
+      a i{
+        @include social-link;
+        transition: all .3s ease-in-out;
+        background-color: $grey-color;
+        color: $text-color;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        font-size: 18px;
+
+        &:hover {
+          background-color: $primary-color !important;
+          transition: all .3s ease-in-out;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+/* ========================================= */
+
+/*         Trainer Detail Page CSS          */
+
+/* ======================================== */
+.faq {
+  .accordion-button:not(.collapsed) {
+    background-color: $primary-color !important;
+    color: $white-color !important;
+  }
+
+  .accordion-button::after{
+        background-image: none;
+        font-family: "FontAwesome";
+        content: "\f078"; 
+        font-weight: 200;
+      }
+}
+
+/* ========================================= */
+
+/*          Testimonial Page CSS            */
+
+/* ======================================== */
+.testimonial1 {
+  .testimonial-icon {
+    i {
+      height: 80px;
+      width: 80px;
+      line-height: 80px;
+    }
+  }
+}
+
+/* ========================================= */
+
+/*             Error Page CSS               */
+
+/* ======================================== */
+
+.error{
+  h1 {
+    -webkit-text-stroke-width: 2px;
+    stroke-width: 2px;
+    -webkit-text-stroke-color: #A3050B;
+    stroke: #A3050B;
+    color: #3A4CB400;
+  }
+}
+
+/* ========================================= */
+
+/*             Search Page CSS               */
+
+/* ======================================== */
+.search {
+  .overlay {
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFEEEE 100%);
+    opacity: 0.5;
+  }
+}
+
+/* ========================================= */
+
+/*            Coming-soon Page CSS          */
+
+/* ======================================== */
+.coming-soon {
+  background-image: url(../image/gym-workout-morning-2022-11-02-04-12-58-utc.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .overlay {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #A3050B 0%, #0C0C0E 100%);
+    opacity: 0.7;
+  }
+  .social-links li a {
+    i {
+      height: 40px;
+      width: 40px;
+      font-size: 16px;
+      line-height: 40px;
+
+      &:hover {
+        background-color: $primary-color !important;
+        color: $white-color;
+      }
+    }
+  }
+
+  .title-sperator {
+    &::after, &::before {
+      border-block-start: 2px solid $white-color;
+    }
+  }
+
+  .divider-wave {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpath d='M0,6c6,0,6,13,12,13S18,6,24,6'/%3E%3C/svg%3E");
+  }
+
+  @media (min-width: 1400px) {
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  @media (max-width: 995px) and (orientation: landscape) {
+      height: 200vh !important;
+  }
+
+  @media (max-width: 995px)
+  {
+    .coming-soon-inner {
+        width: 100% !important;
+      }
+  }
+}
+
+/* ========================================= */
+
+/*             Blog List Page CSS           */
+
+/* ======================================== */
+.blog {
+  .social-link{
+      a i{
+        @include social-link;
+        transition: all .3s ease-in-out;
+        background-color: $grey-color;
+        color: $text-color;
+
+        &:hover {
+          background-color: $primary-color !important;
+          transition: all .3s ease-in-out;
+          color: $white-color;
+        }
+      }
+    }
+}
+
+/* ========================================= */
+
+/*              Shop Page CSS               */
+
+/* ======================================== */
+.shop  {
+  .product-gallery {
+    .gallery-image{
+      a {
+        .overlay {
+          opacity: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100% !important;
+          transition: all ease-in-out .3s;
+        }
+      }
+      &:hover {
+          .overlay {
+            opacity: .5;
+            transition: all ease-in-out .3s;
+          }
+        }
+    }
+  }
+}
+
+.nav-tabs .nav-link {
+  color: $secondary-color;
+  border: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border: none;
+  border-bottom: 1px solid $primary-color;
+  color: $primary-color;
+  background-color: transparent;
+}
+
+/* ========================================= */
+
+/*            Contact Page CSS              */
+
+/* ======================================== */
+.contact {
+  .social-link{
+    a i{
+      @include social-link;
+      transition: all .3s ease-in-out;
+      background-color: #FFFFFF30;
+      color: $white-color;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      font-size: 18px;
+
+      &:hover {
+        background-color: $secondary-color !important;
+        transition: all .3s ease-in-out;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+/* ========================================= */
+
+/*            Homepage 3 CSS                */
+
+/* ======================================== */
+.index2 {
+  .header-nav {
+      .navbar-nav{
+        .nav-link { 
+        color: $white-color;
+        &:hover {
+          color: $primary-color;
+        }
+      } 
+    }
+  }
+
+  header .slicknav_btn.slicknav_open:before, header .slicknav_btn.slicknav_collapsed:before {
+    color: $white-color;
+  }
+
+  header .header-btn .nav-link  {
+    background-color: transparent !important;
+    color: $white-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  // Banner
+  .banner {
+    margin-top: -100px;
+    img {
+      height: 900px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1400px) {
+      margin-top: -190px;
+    }
+
+    .overlay {
+      background-image: linear-gradient(180deg, #A3050B 0%, #0C0C0E 100%);
+      opacity: 0.6;
+    }
+    .overlay1 {
+      background-image: url(../image/shape-pat2.png);
+      background-position: bottom center;
+      background-repeat: repeat-x;
+      background-size: contain;
+      opacity: 1;
+    }
+  }
+
+  // Feature
+  .feature {
+    .circle-container{
+      overflow: visible;
+      img{
+        margin-top: -50%; 
+        @media (max-width: 992px) {
+          margin-top: 0;
+        }
+      }
+      .circle {
+        top: 20%;
+
+        @media (max-width: 1200px) {
+          height: 250px;
+          width: 250px !important;
+        }
+
+        @media (max-width: 992px) {
+          height: 300px;
+          width: 300px !important;
+          top: 30%;
+        }
+        @media (max-width: 768px) {
+          height: 270px;
+          width: 270px !important;
+          top: 30%;
+        }
+      }
+    } 
+    .feature-banner {
+      margin-bottom: -10%;
+      @media (min-width: 1400px) {
+        .h1 {
+          font-size: 48px;
+        }
+      }
+      @media (max-width: 992px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // About
+  .about {
+    margin-top: -100px;
+    .overlay {
+      background-image: url(../image/shape-pat.png);
+      background-position: top center;
+      background-repeat: repeat-x;
+      background-size: contain;
+      opacity: 1;
+      @media (max-width: 1200px) {
+        top: 30px
+      }
+      @media (max-width: 992px) {
+        top: 45px
+      }
+      @media (max-width: 768px) {
+        top: 80px
+      }
+    }
+
+    .about-images {
+      .about-image-left {
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        margin-right: -10%;
+      }
+      .about-image-right {
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+      }
+
+      @media (max-width: 768px) {
+        .about-image-left {
+          transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          margin-right: 0%;
+        }
+        .about-image-right {
+          transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+        }
+      }
+    }
+
+    .about-exp {
+      background-image: url(../image/tag_red_sale_set-Converted-02.png);
+      margin: 0% 0% 0% 0%;
+      padding: 25px 30px 30px 30px;
+      background-repeat: no-repeat;
+      background-size: 50% auto;
+      background-position: center;
+      text-align: center;
+    }
+  }
+
+  // Program
+  .program {
+    .overlay {
+      background-image: url(../image/shape-pat2-1.png);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 1;
+    }
+  }
+
+  // Achivement
+  .achievement {
+      background-image: linear-gradient(90deg, #1D1E21 100%, #1D1E2100 0%);
+      svg {
+        transform: scaleX(-1);
+        position: absolute;
+        top: 0;
+        path {
+          fill: $grey-color;
+        }
+      }
+  }
+
+  // Partner
+  .partner {
+    padding: 38px 0;
+    background-image: linear-gradient(90deg, #FFFFFF00 28%, #DC1D24 0%);
+    @media (max-width: 1400px) {
+      background-image: linear-gradient(90deg, #FFFFFF00 0%, #DC1D24 0%);
+    }
+    .title-sperator {
+      &::after, &::before {
+        border-block-start: 2px solid $white-color;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .partner-inner {
+        margin-left: 300px;
+      }
+    }
+  }
+
+  // Service
+  .service {
+    background-image: url(../image/sportswoman-exercise-workout-in-gym-fitness-traini-2023-04-25-05-01-20-utc1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      border-radius: inherit;
+    }
+
+    .overlay {
+      background-color: #0C0C0E;
+      opacity: 0.5;
+      background-image: none;
+    }
+
+    .service-body {
+      .service-box {
+        &:hover {
+          img {
+            scale: 1.05;
+            transition: all .3s ease-in-out;
+          }
+        }
+        img {
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  // Video Banner CSS
+  .video-banner {
+    .overlay {
+      background-image: url(../image/shape-pat.png);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 1;
+      top: 7%;
+
+      @media (max-width: 1600px) {
+        top: 13%;
+      }
+
+      @media (max-width: 1400px) {
+        top: 15%;
+      }
+
+      @media (max-width: 1200px) {
+        top: 18%;
+      }
+
+      @media (max-width: 992px) {
+        top: 20%;
+      }
+      @media (max-width: 768px) {
+        top: 26%;
+      } 
+    }
+    .video-banner-inner {
+      background-image: url(../image/sporty-sexy-men-with-great-abdominal-muscles-in-bl-2022-09-21-04-24-37-utc1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .overlay {
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #DC1D24 0%, #1D1E21 100%);
+        opacity: 0.5;
+        top: 0;
+      }
+
+      .playicon-wrapper {
+        a {
+
+          &::after , &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: $white-color;
+            border-radius: 50%;
+            -webkit-box-shadow: 0 0 0 0 $white-color;
+            box-shadow: 0 0 0 0 $white-color;
+            -webkit-animation: button-ripple 3s infinite;
+            animation: button-ripple 3s infinite;
+            opacity: .6;
+            z-index: -1;
+          }
+          i {
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            font-size: 25px;
+            transition: all .3s ease-in-out;
+          }
+
+          &:hover {
+            i {
+              background-color: $white-color !important;
+              transition: all .3s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Testimonial Section CSS
+  .testimonial1 {
+    background-attachment: fixed;
+    background-image: url(../image/sporty-sexy-men-with-great-abdominal-muscles-in-bl-2022-09-21-04-24-37-utc1.jpg);
+    background-size: cover;
+
+    svg {
+        transform: scaleX(-1);
+        position: absolute;
+        top: 0;
+        path {
+          fill: $white-color;
+        }
+      }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      border-radius: inherit;
+    }
+
+    .overlay {
+      background-color: #0C0C0E;
+      opacity: 0.5;
+      background-image: none;
+    }
+
+    .testimonial-icon {
+      i {
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+      }
+    }
+
+    @media (min-width: 786px) {
+      .slick-slide.slick-current.slick-active.slick-center {
+        margin-top: 40px !important;
+
+        .testimonial-top {
+          background-color: #DC1D24 !important;
+          border-color: #DC1D24 !important;
+          p{
+            color: $white-color;
+          }
+
+          .testimonial-icon i {
+            background-color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Appointment
+  .appointment {
+    .appointment-inner {
+      margin-bottom: -300px;
+      @media (max-width: 992px) {
+        margin-bottom: -200px;
+      }
+    }
+  }
+
+  // Stats
+  .stat {
+    .circle-container{
+      overflow: visible;
+      margin-top: -100px;
+      
+      .circle {
+        top: 40%;
+      }
+    } 
+
+    @media (max-width: 1200px) {
+    .stat-right {
+      padding: 50px 0 !important;
+    }
+    .circle-container {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .circle-container{
+        .circle {
+          height: 250px;
+          width: 250px !important;
+          top: 30%;
+        }
+      }
+    }
+  }
+
+  // Blogs
+  .blog {
+    .overlay {
+      background-image: url(../image/shape-pat.png);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 1;
+
+      @media (max-width: 768px) {
+        top: 50px;
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    .container {
+      @media (max-width: 996px) {
+        padding-top: 48px !important;
+      }
+    }
+    .overlay {
+      background-image: url(../image/shape-pat2-1.png);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 1;
+    }
+  }
+}
+
+/* ========================================= */
+
+/*             Dashboard CSS                */
+
+/* ======================================== */
+.dashboard {
+  .account-sidebar-nav {
+    .active {
+      background-color: $primary-color !important;
+      color: $white-color;
+    }
+  }
+  .dashboard-left {
+    .dashboard-box-icon{
+      i {
+        height: 44px;
+        width: 44px;
+        font-size: 20px;
+        line-height: 40px;
+      }
+    }
+  }
+}

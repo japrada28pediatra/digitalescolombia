@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digitalescolombia.com/endocrinologo-infantil-colombia/sitemap.xml

@@ -1,0 +1,54 @@
+.coming-soon {
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fffcf9;
+  padding-top: 100px;
+
+  .title {
+    margin-bottom: 22px;
+  }
+
+  .subtitle {
+    margin-bottom: 30px;
+  }
+
+  .footer-subscribe-form {
+    .sub-btn {
+      padding-inline: 27px;
+      color: hsl(var(--white));
+
+      @include md-screen {
+        padding-inline: 20px;
+      }
+    }
+  }
+
+  .panel-image {
+    text-align: right;
+
+    @include md-screen {
+      text-align: center;
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 26px;
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      color: #181818;
+
+      @include md-screen {
+        font-size: 16px;
+      }
+    }
+  }
+}

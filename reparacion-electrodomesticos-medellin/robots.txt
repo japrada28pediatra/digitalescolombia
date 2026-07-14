@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /reparacion-electrodomesticos-medellin/gracias.html
+
+Sitemap: https://digitalescolombia.com/reparacion-electrodomesticos-medellin/sitemap.xml

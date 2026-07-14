@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agencia de Marketing Digital | Growth, SEO, Ads y Diseño Web</title>
+<meta content="Agencia de marketing digital moderna especializada en diseño web, SEO, Google Ads, Meta Ads, automatización, analítica y crecimiento online." name="description"/>
+<meta content="agencia de marketing digital, agencia seo, google ads, meta ads, diseño web, growth marketing, automatización digital" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://digitalescolombia.com/digital-growth/" rel="canonical"/>
+<meta content="Agencia de Marketing Digital | Growth, SEO, Ads y Diseño Web" property="og:title"/>
+<meta content="Creamos sistemas digitales modernos para atraer clientes, convertir visitas en oportunidades y escalar tu negocio online." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://digitalescolombia.com/" property="og:url"/>
+<meta content="https://digitalescolombia.com/assets/og-image.jpg" property="og:image"/>
+<style>
+    :root {
+      --bg: #030712;
+      --bg-2: #06111f;
+      --card: rgba(255, 255, 255, 0.07);
+      --card-2: rgba(255, 255, 255, 0.11);
+      --text: #f8fbff;
+      --muted: #a9b7ce;
+      --primary: #5fffe1;
+      --primary-2: #00d4ff;
+      --accent: #a78bfa;
+      --pink: #ff6ec7;
+      --orange: #ffb86c;
+      --border: rgba(255, 255, 255, 0.13);
+      --shadow: 0 30px 110px rgba(0, 0, 0, 0.55);
+      --radius: 28px;
+      --max: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 212, 255, 0.18), transparent 32rem),
+        radial-gradient(circle at top right, rgba(167, 139, 250, 0.20), transparent 34rem),
+        radial-gradient(circle at 50% 50%, rgba(255, 110, 199, 0.08), transparent 40rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -3;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: radial-gradient(circle at center, black, transparent 75%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      z-index: -4;
+      pointer-events: none;
+      background: conic-gradient(from 180deg, rgba(95,255,225,0.10), rgba(167,139,250,0.12), rgba(255,110,199,0.08), rgba(0,212,255,0.10), rgba(95,255,225,0.10));
+      filter: blur(90px);
+      animation: aurora 16s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes aurora {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.08); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 rgba(95,255,225,0); }
+      50% { box-shadow: 0 0 60px rgba(95,255,225,0.24); }
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes shimmer {
+      from { transform: translateX(-120%); }
+      to { transform: translateX(120%); }
+    }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin-inline: auto;
+    }
+
+    .animated-in {
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .delay-1 { animation-delay: 0.12s; }
+    .delay-2 { animation-delay: 0.24s; }
+    .delay-3 { animation-delay: 0.36s; }
+    .delay-4 { animation-delay: 0.48s; }
+
+    .badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      color: #dce6f7;
+      font-size: 14px;
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 22px var(--primary);
+    }
+
+    .badge::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      animation: shimmer 3.6s ease-in-out infinite;
+    }
+
+    .btn {
+      position: relative;
+      isolation: isolate;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 850;
+      border: 1px solid transparent;
+      transition: transform 0.22s ease, border 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+      transform: translateX(-130%);
+      transition: transform 0.65s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .btn:hover::after {
+      transform: translateX(130%);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2), var(--accent));
+      color: #020617;
+      box-shadow: 0 22px 70px rgba(0, 212, 255, 0.25);
+    }
+
+    .btn-secondary {
+      border-color: var(--border);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(18px);
+    }
+
+    .section {
+      position: relative;
+      padding: 108px 0;
+    }
+
+    .section-header {
+      max-width: 780px;
+      margin-bottom: 48px;
+    }
+
+    .section-header.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+    }
+
+    h1 {
+      font-size: clamp(48px, 4vw, 96px);
+      max-width: 980px;
+      margin: 18px 0 24px;
+    }
+
+    h2 {
+      font-size: clamp(36px, 5.4vw, 64px);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff, var(--primary), var(--primary-2), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(22px);
+      background: rgba(3, 7, 18, 0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 80px;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 950;
+      letter-spacing: -0.045em;
+      font-size: 22px;
+    }
+
+    .logo-mark {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2), var(--accent));
+      color: #020617;
+      font-weight: 950;
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.24s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .hero {
+      position: relative;
+      padding: 98px 0 78px;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(95,255,225,0.24), transparent 62%);
+      filter: blur(8px);
+      z-index: -1;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .hero::before {
+      top: 8%;
+      right: -120px;
+    }
+
+    .hero::after {
+      left: -160px;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(255,110,199,0.19), transparent 62%);
+      animation-delay: 1.2s;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .hero-copy > p {
+      max-width: 720px;
+      font-size: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    .hero-proof {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 42px;
+    }
+
+    .proof-item {
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.045);
+      backdrop-filter: blur(16px);
+    }
+
+    .proof-item strong {
+      display: block;
+      font-size: 31px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .proof-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .orbital-wrap {
+      position: relative;
+      min-height: 590px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 50%;
+      animation: spinSlow 22s linear infinite;
+    }
+
+    .orbit:nth-child(2) {
+      width: 390px;
+      height: 390px;
+      animation-duration: 17s;
+      animation-direction: reverse;
+      border-color: rgba(95,255,225,0.14);
+    }
+
+    .orbit:nth-child(3) {
+      width: 280px;
+      height: 280px;
+      animation-duration: 13s;
+      border-color: rgba(167,139,250,0.16);
+    }
+
+    .planet {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      top: 28px;
+      left: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 30px var(--primary);
+    }
+
+    .orbit:nth-child(2) .planet {
+      background: var(--accent);
+      box-shadow: 0 0 30px var(--accent);
+    }
+
+    .orbit:nth-child(3) .planet {
+      background: var(--pink);
+      box-shadow: 0 0 30px var(--pink);
+    }
+
+    .hero-panel {
+      position: relative;
+      width: min(100%, 480px);
+      padding: 18px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.045));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      overflow: hidden;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(120deg, transparent, rgba(95,255,225,0.45), transparent, rgba(167,139,250,0.35), transparent);
+      animation: spinSlow 8s linear infinite;
+      z-index: -2;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: 33px;
+      background: rgba(3,7,18,0.88);
+      z-index: -1;
+    }
+
+    .dashboard {
+      border-radius: 26px;
+      overflow: hidden;
+      background: rgba(6, 17, 31, 0.86);
+      border: 1px solid var(--border);
+    }
+
+    .dash-top {
+      display: flex;
+      gap: 8px;
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.28);
+    }
+
+    .dot:nth-child(1) { background: var(--pink); }
+    .dot:nth-child(2) { background: var(--orange); }
+    .dot:nth-child(3) { background: var(--primary); }
+
+    .dash-body {
+      padding: 22px;
+    }
+
+    .metric-card {
+      position: relative;
+      padding: 19px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(95,255,225,0.16), transparent 45%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .metric-card:hover::before {
+      opacity: 1;
+    }
+
+    .metric-row {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+      z-index: 1;
+    }
+
+    .metric-row span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .metric-row strong {
+      color: var(--primary);
+      font-size: 21px;
+    }
+
+    .bar {
+      position: relative;
+      z-index: 1;
+      height: 9px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2), var(--accent));
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    .floating-card {
+      position: absolute;
+      padding: 13px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      font-weight: 800;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating-card small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .floating-card.one {
+      top: 80px;
+      right: 0;
+    }
+
+    .floating-card.two {
+      left: 0;
+      bottom: 90px;
+      animation-delay: 1.1s;
+    }
+
+    .marquee-wrap {
+      width: 100%;
+      overflow: hidden;
+      border-block: 1px solid var(--border);
+      background: rgba(255,255,255,0.035);
+      margin-top: 54px;
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 22s linear infinite;
+    }
+
+    .marquee span {
+      padding: 18px 28px;
+      color: rgba(255,255,255,0.62);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 21px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      position: relative;
+      isolation: isolate;
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.035));
+      box-shadow: 0 18px 70px rgba(0,0,0,0.22);
+      transition: transform 0.24s ease, border 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at var(--x, 70%) var(--y, 20%), rgba(95,255,225,0.20), transparent 38%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(135deg, rgba(95,255,225,0.12), rgba(167,139,250,0.08), transparent);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: rgba(95, 255, 225, 0.44);
+      box-shadow: 0 28px 95px rgba(0, 212, 255, 0.10);
+    }
+
+    .card:hover::before,
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(95,255,225,0.16), rgba(167,139,250,0.16));
+      color: var(--primary);
+      font-size: 25px;
+      margin-bottom: 22px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--muted);
+      list-style: none;
+    }
+
+    .list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: 950;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .glass-panel {
+      position: relative;
+      padding: 34px;
+      border-radius: 34px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.055);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      top: -80px;
+      border-radius: 999px;
+      background: rgba(95,255,225,0.13);
+      filter: blur(20px);
+    }
+
+    .process {
+      counter-reset: step;
+      display: grid;
+      gap: 16px;
+    }
+
+    .process-item {
+      position: relative;
+      counter-increment: step;
+      padding: 25px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.055);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 19px;
+      align-items: flex-start;
+      overflow: hidden;
+      transition: transform 0.24s ease, border 0.24s ease;
+    }
+
+    .process-item:hover {
+      transform: translateX(8px);
+      border-color: rgba(95,255,225,0.38);
+    }
+
+    .process-item::before {
+      content: counter(step);
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2), var(--accent));
+      color: #020617;
+      font-weight: 950;
+      box-shadow: 0 16px 40px rgba(0,212,255,0.18);
+    }
+
+    .case-card {
+      display: grid;
+      gap: 21px;
+    }
+
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      color: #d7e1f3;
+      font-size: 13px;
+      border: 1px solid var(--border);
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .number {
+      padding: 18px;
+      border-radius: 19px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--border);
+    }
+
+    .number strong {
+      display: block;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 29px;
+      letter-spacing: -0.05em;
+    }
+
+    .number span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .testimonial {
+      min-height: 260px;
+    }
+
+    .testimonial p {
+      font-size: 18px;
+      color: #dce7f7;
+    }
+
+    .person {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2), var(--accent), var(--pink));
+      box-shadow: 0 0 35px rgba(95,255,225,0.22);
+    }
+
+    .person strong {
+      display: block;
+    }
+
+    .person span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pricing-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(95, 255, 225, 0.56);
+      box-shadow: 0 32px 110px rgba(95, 255, 225, 0.12);
+    }
+
+    .pricing-card.featured::before {
+      opacity: 1;
+    }
+
+    .price {
+      font-size: 44px;
+      letter-spacing: -0.06em;
+      font-weight: 950;
+      margin: 20px 0 8px;
+    }
+
+    .price small {
+      font-size: 16px;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    details {
+      padding: 23px 25px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--border);
+      transition: border 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    details:hover {
+      border-color: rgba(95,255,225,0.28);
+      transform: translateY(-2px);
+    }
+
+    details[open] {
+      background: rgba(255,255,255,0.085);
+      border-color: rgba(95,255,225,0.34);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 850;
+      font-size: 18px;
+    }
+
+    details p {
+      margin-top: 12px;
+    }
+
+    .cta {
+      position: relative;
+      padding: 78px;
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.30), transparent 34%),
+        radial-gradient(circle at 20% 80%, rgba(95,255,225,0.20), transparent 36%),
+        linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      text-align: center;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      background: linear-gradient(90deg, transparent, rgba(95,255,225,0.3), transparent, rgba(167,139,250,0.28), transparent);
+      animation: spinSlow 9s linear infinite;
+      z-index: -2;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: 37px;
+      background: rgba(3,7,18,0.86);
+      z-index: -1;
+    }
+
+    .cta p {
+      max-width: 730px;
+      margin: 0 auto 30px;
+      font-size: 19px;
+    }
+
+    .footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(0,0,0,0.18);
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 9px 12px;
+      font-weight: 850;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px) scale(0.98);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .split,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links,
+      .header .btn {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .orbital-wrap {
+        min-height: 520px;
+      }
+
+      .orbit {
+        width: 430px;
+        height: 430px;
+      }
+
+      .orbit:nth-child(2) {
+        width: 340px;
+        height: 340px;
+      }
+
+      .orbit:nth-child(3) {
+        width: 250px;
+        height: 250px;
+      }
+
+      .numbers {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 48px 22px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .section {
+        padding: 78px 0;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .proof-item {
+        width: 100%;
+      }
+
+      .process-item {
+        grid-template-columns: 1fr;
+      }
+
+      .orbital-wrap {
+        min-height: 430px;
+      }
+
+      .orbit {
+        width: 340px;
+        height: 340px;
+      }
+
+      .orbit:nth-child(2) {
+        width: 270px;
+        height: 270px;
+      }
+
+      .orbit:nth-child(3) {
+        width: 200px;
+        height: 200px;
+      }
+
+      .floating-card {
+        display: none;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Digital Growth",
+    "url": "https://digitalescolombia.com/",
+    "logo": "https://digitalescolombia.com/assets/logo.png",
+    "description": "Agencia de marketing digital especializada en estrategia, diseño web, SEO, pauta digital, automatización y analítica.",
+    "sameAs": [
+      "https://www.instagram.com/tuagencia",
+      "https://www.linkedin.com/company/tuagencia"
+    ]
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué hace una agencia de marketing digital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Una agencia de marketing digital ayuda a una empresa a conseguir clientes mediante estrategia, diseño web, SEO, publicidad online, automatización, contenidos y medición de resultados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Trabajan con Google Ads y Meta Ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Podemos planificar, configurar, medir y optimizar campañas en Google Ads, Facebook Ads, Instagram Ads y otras plataformas según el objetivo del negocio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿También diseñan páginas web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Diseñamos sitios web, landing pages y páginas orientadas a conversión, posicionamiento orgánico y campañas de pauta digital."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="header">
+<div class="container nav">
+<a aria-label="Ir al inicio" class="logo" href="#inicio">
+<span class="logo-mark">D</span>
+<span>Digital Growth</span>
+</a>
+<nav aria-label="Navegación principal" class="nav-links">
+<a href="#servicios">Servicios</a>
+<a href="#metodo">Método</a>
+<a href="#casos">Resultados</a>
+<a href="#planes">Planes</a>
+<a href="#faq">FAQ</a>
+</nav>
+<a class="btn btn-primary" href="https://wa.me/573001112233" rel="noopener" target="_blank">Agenda una llamada</a>
+<button aria-label="Abrir menú" class="mobile-menu-btn" type="button">Menú</button>
+</div>
+</header>
+<main id="inicio">
+<section class="hero">
+<div class="container hero-grid">
+<div class="hero-copy">
+<span class="badge animated-in">Marketing, diseño y automatización en un solo sistema</span>
+<h1 class="animated-in delay-1">Creamos experiencias digitales que <span class="gradient-text">atraen, convierten y escalan.</span></h1>
+<p class="animated-in delay-2">Diseñamos sitios web, campañas, embudos, automatizaciones y sistemas de medición para transformar tráfico en oportunidades reales de negocio.</p>
+<div class="hero-actions animated-in delay-3">
+<a class="btn btn-primary" href="#contacto">Quiero crecer online</a>
+<a class="btn btn-secondary" href="#servicios">Explorar servicios</a>
+</div>
+<div aria-label="Indicadores de confianza" class="hero-proof animated-in delay-4">
+<div class="proof-item">
+<strong>+120%</strong>
+<span>más leads calificados</span>
+</div>
+<div class="proof-item">
+<strong>35%</strong>
+<span>menos costo por consulta</span>
+</div>
+<div class="proof-item">
+<strong>24/7</strong>
+<span>captación automatizada</span>
+</div>
+</div>
+</div>
+<aside aria-label="Panel visual de resultados de marketing" class="orbital-wrap animated-in delay-2">
+<div class="orbit"><span class="planet"></span></div>
+<div class="orbit"><span class="planet"></span></div>
+<div class="orbit"><span class="planet"></span></div>
+<div class="floating-card one">SEO +132%<small>crecimiento orgánico</small></div>
+<div class="floating-card two">ROAS 4.8x<small>campañas optimizadas</small></div>
+<div class="hero-panel">
+<div class="dashboard">
+<div class="dash-top">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+<div class="dash-body">
+<div class="metric-card">
+<div class="metric-row">
+<span>Leads mensuales</span>
+<strong>+186%</strong>
+</div>
+<div class="bar"><span style="width: 86%"></span></div>
+</div>
+<div class="metric-card">
+<div class="metric-row">
+<span>Conversiones web</span>
+<strong>+74%</strong>
+</div>
+<div class="bar"><span style="width: 74%"></span></div>
+</div>
+<div class="metric-card">
+<div class="metric-row">
+<span>SEO orgánico</span>
+<strong>+132%</strong>
+</div>
+<div class="bar"><span style="width: 92%"></span></div>
+</div>
+<div class="metric-card">
+<div class="metric-row">
+<span>Automatización</span>
+<strong>24/7</strong>
+</div>
+<div class="bar"><span style="width: 97%"></span></div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<div aria-label="Servicios principales" class="marquee-wrap">
+<div class="marquee">
+<span>SEO técnico</span><span>Google Ads</span><span>Meta Ads</span><span>Diseño Web</span><span>Landing Pages</span><span>Automatización</span><span>Analytics</span><span>Copywriting</span>
+<span>SEO técnico</span><span>Google Ads</span><span>Meta Ads</span><span>Diseño Web</span><span>Landing Pages</span><span>Automatización</span><span>Analytics</span><span>Copywriting</span>
+</div>
+</div>
+</section>
+<section class="section" id="servicios">
+<div class="container">
+<div class="section-header reveal">
+<div class="eyebrow">Servicios</div>
+<h2>Un ecosistema digital completo, no acciones sueltas.</h2>
+<p>Creamos activos que trabajan juntos: web, posicionamiento, campañas, automatización, contenido y analítica.</p>
+</div>
+<div class="grid-3">
+<article class="card reveal">
+<div class="icon">✦</div>
+<h3>Diseño web estratégico</h3>
+<p>Sitios web y landing pages modernas, rápidas y pensadas para convertir desde el primer scroll.</p>
+<ul class="list">
+<li>Web corporativa</li>
+<li>Landing pages para campañas</li>
+<li>UX/UI orientado a conversión</li>
+</ul>
+</article>
+<article class="card reveal">
+<div class="icon">◎</div>
+<h3>SEO y posicionamiento</h3>
+<p>Arquitectura, contenidos y optimización técnica para ganar visibilidad orgánica en búsquedas relevantes.</p>
+<ul class="list">
+<li>SEO técnico</li>
+<li>SEO local</li>
+<li>Contenido semántico</li>
+</ul>
+</article>
+<article class="card reveal">
+<div class="icon">↗</div>
+<h3>Publicidad digital</h3>
+<p>Campañas en Google, Meta y otros canales con enfoque en leads, ventas y medición real.</p>
+<ul class="list">
+<li>Google Ads</li>
+<li>Facebook e Instagram Ads</li>
+<li>Remarketing y embudos</li>
+</ul>
+</article>
+<article class="card reveal">
+<div class="icon">⚙</div>
+<h3>Automatización comercial</h3>
+<p>Flujos para responder más rápido, ordenar oportunidades y acompañar al cliente hasta la venta.</p>
+<ul class="list">
+<li>CRM y formularios</li>
+<li>WhatsApp y email automation</li>
+<li>Seguimiento de leads</li>
+</ul>
+</article>
+<article class="card reveal">
+<div class="icon">◈</div>
+<h3>Analítica y medición</h3>
+<p>Configuramos eventos, conversiones y tableros para saber qué canal trae clientes reales.</p>
+<ul class="list">
+<li>GA4 y Tag Manager</li>
+<li>Eventos de conversión</li>
+<li>Reportes claros</li>
+</ul>
+</article>
+<article class="card reveal">
+<div class="icon">✎</div>
+<h3>Contenido y creatividad</h3>
+<p>Mensajes, piezas y estructuras de contenido para comunicar mejor y aumentar confianza.</p>
+<ul class="list">
+<li>Copywriting</li>
+<li>Creatividades para anuncios</li>
+<li>Contenido para redes y blog</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="metodo">
+<div class="container split">
+<div class="glass-panel reveal">
+<div class="eyebrow">Método</div>
+<h2>Primero estrategia. Después diseño, pauta y automatización.</h2>
+<p>Una web bonita no alcanza. Cada página, campaña y automatización debe tener una intención clara dentro del sistema comercial.</p>
+<ul class="list">
+<li>Diagnóstico de situación actual</li>
+<li>Definición de objetivos y métricas</li>
+<li>Diseño del embudo digital</li>
+<li>Ejecución, medición y optimización</li>
+</ul>
+</div>
+<div class="process">
+<article class="process-item reveal">
+<div>
+<h3>Auditoría inicial</h3>
+<p>Analizamos web, canales, competencia, propuesta de valor y oportunidades de crecimiento.</p>
+</div>
+</article>
+<article class="process-item reveal">
+<div>
+<h3>Estrategia digital</h3>
+<p>Definimos mensajes, páginas, campañas y canales con mayor potencial comercial.</p>
+</div>
+</article>
+<article class="process-item reveal">
+<div>
+<h3>Implementación</h3>
+<p>Diseñamos, configuramos, medimos y lanzamos cada activo con foco en conversión.</p>
+</div>
+</article>
+<article class="process-item reveal">
+<div>
+<h3>Optimización continua</h3>
+<p>Revisamos datos, ajustamos anuncios, mejoramos páginas y potenciamos lo que funciona.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="casos">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow">Resultados</div>
+<h2>Métricas que importan: consultas, ventas y oportunidades.</h2>
+<p>Más tráfico no siempre significa más ventas. Nos enfocamos en conversiones reales y decisiones basadas en datos.</p>
+</div>
+<div class="grid-2">
+<article class="card case-card reveal">
+<div class="case-meta">
+<span class="pill">SEO local</span>
+<span class="pill">Web</span>
+<span class="pill">Leads</span>
+</div>
+<h3>Empresa de servicios profesionales</h3>
+<p>Reestructuramos su sitio, creamos landing pages por servicio y mejoramos el tracking de formularios y WhatsApp.</p>
+<div class="numbers">
+<div class="number"><strong>+148%</strong><span>consultas</span></div>
+<div class="number"><strong>-32%</strong><span>costo por lead</span></div>
+<div class="number"><strong>3.1x</strong><span>más tráfico orgánico</span></div>
+</div>
+</article>
+<article class="card case-card reveal">
+<div class="case-meta">
+<span class="pill">Google Ads</span>
+<span class="pill">Landing</span>
+<span class="pill">CRM</span>
+</div>
+<h3>Negocio con campañas activas</h3>
+<p>Optimizamos la landing, separamos campañas por intención y configuramos eventos reales de conversión.</p>
+<div class="numbers">
+<div class="number"><strong>+82%</strong><span>conversiones</span></div>
+<div class="number"><strong>-27%</strong><span>CPL</span></div>
+<div class="number"><strong>+54%</strong><span>tasa de cierre</span></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container grid-3">
+<article class="card testimonial reveal">
+<p>“Dejamos de invertir a ciegas. Ahora sabemos qué campaña trae consultas y qué página convierte mejor.”</p>
+<div class="person">
+<div class="avatar"></div>
+<div>
+<strong>Laura M.</strong>
+<span>Directora comercial</span>
+</div>
+</div>
+</article>
+<article class="card testimonial reveal">
+<p>“La nueva web no solo se ve mejor: carga rápido, tiene mejor estructura SEO y nos empezaron a llegar más leads.”</p>
+<div class="person">
+<div class="avatar"></div>
+<div>
+<strong>Andrés R.</strong>
+<span>Fundador</span>
+</div>
+</div>
+</article>
+<article class="card testimonial reveal">
+<p>“Nos ayudaron a ordenar todo el proceso digital: anuncios, landing, WhatsApp, formularios y seguimiento.”</p>
+<div class="person">
+<div class="avatar"></div>
+<div>
+<strong>Camila S.</strong>
+<span>Gerente de marketing</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="planes">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow">Planes</div>
+<h2>Soluciones para distintos momentos de crecimiento.</h2>
+<p>Podemos comenzar con una landing, una auditoría o un sistema completo de marketing y ventas.</p>
+</div>
+<div class="grid-3">
+<article class="card pricing-card reveal">
+<h3>Landing de conversión</h3>
+<p>Ideal para campañas, validación de oferta o captación rápida de consultas.</p>
+<div class="price">Desde USD 450</div>
+<ul class="list">
+<li>Diseño one page</li>
+<li>Copy básico</li>
+<li>Formulario o WhatsApp</li>
+<li>SEO on-page inicial</li>
+</ul>
+<a class="btn btn-secondary" href="#contacto">Consultar</a>
+</article>
+<article class="card pricing-card featured reveal">
+<span class="badge">Más elegido</span>
+<h3>Web + Marketing</h3>
+<p>Para empresas que necesitan presencia fuerte, medición y campañas listas para escalar.</p>
+<div class="price">Desde USD 1.500</div>
+<ul class="list">
+<li>Web profesional</li>
+<li>SEO técnico base</li>
+<li>Tracking GA4/GTM</li>
+<li>Landing para campañas</li>
+</ul>
+<a class="btn btn-primary" href="#contacto">Empezar proyecto</a>
+</article>
+<article class="card pricing-card reveal">
+<h3>Growth mensual</h3>
+<p>Para negocios que quieren crecimiento sostenido, reportes y optimización continua.</p>
+<div class="price">Desde USD 600 <small>/ mes</small></div>
+<ul class="list">
+<li>SEO y contenidos</li>
+<li>Gestión de campañas</li>
+<li>Reportes mensuales</li>
+<li>Mejoras continuas</li>
+</ul>
+<a class="btn btn-secondary" href="#contacto">Ver disponibilidad</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="faq">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow">Preguntas frecuentes</div>
+<h2>Antes de empezar, resolvemos tus dudas.</h2>
+</div>
+<div class="faq">
+<details class="reveal">
+<summary>¿Trabajan con empresas pequeñas o solo con grandes marcas?</summary>
+<p>Trabajamos con empresas de distintos tamaños, siempre que haya un objetivo claro: conseguir más consultas, vender mejor o mejorar la presencia digital.</p>
+</details>
+<details class="reveal">
+<summary>¿Pueden hacer solo la página web?</summary>
+<p>Sí. Podemos diseñar una web o landing independiente, aunque recomendamos dejarla preparada para SEO, tracking y campañas desde el inicio.</p>
+</details>
+<details class="reveal">
+<summary>¿Incluyen SEO?</summary>
+<p>Todos los proyectos web incluyen una base SEO. También podemos trabajar posicionamiento mensual con contenidos, estructura técnica y páginas por servicio o ubicación.</p>
+</details>
+<details class="reveal">
+<summary>¿Gestionan campañas de Google Ads y Meta Ads?</summary>
+<p>Sí. Configuramos campañas, conversiones, audiencias, anuncios, landings y reportes para mejorar el rendimiento de la inversión.</p>
+</details>
+<details class="reveal">
+<summary>¿Cuánto tarda un proyecto?</summary>
+<p>Depende del alcance. Una landing puede avanzar rápido, mientras que una web completa con estrategia, SEO y medición requiere más planificación.</p>
+</details>
+<details class="reveal">
+<summary>¿Puedo pedir una auditoría antes de contratar?</summary>
+<p>Sí. Podemos revisar tu web, campañas y medición actual para detectar oportunidades y priorizar acciones.</p>
+</details>
+</div>
+</div>
+</section>
+<section class="section" id="contacto">
+<div class="container">
+<div class="cta reveal">
+<div class="eyebrow">Agenda una llamada</div>
+<h2>Convirtamos tu presencia digital en un canal real de ventas.</h2>
+<p>Cuéntanos qué vendes, cuál es tu objetivo y qué canales estás usando. Te ayudamos a detectar el próximo paso más rentable.</p>
+<div class="hero-actions" style="justify-content:center; margin-top: 0;">
+<a class="btn btn-primary" href="https://wa.me/573001112233" rel="noopener" target="_blank">Escribir por WhatsApp</a>
+<a class="btn btn-secondary" href="mailto:hola@tudominio.com">Enviar email</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<strong>Digital Growth</strong><br/>
+        Agencia de marketing digital, diseño web y crecimiento online.
+      </div>
+<div class="footer-links">
+<a href="#servicios">Servicios</a>
+<a href="#metodo">Método</a>
+<a href="#casos">Resultados</a>
+<a href="#planes">Planes</a>
+<a href="#contacto">Contacto</a>
+</div>
+</div>
+</footer>
+<script>
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.16
+    });
+
+    revealElements.forEach((element) => observer.observe(element));
+
+    document.querySelectorAll('.card').forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--x', `${x}%`);
+        card.style.setProperty('--y', `${y}%`);
+      });
+    });
+  </script>
+<section class="dc-internal-links" style="padding:28px 0;background:#fff;border-top:1px solid #e5e7eb;"><div style="max-width:1100px;margin:0 auto;padding:0 20px;"><h2 style="font-size:1.35rem;margin-bottom:12px;">Explorar servicios relacionados</h2><p style="margin-bottom:12px;">También podés revisar otros recursos del ecosistema Digitales Colombia:</p><p><a href="/marketing-digital-colombia.html">Marketing digital</a> · <a href="/salud-en-colombia.html">Salud en Colombia</a> · <a href="/abogados-en-colombia.html">Abogados en Colombia</a> · <a href="/servicios-locales-bogota.html">Servicios locales Bogotá</a> · <a href="/alojamientos-y-turismo-colombia.html">Alojamientos y turismo</a></p></div></section>
+<a class="dc-floating-whatsapp" href="https://wa.me/573001112233" aria-label="Consultar por WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#22c55e;color:#07131f;padding:12px 16px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.18);">WhatsApp</a>
+</body>
+</html>

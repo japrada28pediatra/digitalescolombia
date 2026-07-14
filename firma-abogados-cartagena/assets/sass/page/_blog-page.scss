@@ -1,0 +1,49 @@
+.news-section {
+  .title {
+    font-size: 38px;
+
+    @include md-screen {
+      font-size: 32px;
+    }
+
+    @include sm-screen {
+      font-size: 28px;
+    }
+  }
+}
+
+.chunk-blog__gridview {
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  .chunk-blog__card {
+    flex: 1;
+    flex-basis: 30%;
+  }
+}
+
+.chunk-blog__listview {
+  justify-content: center;
+  // align-items: stretch;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include md-screen {
+    margin-bottom: 30px;
+  }
+
+  .chunk-pagination__wrap {
+    @include md-screen {
+      margin-top: 0px;
+    }
+
+    nav ul {
+      justify-content: flex-start;
+
+    }
+  }
+
+}

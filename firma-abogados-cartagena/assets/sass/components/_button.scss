@@ -1,0 +1,534 @@
+/* Button Style */
+button {
+  border: none;
+  transition: 0.5s;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// solid btn
+@mixin btn-style($bg-color, $hover-color, $color) {
+  background: hsl(var(--#{$bg-color}));
+  color: hsl(var(--#{$color}));
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  // text-transform: capitalize;
+  font-family: var(--body-font);
+  transition: 0.2s linear;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: hsl(var(--#{$hover-color})) !important;
+    color: hsl(var(--white)) !important;
+    border: 1px solid transparent !important;
+  }
+
+  &.pill {
+    border-radius: 35px;
+  }
+}
+
+.btn {
+  border-radius: 0px;
+  min-width: 200px;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @include slg-screen {
+    padding: 6px 10px;
+  }
+
+  @include msm-screen {
+    padding: 6px 7px;
+    min-width: 150px;
+  }
+
+  &:hover,
+  &:focus {
+    color: hsl(var(--white));
+    border-color: transparent;
+  }
+
+  &--sm {
+    padding: 4px 12px;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+      background-color: hsl(var(--white));
+      border: 1px solid transparent;
+      color: hsl(var(--white)) !important;
+    }
+
+    @include sm-screen {
+      padding: 5px 8px;
+    }
+  }
+
+  &--md {
+    padding: 8px 14px;
+    font-size: 16px;
+
+    @include sm-screen {
+      padding: 6px 12px;
+    }
+  }
+
+  &--lg {
+    padding: 14px 22px !important;
+    font-size: 17px !important;
+
+    @include sm-screen {
+      padding: 6px 14px;
+      font-size: 16px !important;
+    }
+  }
+
+  &--base-two {
+    background: hsl(var(--base-two));
+    color: hsl(var(--white));
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    // text-transform: capitalize;
+    font-family: var(--body-font);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: hsl(var(--base-two-hover)) !important;
+      color: hsl(var(--white)) !important;
+      border: 1px solid transparent !important;
+    }
+
+    &.pill {
+      border-radius: 35px;
+    }
+  }
+
+  &--base-three {
+    background: hsl(var(--base-three));
+    color: hsl(var(--white));
+    border: 1px solid transparent;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    // text-transform: capitalize;
+    font-family: var(--body-font);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: hsl(var(--base)) !important;
+      color: hsl(var(--white)) !important;
+      border: 1px solid transparent !important;
+    }
+
+    &.pill {
+      border-radius: 35px;
+    }
+  }
+
+  &--base-four {
+    background: hsl(var(--base-four));
+    color: hsl(var(--white));
+    border: 1px solid transparent;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    // text-transform: capitalize;
+    font-family: var(--body-font);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: hsl(var(--base-four-hover)) !important;
+      color: hsl(var(--white)) !important;
+      border: 1px solid transparent !important;
+    }
+
+    &.pill {
+      border-radius: 35px;
+    }
+  }
+
+  &--base-five {
+    background: hsl(var(--base-five));
+    color: hsl(var(--white));
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: var(--body-font);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: hsl(var(--base)) !important;
+      color: hsl(var(--white)) !important;
+      border: 1px solid transparent !important;
+    }
+
+    &.pill {
+      border-radius: 35px;
+    }
+  }
+
+  &--base-circle {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: hsl(var(--base));
+    border-radius: 4px;
+    position: relative;
+    transition: 0.2s linear;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: hsl(var(--base) / 0.1);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      transition: 0.2s linear;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+      background: hsl(var(--base));
+      color: hsl(var(--white));
+
+      &::after {
+        top: 0px;
+        left: 0px;
+        background-color: hsl(var(--base));
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        transition: 0.2s linear;
+      }
+    }
+  }
+}
+
+.btn--base {
+  @include btn-style(base, base-d-200, white);
+}
+
+.btn--primary {
+  @include btn-style(primary, primary-d-100, primary);
+}
+
+.btn--secondary {
+  @include btn-style(secondary, secondary-d-100, secondary);
+}
+
+.btn--success {
+  @include btn-style(success, success-d-100, success);
+}
+
+.btn--danger {
+  @include btn-style(danger, danger-d-100, danger);
+}
+
+.btn--warning {
+  @include btn-style(warning, warning-d-100, warning);
+}
+
+.btn--info {
+  @include btn-style(info, info-d-100, info);
+}
+
+.btn--violet {
+  @include btn-style(violet, violet-d-100, violet);
+}
+
+.btn--dark {
+  @include btn-style(dark, dark-d-100, white);
+}
+
+.style--two {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s linear;
+  margin-left: 12px;
+  min-width: auto;
+
+  &:focus {
+    outline: 0;
+    border: 0;
+    color: hsl(var(--black));
+  }
+
+  i {
+    font-size: 22px;
+    color: hsl(var(--black) / 0.5);
+    margin-left: 12px;
+    transition: margin-left 0.5s linear, color 0.5s linear;
+    /* Smooth transition for icon */
+  }
+
+  &:hover {
+    color: hsl(var(--black));
+
+    i {
+      color: hsl(var(--white));
+    }
+
+    &::after {
+      width: 38px;
+      height: 38px;
+      left: 76%;
+      background-color: hsl(var(--base-two));
+      transition: left 0.3s linear, background-color 0.3s linear;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: hsl(var(--base-two) / 0.1);
+    transition: left 0.3s linear, background-color 0.3s linear;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.style--three {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s linear;
+  margin-left: 12px;
+  min-width: auto;
+
+  &:focus {
+    outline: 0;
+    border: 0;
+    color: hsl(var(--black));
+  }
+
+  i {
+    font-size: 18px;
+    font-weight: 600;
+    color: hsl(var(--black) / 0.3);
+    margin-left: 12px;
+    transition: margin-left 0.5s linear, color 0.5s linear;
+    /* Smooth transition for icon */
+  }
+
+  &:hover {
+    color: hsl(var(--black));
+
+    i {
+      color: hsl(var(--white));
+    }
+
+    &::after {
+      width: 38px;
+      height: 38px;
+      left: 76%;
+      background-color: hsl(var(--base));
+      transition: left 0.3s linear, background-color 0.3s linear;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: hsl(var(--base) / 0.1);
+    transition: left 0.3s linear, background-color 0.3s linear;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: hsl(var(--white));
+  background-color: hsl(var(--base-two));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: hsl(var(--base-d-200));
+  }
+}
+
+.pill {
+  border-radius: 35px !important;
+}
+
+.btn-outline {
+  background: transparent;
+  border: none !important;
+  border-radius: 8px;
+
+  &:hover,
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+@mixin btn-outline-style($br-color, $hover-color, $color) {
+  color: hsl(var(--#{$br-color}));
+  border: 1px solid hsl(var(--#{$br-color})) !important;
+  // text-transform: capitalize;
+  padding: 10px 32px;
+
+  &:hover,
+  &:focus {
+    background-color: hsl(var(--#{$hover-color})) !important;
+    color: hsl(var(--#{$color})) !important;
+    border: 1px solid hsl(var(--#{$hover-color})) !important;
+  }
+}
+
+.btn-outline {
+  &--base {
+    @include btn-outline-style(base, base-d-200, white);
+  }
+
+  &--base-two {
+    @include btn-outline-style(base-two, base-two, white);
+  }
+
+  &--base-four {
+    @include btn-outline-style(base-four, base-four-hover, white);
+  }
+
+  &--success {
+    @include btn-outline-style(success, success, white);
+  }
+
+  &--danger {
+    @include btn-outline-style(danger, danger, white);
+  }
+
+  &--warning {
+    @include btn-outline-style(warning, warning, white);
+  }
+
+  &--info {
+    @include btn-outline-style(info, info, white);
+  }
+
+  &--primary {
+    @include btn-outline-style(primary, primary, white);
+  }
+
+  &--secondary {
+    @include btn-outline-style(secondary, secondary, white);
+  }
+
+  &--dark {
+    @include btn-outline-style(dark, base-d-300, white);
+  }
+
+  &--grey {
+    @include btn-outline-style(grey, base, black);
+  }
+
+  &--violet {
+    @include btn-outline-style(violet, violet, white);
+  }
+}
+
+// button circle xxl
+.btn-circle {
+  border-radius: 50%;
+  width: 139px;
+  height: 139px;
+  background: hsl(var(--base));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: hsl(var(--white));
+  rotate: -45deg;
+  position: relative;
+  border: 8px solid hsl(var(--white));
+
+  i {
+    transition: all 0.3s ease-out;
+  }
+
+  &::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed hsl(var(--white));
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    color: hsl(var(--white));
+
+    i {
+      rotate: 90deg;
+      transition: all 0.3s ease-out;
+    }
+  }
+}
+
+.copytext {
+  border-radius: 0px 6px 6px 0px !important;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+//
+.grp-btn-wrap {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+}
+
+/* END Button Style */
