@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digitalescolombia.com/sitemap-index.xml
+
