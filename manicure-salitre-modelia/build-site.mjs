@@ -5,10 +5,14 @@ import { fileURLToPath } from 'node:url';
 const root = dirname(fileURLToPath(import.meta.url));
 const baseUrl = 'https://digitalescolombia.com/manicure-salitre-modelia';
 // Agrega el número después de 57 cuando esté confirmado; por ejemplo: 573001234567.
-const whatsappNumber = '';
+const whatsappNumber = '573138948286';
+const whatsappIntro = 'Te hablo desde la página web para solicitar una cita.';
 
 const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
-const wa = (message) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+const wa = (message = '') => {
+  const detail = message.replace(/^Hola,\s*/i, '').trim();
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`${whatsappIntro}${detail ? ` ${detail}` : ''}`)}`;
+};
 const img = (depth, name) => `${depth ? '../' : ''}images/${name}`;
 
 function schemaFor({ canonical, title, description, type = 'WebPage', faq = [], article }) {
@@ -75,7 +79,7 @@ function footer(depth = 0) {
       <div><a class="brand" href="${p}index.html"><span class="brand-mark">SM</span><span>SALITRE · MODELIA</span></a><p>Manicure tradicional y semipermanente a domicilio en el occidente de Bogotá.</p></div>
       <div><h3>Servicios</h3><div class="footer-links"><a href="${p}manicure-tradicional.html">Manicure tradicional</a><a href="${p}manicure-semipermanente.html">Semipermanente</a><a href="${p}manicure-salitre.html">En Salitre</a><a href="${p}manicure-modelia.html">En Modelia</a></div></div>
       <div><h3>Más zonas</h3><div class="footer-links"><a href="${p}manicure-a-domicilio-bogota.html">A domicilio en Bogotá</a><a href="${p}manicure-portal-de-las-americas.html">Portal de las Américas</a><a href="${p}manicure-kennedy.html">Kennedy</a><a href="${p}manicure-hayuelos.html">Hayuelos</a><a href="${p}manicure-fontibon.html">Fontibón</a></div></div>
-      <div><h3>Información</h3><div class="footer-links"><a href="${p}blog/index.html">Consejos para tus uñas</a><a href="${p}index.html#como-funciona">Cómo reservar</a><a href="${p}index.html#preguntas">Preguntas frecuentes</a><a href="${wa('Hola, quiero información sobre manicure a domicilio.')}" target="_blank" rel="noopener">WhatsApp</a></div></div>
+      <div><h3>Información</h3><div class="footer-links"><a href="${p}blog/index.html">Consejos para tus uñas</a><a href="${p}index.html#como-funciona">Cómo reservar</a><a href="${p}index.html#preguntas">Preguntas frecuentes</a><a href="${wa('Hola, quiero información sobre manicure a domicilio.')}" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/yuranylashes.nails/" target="_blank" rel="noopener noreferrer">Instagram · @Yuranylashes.nails</a></div></div>
     </div>
     <div class="wrap footer-bottom"><span>© 2026 Manicure Salitre & Modelia · Un proyecto de <a href="https://digitalescolombia.com/">Digitales Colombia</a></span><span>Bogotá, Colombia · <a href="https://seoparaempresas.com/" target="_blank" rel="noopener">SEO para empresas</a></span></div>
   </footer>
@@ -169,6 +173,151 @@ pages.push(['manicure-modelia.html', page({ title: 'Manicure en Modelia Bogotá 
 pages.push(['manicure-tradicional.html', page({ title: 'Manicure tradicional a domicilio en Salitre y Modelia', description: 'Manicure tradicional a domicilio con preparación, limado, cuidado de cutículas y esmaltado en Salitre y Modelia, Bogotá.', path: 'manicure-tradicional.html', type:'Service', body: landingBody({ eyebrow:'Manicure tradicional', heading:'Manicure tradicional a domicilio', italic:'un clásico bien cuidado.', lead:'Ideal si disfrutas cambiar de color con frecuencia o prefieres un retiro sencillo en casa.', image:'manicure-tradicional.webp', imageAlt:'Proceso cuidadoso de manicure tradicional', introTitle:'¿Qué incluye el manicure tradicional?', intro:'La cita se enfoca en preparar la uña y lograr un acabado limpio. El tiempo de secado depende del esmalte y de las capas aplicadas.', benefits:[['Preparación y limado','Forma y longitud acordadas antes de esmaltar.'],['Cuidado de cutículas','Trabajo cuidadoso alrededor de la uña.'],['Esmaltado tradicional','Base, color y acabado según el producto elegido.']], zone:'Salitre y Modelia', zoneCopy:'Consulta disponibilidad para Ciudad Salitre, Modelia y sectores cercanos del occidente de Bogotá.', related:[['manicure-semipermanente.html','¿Prefieres más duración?','Compara el servicio semipermanente antes de elegir.'],['blog/manicure-tradicional-o-semipermanente.html','Tradicional vs. semipermanente','Conoce las diferencias de duración, retiro y mantenimiento.'],['blog/cuidados-para-que-el-esmalte-dure-mas.html','Cuida tu esmalte','Hábitos sencillos que ayudan a mantener el acabado.']] }) })]);
 
 pages.push(['manicure-semipermanente.html', page({ title: 'Manicure semipermanente en Salitre y Modelia | A domicilio', description: 'Manicure semipermanente a domicilio en Salitre y Modelia, Bogotá. Acabado brillante y resistente. Consulta cobertura y disponibilidad.', path: 'manicure-semipermanente.html', type:'Service', body: landingBody({ eyebrow:'Manicure semipermanente', heading:'Semipermanente a domicilio', italic:'brillo que acompaña tu rutina.', lead:'Una opción resistente para quienes quieren mantener el color impecable durante más tiempo.', image:'manicure-semipermanente.webp', imageAlt:'Manicure semipermanente en tonos borgoña y rosa', introTitle:'Un acabado uniforme y duradero', intro:'El esmalte en gel se aplica en capas y se cura con lámpara. Si tienes producto anterior, avísalo al reservar para contemplar el retiro.', benefits:[['Preparación completa','Forma, superficie y cutículas listas para el color.'],['Aplicación en gel','Capas finas curadas con lámpara.'],['Retiro responsable','Evita desprender el producto en casa para no debilitar la uña.']], zone:'Salitre y Modelia', zoneCopy:'El servicio se presta a domicilio con cobertura sujeta a ruta y disponibilidad. Es necesario contar con acceso cercano a una toma de corriente.', related:[['manicure-tradicional.html','Manicure tradicional','Una alternativa clásica de retiro sencillo.'],['blog/cuanto-dura-manicure-semipermanente.html','¿Cuánto dura?','Factores que cambian la duración del semipermanente.'],['blog/cuidados-para-que-el-esmalte-dure-mas.html','Cuidados posteriores','Cómo proteger el borde y el brillo de tus uñas.']] }) })]);
+
+const localLandings = [
+  {
+    slug: 'manicure-a-domicilio-bogota.html',
+    title: 'Manicure a domicilio en Bogotá | Tradicional y semipermanente',
+    description: 'Servicio de manicure a domicilio en Bogotá con opciones tradicionales y semipermanentes. Consulta cobertura en Salitre, Modelia, Kennedy y zonas cercanas.',
+    eyebrow: 'Manicure a domicilio en Bogotá',
+    heading: 'Tu manicure llega hasta tu casa',
+    italic: 'menos traslados, más tiempo para ti.',
+    lead: 'Coordina una cita de manicure tradicional o semipermanente en tu hogar y confirma la cobertura de tu sector por WhatsApp.',
+    image: 'hero-manicure.webp',
+    imageAlt: 'Manicure a domicilio con acabado nude',
+    introTitle: 'Un servicio pensado para tu rutina',
+    intro: 'La atención a domicilio permite organizar la cita alrededor de tu día. Antes de confirmar, indícanos la zona, el servicio y si necesitas retiro de esmalte anterior.',
+    benefits: [['Sin desplazamientos','Recibe el servicio en un espacio cómodo de tu hogar.'],['Dos tipos de acabado','Elige entre manicure tradicional o semipermanente.'],['Reserva clara','Confirma cobertura, retiro y horario antes de la cita.']],
+    zone: 'Bogotá y zonas de cobertura',
+    zoneCopy: 'La atención se concentra en el occidente de Bogotá: Salitre, Modelia, Hayuelos, Normandía, Quinta Paredes, Fontibón, Portal de las Américas y sectores de Kennedy. Toda cita está sujeta a confirmación de ruta.',
+    related: [['manicure-tradicional.html','Manicure tradicional','Color clásico y retiro sencillo.'],['manicure-semipermanente.html','Manicure semipermanente','Un acabado brillante y más resistente.'],['blog/como-preparar-cita-manicure-domicilio.html','Prepara tu cita','Qué espacio necesitas y qué debes informar al reservar.']]
+  },
+  {
+    slug: 'manicure-portal-de-las-americas.html',
+    title: 'Manicure en Portal de las Américas | Servicio a domicilio',
+    description: 'Manicure tradicional y semipermanente a domicilio en el sector de Portal de las Américas, Bogotá. Consulta cobertura y disponibilidad.',
+    eyebrow: 'Manicure en Portal de las Américas',
+    heading: 'Manicure a domicilio cerca de Portal de las Américas',
+    italic: 'cuida tus manos sin salir de casa.',
+    lead: 'Consulta atención para el sector de Portal de las Américas y coordina el servicio que mejor se ajusta a tu rutina.',
+    image: 'manicure-semipermanente.webp',
+    imageAlt: 'Uñas semipermanentes en tonos borgoña y rosa',
+    introTitle: 'Tradicional o semipermanente en tu hogar',
+    intro: 'Puedes solicitar preparación, limado, cuidado de cutículas y el tipo de esmaltado que prefieras. Si llevas producto anterior, avísalo desde la reserva.',
+    benefits: [['Cita coordinada','Indica dirección, conjunto o sector para revisar la ruta.'],['Acabado personalizado','Escoge el tipo de esmalte y la forma de tus uñas.'],['Comodidad en casa','Prepara una mesa iluminada y evita desplazamientos.']],
+    zone: 'Portal de las Américas, Bogotá',
+    zoneCopy: 'La cobertura se confirma según la dirección exacta, la ruta disponible y el horario solicitado. También puedes consultar por sectores cercanos de Kennedy.',
+  },
+  {
+    slug: 'manicure-kennedy.html',
+    title: 'Manicure en Kennedy Bogotá | Servicio a domicilio',
+    description: 'Servicio de manicure tradicional y semipermanente a domicilio en Kennedy, Bogotá. Consulta cobertura para tu sector y agenda por WhatsApp.',
+    eyebrow: 'Manicure en Kennedy',
+    heading: 'Manicure a domicilio en Kennedy',
+    italic: 'una cita cómoda en tu espacio.',
+    lead: 'Ahorra el desplazamiento y consulta una cita de manicure tradicional o semipermanente en tu sector de Kennedy.',
+    image: 'manicure-tradicional.webp',
+    imageAlt: 'Preparación cuidadosa para un manicure a domicilio',
+    introTitle: 'Atención organizada desde la reserva',
+    intro: 'Kennedy reúne sectores amplios y rutas distintas. Por eso confirmamos previamente la ubicación, el tipo de servicio y el tiempo necesario para atenderte.',
+    benefits: [['Cobertura confirmada','Comparte tu barrio o sector antes de agendar.'],['Servicio completo','Preparación, cutículas, limado y esmaltado.'],['Opciones para tu rutina','Tradicional para cambiar con frecuencia o gel para más duración.']],
+    zone: 'Kennedy, Bogotá',
+    zoneCopy: 'La disponibilidad puede variar entre sectores de Kennedy. Envíanos tu ubicación aproximada para validar la cobertura sin compromisos.',
+  },
+  {
+    slug: 'manicure-hayuelos.html',
+    title: 'Manicure en Hayuelos Bogotá | Atención a domicilio',
+    description: 'Manicure tradicional y semipermanente a domicilio en Hayuelos, Bogotá. Confirma cobertura, retiro y disponibilidad por WhatsApp.',
+    eyebrow: 'Manicure en Hayuelos',
+    heading: 'Manicure a domicilio en Hayuelos',
+    italic: 'tu momento de cuidado, en casa.',
+    lead: 'Organiza tu cita sin alterar tu día y elige entre esmaltado tradicional o semipermanente.',
+    image: 'hero-manicure.webp',
+    imageAlt: 'Manos con manicure nude en un ambiente cálido',
+    introTitle: 'Una cita sencilla de organizar',
+    intro: 'Antes del servicio confirmamos si necesitas retiro, el tipo de acabado y el horario. Así se preparan los materiales adecuados para tu cita.',
+    benefits: [['Atención en tu espacio','Evita traslados y salas de espera.'],['Preparación cuidadosa','Limado y cuidado de cutículas antes del color.'],['Reserva anticipada','Coordina la ruta y el horario con claridad.']],
+    zone: 'Hayuelos, Bogotá',
+    zoneCopy: 'Hayuelos hace parte de la zona de consulta habitual. La dirección exacta y la disponibilidad se validan antes de confirmar la cita.',
+  },
+  {
+    slug: 'manicure-normandia.html',
+    title: 'Manicure en Normandía Bogotá | Servicio a domicilio',
+    description: 'Manicure tradicional y semipermanente a domicilio en Normandía, Bogotá. Consulta disponibilidad y cobertura para tu dirección.',
+    eyebrow: 'Manicure en Normandía',
+    heading: 'Manicure a domicilio en Normandía',
+    italic: 'belleza sin desplazamientos.',
+    lead: 'Recibe el servicio en casa y dedica tu tiempo a elegir el color y disfrutar el resultado.',
+    image: 'manicure-tradicional.webp',
+    imageAlt: 'Manicurista realizando cuidado de cutículas',
+    introTitle: 'Cuidado de manos cerca de ti',
+    intro: 'El servicio se adapta al acabado que elijas. Indica si deseas manicure tradicional, semipermanente o retiro antes de la nueva aplicación.',
+    benefits: [['Servicio personalizado','Forma, longitud y color según tu preferencia.'],['Materiales preparados','La reserva previa permite organizar cada cita.'],['Atención tranquila','Un proceso sin afán dentro de tu hogar.']],
+    zone: 'Normandía, Bogotá',
+    zoneCopy: 'Consulta disponibilidad para Normandía y sectores cercanos. La cobertura está sujeta a la ruta programada para el día y el horario.',
+  },
+  {
+    slug: 'manicure-quinta-paredes.html',
+    title: 'Manicure en Quinta Paredes | Servicio a domicilio',
+    description: 'Servicio de manicure tradicional y semipermanente a domicilio en Quinta Paredes, Bogotá. Confirma cobertura y reserva por WhatsApp.',
+    eyebrow: 'Manicure en Quinta Paredes',
+    heading: 'Manicure a domicilio en Quinta Paredes',
+    italic: 'una pausa para cuidar tus manos.',
+    lead: 'Consulta una cita en casa con preparación cuidadosa y el acabado que prefieras.',
+    image: 'manicure-semipermanente.webp',
+    imageAlt: 'Acabado semipermanente brillante en uñas cortas',
+    introTitle: 'Una opción cómoda cerca de Ciudad Salitre',
+    intro: 'Coordina el servicio con anticipación e informa si tienes esmalte anterior. Esto permite separar el tiempo adecuado y llevar los implementos necesarios.',
+    benefits: [['Tradicional o gel','Elige según duración, retiro y rutina.'],['Atención a domicilio','Prepara una mesa estable y bien iluminada.'],['Confirmación previa','Valida la dirección y el horario antes de la cita.']],
+    zone: 'Quinta Paredes, Bogotá',
+    zoneCopy: 'La cobertura para Quinta Paredes se revisa según la dirección exacta y la ruta disponible. También puedes consultar por Ciudad Salitre.',
+  },
+  {
+    slug: 'manicure-fontibon.html',
+    title: 'Manicure en Fontibón Bogotá | Atención a domicilio',
+    description: 'Manicure tradicional y semipermanente a domicilio en sectores de Fontibón, Bogotá. Consulta cobertura y disponibilidad por WhatsApp.',
+    eyebrow: 'Manicure en Fontibón',
+    heading: 'Manicure a domicilio en Fontibón',
+    italic: 'consulta cobertura para tu sector.',
+    lead: 'Coordina una cita en casa para cuidar tus manos sin sumar otro desplazamiento a tu día.',
+    image: 'hero-manicure.webp',
+    imageAlt: 'Manicure nude de aspecto natural realizado en casa',
+    introTitle: 'Servicio sujeto a ruta en Fontibón',
+    intro: 'Fontibón comprende numerosos sectores. Comparte tu ubicación aproximada para confirmar si la ruta del día permite atenderte y en qué horario.',
+    benefits: [['Revisión de cobertura','La dirección se valida antes de confirmar.'],['Servicio a elección','Tradicional, semipermanente o retiro previo.'],['Cita preparada','Informa el estado actual de tus uñas al reservar.']],
+    zone: 'Fontibón, Bogotá',
+    zoneCopy: 'La cobertura no es uniforme en toda la localidad. La disponibilidad depende del sector, la distancia y la agenda del día.',
+  }
+];
+
+const localRelated = [
+  ['manicure-a-domicilio-bogota.html','Manicure a domicilio','Conoce el servicio y todas las zonas de consulta.'],
+  ['manicure-tradicional.html','Manicure tradicional','Una opción clásica y fácil de cambiar.'],
+  ['manicure-semipermanente.html','Manicure semipermanente','Más duración y brillo para tu rutina.']
+];
+
+for (const local of localLandings) {
+  pages.push([local.slug, page({
+    title: local.title,
+    description: local.description,
+    path: local.slug,
+    type: 'Service',
+    body: landingBody({
+      eyebrow: local.eyebrow,
+      heading: local.heading,
+      italic: local.italic,
+      lead: local.lead,
+      image: local.image,
+      imageAlt: local.imageAlt,
+      introTitle: local.introTitle,
+      intro: local.intro,
+      benefits: local.benefits,
+      zone: local.zone,
+      zoneCopy: local.zoneCopy,
+      related: local.related || localRelated
+    })
+  })]);
+}
 
 const posts = [
   {
@@ -285,6 +434,7 @@ const sitemapPaths = [
   'manicure-modelia.html',
   'manicure-tradicional.html',
   'manicure-semipermanente.html',
+  ...localLandings.map((landing) => landing.slug),
   'blog/',
   ...posts.map((post) => `blog/${post.slug}`)
 ];
