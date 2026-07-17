@@ -58,7 +58,7 @@ h1 em { display: block; margin-top: .55rem; color: var(--rose); font-weight: 500
 .trust-list { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin: 1.7rem 0 0; padding: 0; color: #70555d; list-style: none; font-size: .78rem; }
 .trust-list li::before { content: "✓"; display: inline-grid; width: 24px; height: 24px; place-items: center; margin-right: .4rem; border: 1px solid rgba(104,21,47,.25); border-radius: 50%; color: var(--burgundy); }
 .hero-media { position: relative; padding-bottom: 2rem; }
-.hero-media img { width: 100%; aspect-ratio: 1.13; object-fit: cover; border: 8px solid rgba(255,255,255,.75); border-radius: 2.5rem 2.5rem 2.5rem 6.5rem; box-shadow: var(--shadow); }
+.hero-media img { max-height:600px; width: 100%; aspect-ratio: 1.13; object-fit: cover; border: 8px solid rgba(255,255,255,.75); border-radius: 2.5rem 2.5rem 2.5rem 6.5rem; box-shadow: var(--shadow); }
 .media-note { position: absolute; left: -1.5rem; bottom: 0; max-width: 280px; padding: 1rem 1.2rem; border: 1px solid rgba(255,255,255,.8); border-radius: 1.2rem; background: rgba(246,225,226,.96); color: var(--burgundy); box-shadow: var(--shadow); font-size: .82rem; }
 .section-head { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
 .section-head.left { margin-left: 0; text-align: left; }
