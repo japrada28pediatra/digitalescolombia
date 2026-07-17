@@ -46,7 +46,7 @@ button, summary { font: inherit; }
 .button-primary:hover { background: #531126; }
 .button-secondary { color: var(--burgundy); border-color: rgba(104, 21, 47, .45); background: rgba(255,255,255,.48); }
 .button-light { color: var(--wine); background: var(--blush); }
-.hero { overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: radial-gradient(circle at 8% 85%, rgba(246,225,226,.9), transparent 25%), linear-gradient(135deg,#fffaf6 0%,#fff7f1 56%,#f9e8e6 100%); }
+.hero { overflow: hidden; padding: clamp(3.5rem, 3vw, 1rem) 0; background: radial-gradient(circle at 8% 85%, rgba(246,225,226,.9), transparent 25%), linear-gradient(135deg,#fffaf6 0%,#fff7f1 56%,#f9e8e6 100%); }
 .hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(2.5rem, 6vw, 5rem); }
 .eyebrow { margin: 0 0 1rem; color: var(--rose); font-size: .75rem; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
 h1, h2, h3, p { text-wrap: pretty; }
