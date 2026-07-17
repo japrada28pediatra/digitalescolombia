@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manicure en Salitre Bogotá | Servicio a domicilio</title>
+  <meta name="description" content="Manicure tradicional y semipermanente a domicilio en Salitre, Bogotá. Reserva tu cita y disfruta uñas impecables sin salir de casa.">
+  <meta name="keywords" content="manicure Salitre, manicure en Salitre Bogotá, manicure a domicilio Bogotá, manicure semipermanente Salitre, uñas semipermanentes Bogotá">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#68152f">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Manicure a domicilio en Salitre, Bogotá">
+  <meta property="og:description" content="Manicure tradicional y semipermanente en la comodidad de tu hogar.">
+  <meta property="og:image" content="images/hero-manicure.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#fff9f4',
+            blush: '#f6e1e2',
+            rose: '#bc6671',
+            burgundy: '#68152f',
+            wine: '#35111e',
+            taupe: '#806c70'
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif']
+          },
+          boxShadow: {
+            soft: '0 24px 70px rgba(73,32,45,.12)',
+            card: '0 12px 40px rgba(73,32,45,.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-padding-top: 100px; }
+      body { @apply bg-cream font-sans text-[#2d1c22] antialiased; }
+      ::selection { @apply bg-[#d9919a] text-wine; }
+      a:focus-visible, summary:focus-visible { @apply outline outline-2 outline-offset-4 outline-rose; }
+    }
+
+    @layer components {
+      .container-site { @apply mx-auto w-[min(1280px,calc(100%-2rem))] md:w-[min(1280px,calc(100%-4rem))]; }
+      .section-space { @apply py-20 md:py-28; }
+      .eyebrow { @apply mb-4 text-xs font-bold uppercase tracking-[.2em] text-rose; }
+      .title-display { @apply font-serif text-4xl font-medium leading-[1.05] tracking-[-.035em] text-wine md:text-6xl; }
+      .btn { @apply inline-flex min-h-14 items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold transition duration-200 hover:-translate-y-0.5; }
+      .btn-primary { @apply bg-burgundy text-white shadow-[0_12px_28px_rgba(104,21,47,.2)] hover:bg-[#531126]; }
+      .btn-secondary { @apply border border-burgundy/60 bg-white/50 text-burgundy hover:bg-blush; }
+      .wa-icon { @apply grid h-6 w-6 place-items-center rounded-full border border-current text-xs; }
+      .nav-link { @apply relative text-sm font-medium text-[#5b3944] after:absolute after:inset-x-0 after:-bottom-2 after:h-px after:origin-right after:scale-x-0 after:bg-rose after:transition-transform hover:after:origin-left hover:after:scale-x-100; }
+      .check { @apply grid h-6 w-6 shrink-0 place-items-center rounded-full border border-burgundy/30 text-xs text-burgundy; }
+    }
+
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-plus { transform: rotate(45deg); background: #f6e1e2; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-up { animation: fadeUp .7s both cubic-bezier(.2,.8,.2,1); }
+      .fade-up-delay { animation-delay: .12s; }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["NailSalon", "LocalBusiness"],
+    "name": "Salitre Nails",
+    "description": "Servicio de manicure tradicional y manicure semipermanente a domicilio en Salitre, Bogotá.",
+    "areaServed": { "@type": "Place", "name": "Salitre, Bogotá, Colombia" },
+    "priceRange": "$$",
+    "serviceType": ["Manicure a domicilio", "Manicure tradicional", "Manicure semipermanente"]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Reemplaza los enlaces https://wa.me/?text=... por https://wa.me/57TU_NUMERO?text=... -->
+  <div class="flex min-h-[42px] items-center justify-center gap-2 bg-gradient-to-r from-[#531126] via-burgundy to-[#531126] px-5 py-2 text-center text-sm text-white">
+    <span aria-hidden="true">⌖</span>
+    Servicio a domicilio en Salitre, Bogotá
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-burgundy/10 bg-cream/90 backdrop-blur-xl">
+    <div class="container-site flex min-h-[82px] items-center justify-between gap-6 md:min-h-24">
+      <a href="#inicio" class="inline-flex items-center gap-3 font-serif text-base tracking-[.16em] text-wine md:text-xl" aria-label="Salitre Nails, inicio">
+        <span class="grid h-12 w-10 place-items-center rounded-[50%] border border-rose/70 font-sans text-xs font-bold text-rose md:h-16 md:w-12">SN</span>
+        <span>SALITRE NAILS</span>
+      </a>
+
+      <nav class="ml-auto hidden items-center gap-8 lg:flex" aria-label="Navegación principal">
+        <a class="nav-link" href="#servicios">Servicios</a>
+        <a class="nav-link" href="#experiencia">Por qué elegirnos</a>
+        <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+        <a class="nav-link" href="#preguntas">Preguntas</a>
+      </nav>
+
+      <a class="btn btn-primary h-12 min-h-12 w-12 px-0 text-[0] md:w-auto md:px-5 md:text-sm" href="https://wa.me/?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20manicure%20a%20domicilio%20en%20Salitre%2C%20Bogot%C3%A1." target="_blank" rel="noopener">
+        <span class="wa-icon text-xs" aria-hidden="true">☎</span>
+        <span>Reservar por WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="relative overflow-hidden bg-[radial-gradient(circle_at_8%_85%,rgba(246,225,226,.9),transparent_25%),linear-gradient(135deg,#fffaf6_0%,#fff7f1_56%,#f9e8e6_100%)] py-14 md:py-24">
+      <div class="container-site grid items-center gap-14 lg:grid-cols-[.93fr_1.07fr] lg:gap-16">
+        <div class="fade-up relative z-10">
+          <p class="eyebrow">MANICURE A DOMICILIO EN BOGOTÁ</p>
+          <h1 class="max-w-2xl font-serif text-[clamp(3rem,6vw,5.15rem)] font-medium leading-[.98] tracking-[-.045em] text-wine">
+            Manicure en Salitre,
+            <span class="mt-3 block font-normal italic text-rose">impecable. Sin salir de casa.</span>
+          </h1>
+          <p class="mt-7 max-w-xl text-lg leading-relaxed text-[#6f565e] md:text-xl">
+            Manicure tradicional y semipermanente con atención profesional en la comodidad de tu hogar.
+          </p>
+
+          <div class="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+            <a class="btn btn-primary" href="https://wa.me/?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20manicure%20a%20domicilio%20en%20Salitre%2C%20Bogot%C3%A1." target="_blank" rel="noopener">
+              <span class="wa-icon" aria-hidden="true">☎</span> Reservar por WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios <span aria-hidden="true">→</span></a>
+          </div>
+
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-xs text-[#70555d] sm:flex sm:flex-wrap sm:gap-6" aria-label="Beneficios principales">
+            <li class="flex items-center gap-2"><span class="check">✓</span> Material esterilizado</li>
+            <li class="flex items-center gap-2"><span class="check">✓</span> Puntualidad</li>
+            <li class="flex items-center gap-2"><span class="check">✓</span> Acabado premium</li>
+          </ul>
+        </div>
+
+        <div class="fade-up fade-up-delay relative z-10 pb-10">
+          <div class="aspect-square overflow-hidden rounded-[2.5rem_2.5rem_2.5rem_7rem] border-[8px] border-white/70 shadow-soft md:aspect-[1.15]">
+            <img class="h-full w-full object-cover object-center transition duration-700 hover:scale-[1.025]" src="images/hero-manicure.webp" alt="Manicure nude realizado a domicilio en Salitre, Bogotá" width="1600" height="1200" fetchpriority="high">
+          </div>
+          <div class="absolute bottom-0 left-3 right-3 grid grid-cols-[3.25rem_1fr] gap-3 rounded-3xl border border-white/80 bg-blush/95 p-5 shadow-soft backdrop-blur md:left-[-2rem] md:right-auto md:w-72">
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-white/70 text-2xl text-burgundy" aria-hidden="true">⌂</span>
+            <div><strong class="block text-sm text-wine">Atención a domicilio</strong><span class="text-xs text-rose">Salitre, Bogotá</span></div>
+            <p class="col-span-2 border-t border-burgundy/10 pt-3 text-xs text-[#704e59]">✓ Cuidado profesional</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white" id="servicios">
+      <div class="container-site">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <p class="eyebrow">ELIGE TU ACABADO</p>
+          <h2 class="title-display">Servicios para consentir tus manos</h2>
+          <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-taupe">Una experiencia cuidada de principio a fin, sin desplazamientos ni esperas.</p>
+        </div>
+
+        <div class="grid gap-7 lg:grid-cols-2">
+          <article class="group overflow-hidden rounded-[2rem] border border-burgundy/10 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]" src="images/manicure-tradicional.webp" alt="Manicure tradicional profesional a domicilio en Salitre, Bogotá" width="1600" height="1200" loading="lazy">
+              <span class="absolute left-5 top-5 rounded-full border border-white/70 bg-cream/90 px-4 py-2 text-xs font-semibold text-burgundy backdrop-blur">Clásico y natural</span>
+            </div>
+            <div class="p-7 md:p-9">
+              <h3 class="font-serif text-3xl font-medium text-wine">Manicure tradicional</h3>
+              <p class="mt-3 text-taupe">Cuidado completo de tus manos y uñas, con preparación, limado, cutículas y el color que elijas.</p>
+              <ul class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#654b53]">
+                <li>✓ Preparación y limado</li><li>✓ Cuidado de cutículas</li><li>✓ Esmaltado tradicional</li>
+              </ul>
+              <a class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-burgundy hover:text-rose" href="https://wa.me/?text=Hola%2C%20quiero%20consultar%20por%20manicure%20tradicional%20en%20Salitre." target="_blank" rel="noopener">Consultar disponibilidad ↗</a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[2rem] border border-burgundy/10 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]" src="images/manicure-semipermanente.webp" alt="Manicure semipermanente color borgoña en Salitre, Bogotá" width="1600" height="1200" loading="lazy">
+              <span class="absolute left-5 top-5 rounded-full border border-white/70 bg-cream/90 px-4 py-2 text-xs font-semibold text-burgundy backdrop-blur">Más duración</span>
+            </div>
+            <div class="p-7 md:p-9">
+              <h3 class="font-serif text-3xl font-medium text-wine">Manicure semipermanente</h3>
+              <p class="mt-3 text-taupe">Un acabado brillante, uniforme y resistente para disfrutar uñas impecables durante más tiempo.</p>
+              <ul class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#654b53]">
+                <li>✓ Preparación completa</li><li>✓ Esmalte en gel</li><li>✓ Acabado brillante</li>
+              </ul>
+              <a class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-burgundy hover:text-rose" href="https://wa.me/?text=Hola%2C%20quiero%20consultar%20por%20manicure%20semipermanente%20en%20Salitre." target="_blank" rel="noopener">Consultar disponibilidad ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-7 flex flex-col items-start justify-between gap-5 rounded-3xl border border-burgundy/10 bg-blush p-7 md:flex-row md:items-center">
+          <div class="flex items-start gap-4">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-2xl text-burgundy">＋</span>
+            <div><strong class="text-wine">Personaliza tu cita</strong><p class="mt-1 text-sm text-[#765a63]">Consulta por retiro de esmalte, hidratación o diseño minimalista.</p></div>
+          </div>
+          <a class="text-sm font-bold text-burgundy hover:text-rose" href="https://wa.me/?text=Hola%2C%20quiero%20consultar%20por%20complementos%20para%20mi%20manicure." target="_blank" rel="noopener">Preguntar por complementos →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-[#f8eee7]" id="experiencia">
+      <div class="container-site grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+        <div class="relative mx-auto max-w-xl">
+          <div class="absolute -left-5 -top-5 h-2/5 w-2/5 rounded-[5rem_1rem] bg-blush"></div>
+          <img class="relative aspect-[4/5] w-full rounded-[7rem_1.75rem_1.75rem_1.75rem] object-cover shadow-soft md:aspect-[5/4]" src="images/manicure-tradicional.webp" alt="Servicio profesional de manicure a domicilio" width="1600" height="1200" loading="lazy">
+          <span class="absolute -bottom-6 right-4 max-w-[13rem] rounded-2xl bg-burgundy px-5 py-4 text-center font-serif text-lg italic leading-snug text-white shadow-soft">Tu momento de cuidado, en casa</span>
+        </div>
+
+        <div>
+          <p class="eyebrow">BELLEZA SIN COMPLICACIONES</p>
+          <h2 class="title-display">Todo lo que esperas de un buen manicure</h2>
+          <p class="mt-5 text-lg leading-relaxed text-taupe">Cuidamos los detalles para que solo tengas que elegir tu color, relajarte y disfrutar el resultado.</p>
+
+          <div class="mt-8 border-t border-burgundy/10">
+            <article class="grid grid-cols-[3rem_1fr] gap-4 border-b border-burgundy/10 py-5">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blush text-xs font-bold text-burgundy">01</span>
+              <div><h3 class="font-bold text-wine">Higiene y cuidado</h3><p class="mt-1 text-sm text-taupe">Implementos preparados y un proceso ordenado para tu tranquilidad.</p></div>
+            </article>
+            <article class="grid grid-cols-[3rem_1fr] gap-4 border-b border-burgundy/10 py-5">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blush text-xs font-bold text-burgundy">02</span>
+              <div><h3 class="font-bold text-wine">Atención sin afán</h3><p class="mt-1 text-sm text-taupe">Una cita pensada para cuidar la forma, el acabado y cada detalle.</p></div>
+            </article>
+            <article class="grid grid-cols-[3rem_1fr] gap-4 border-b border-burgundy/10 py-5">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-blush text-xs font-bold text-burgundy">03</span>
+              <div><h3 class="font-bold text-wine">Comodidad real</h3><p class="mt-1 text-sm text-taupe">Recibe el servicio en tu hogar, sin tráfico ni salas de espera.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space relative overflow-hidden bg-wine text-white" id="como-funciona">
+      <div class="container-site relative z-10">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <p class="eyebrow !text-[#d9919a]">RESERVAR ES MUY FÁCIL</p>
+          <h2 class="font-serif text-4xl font-medium tracking-tight md:text-6xl">Tu manicure en tres pasos</h2>
+        </div>
+        <ol class="grid gap-5 lg:grid-cols-3">
+          <li class="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-blush font-bold text-burgundy">1</span>
+            <h3 class="mt-8 font-serif text-2xl font-medium">Elige tu servicio</h3>
+            <p class="mt-3 text-sm text-white/65">Tradicional, semipermanente o con retiro previo.</p>
+          </li>
+          <li class="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-blush font-bold text-burgundy">2</span>
+            <h3 class="mt-8 font-serif text-2xl font-medium">Coordina por WhatsApp</h3>
+            <p class="mt-3 text-sm text-white/65">Envíanos tu ubicación y el horario que prefieres.</p>
+          </li>
+          <li class="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-blush font-bold text-burgundy">3</span>
+            <h3 class="mt-8 font-serif text-2xl font-medium">Disfruta en casa</h3>
+            <p class="mt-3 text-sm text-white/65">Llevamos el servicio hasta ti en Salitre.</p>
+          </li>
+        </ol>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 text-center md:flex-row">
+          <a class="btn bg-blush text-wine hover:bg-white" href="https://wa.me/?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20manicure%20a%20domicilio%20en%20Salitre%2C%20Bogot%C3%A1." target="_blank" rel="noopener"><span class="wa-icon">☎</span> Reservar por WhatsApp</a>
+          <p class="text-xs text-white/60">Te confirmamos disponibilidad directamente por WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white">
+      <div class="container-site grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+        <div>
+          <p class="eyebrow">ZONA DE ATENCIÓN</p>
+          <h2 class="title-display">Manicure a domicilio en Salitre, Bogotá</h2>
+          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-taupe">Atendemos principalmente en Salitre. Si estás en un sector cercano, escríbenos para confirmar cobertura y disponibilidad.</p>
+        </div>
+        <div class="rounded-[2rem] border border-burgundy/10 bg-[radial-gradient(circle_at_88%_12%,rgba(217,145,154,.26),transparent_32%),#f8eee7] p-8 md:p-10">
+          <span class="grid h-16 w-16 place-items-center rounded-full bg-burgundy text-2xl text-white">⌖</span>
+          <h3 class="mt-6 font-serif text-3xl font-medium text-wine">Salitre y alrededores</h3>
+          <p class="mt-2 text-sm text-taupe">La cobertura puede variar según el día y el horario.</p>
+          <a class="mt-6 inline-flex text-sm font-bold text-burgundy hover:text-rose" href="https://wa.me/?text=Hola%2C%20quiero%20consultar%20si%20tienen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">Consultar mi zona →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-[#f8eee7]" id="preguntas">
+      <div class="container-site grid items-start gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
+        <div class="lg:sticky lg:top-36">
+          <p class="eyebrow">ANTES DE TU CITA</p>
+          <h2 class="title-display">Preguntas frecuentes</h2>
+          <p class="mt-5 leading-relaxed text-taupe">Resolvemos las dudas más comunes sobre el servicio de manicure a domicilio.</p>
+          <a class="mt-6 inline-flex text-sm font-bold text-burgundy hover:text-rose" href="https://wa.me/?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20servicio%20de%20manicure." target="_blank" rel="noopener">¿Tienes otra pregunta? Escríbenos →</a>
+        </div>
+
+        <div class="border-t border-burgundy/10">
+          <details class="border-b border-burgundy/10" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 py-6 font-serif text-xl font-medium text-wine"><span>¿Qué incluye el servicio de manicure a domicilio?</span><span class="faq-plus grid h-9 w-9 shrink-0 place-items-center rounded-full border border-burgundy/20 font-sans transition">＋</span></summary>
+            <p class="-mt-1 pb-6 pr-10 text-sm leading-relaxed text-taupe">Incluye preparación de las uñas, limado, cuidado de cutículas y esmaltado. Antes de reservar puedes indicar si deseas manicure tradicional, semipermanente o retiro de esmalte anterior.</p>
+          </details>
+          <details class="border-b border-burgundy/10">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 py-6 font-serif text-xl font-medium text-wine"><span>¿Cuánto dura el manicure semipermanente?</span><span class="faq-plus grid h-9 w-9 shrink-0 place-items-center rounded-full border border-burgundy/20 font-sans transition">＋</span></summary>
+            <p class="-mt-1 pb-6 pr-10 text-sm leading-relaxed text-taupe">Generalmente conserva su brillo entre dos y tres semanas. La duración puede variar según el crecimiento de la uña, tus actividades y los cuidados posteriores.</p>
+          </details>
+          <details class="border-b border-burgundy/10">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 py-6 font-serif text-xl font-medium text-wine"><span>¿Atienden únicamente en Salitre?</span><span class="faq-plus grid h-9 w-9 shrink-0 place-items-center rounded-full border border-burgundy/20 font-sans transition">＋</span></summary>
+            <p class="-mt-1 pb-6 pr-10 text-sm leading-relaxed text-taupe">Salitre es nuestra zona principal de atención. También puedes consultar disponibilidad para sectores cercanos antes de confirmar la reserva.</p>
+          </details>
+          <details class="border-b border-burgundy/10">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 py-6 font-serif text-xl font-medium text-wine"><span>¿Debo tener herramientas o productos en casa?</span><span class="faq-plus grid h-9 w-9 shrink-0 place-items-center rounded-full border border-burgundy/20 font-sans transition">＋</span></summary>
+            <p class="-mt-1 pb-6 pr-10 text-sm leading-relaxed text-taupe">No. El servicio se realiza con los implementos necesarios. Solo necesitas un espacio cómodo, iluminado y una superficie de apoyo.</p>
+          </details>
+          <details class="border-b border-burgundy/10">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-5 py-6 font-serif text-xl font-medium text-wine"><span>¿Puedo solicitar retiro de semipermanente?</span><span class="faq-plus grid h-9 w-9 shrink-0 place-items-center rounded-full border border-burgundy/20 font-sans transition">＋</span></summary>
+            <p class="-mt-1 pb-6 pr-10 text-sm leading-relaxed text-taupe">Sí. Indícalo al reservar para contemplar el tiempo y los materiales necesarios antes de aplicar el nuevo color.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white">
+      <div class="container-site rounded-[2.5rem] bg-[radial-gradient(circle_at_15%_100%,rgba(217,145,154,.34),transparent_32%),#f6e1e2] px-6 py-20 text-center md:px-10">
+        <p class="eyebrow">TU PRÓXIMO COLOR TE ESPERA</p>
+        <h2 class="title-display">¿Lista para unas uñas impecables?</h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-taupe">Reserva tu manicure a domicilio en Salitre y disfruta tu cita sin salir de casa.</p>
+        <a class="btn btn-primary mt-8" href="https://wa.me/?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20manicure%20a%20domicilio%20en%20Salitre%2C%20Bogot%C3%A1." target="_blank" rel="noopener"><span class="wa-icon">☎</span> Reservar por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-wine pb-24 pt-16 text-white/70 md:pb-8">
+    <div class="container-site grid gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_.65fr_.65fr] lg:gap-16">
+      <div>
+        <a href="#inicio" class="inline-flex items-center gap-3 font-serif text-lg tracking-[.16em] text-white"><span class="grid h-14 w-11 place-items-center rounded-[50%] border border-white/30 font-sans text-xs font-bold text-[#d9919a]">SN</span><span>SALITRE NAILS</span></a>
+        <p class="mt-5 max-w-md text-sm">Manicure tradicional y semipermanente a domicilio en Salitre, Bogotá.</p>
+      </div>
+      <div class="flex flex-col items-start gap-2 text-sm"><strong class="mb-2 text-white">Servicios</strong><a class="hover:text-white" href="#servicios">Manicure tradicional</a><a class="hover:text-white" href="#servicios">Manicure semipermanente</a><a class="hover:text-white" href="#experiencia">Servicio a domicilio</a></div>
+      <div class="flex flex-col items-start gap-2 text-sm"><strong class="mb-2 text-white">Información</strong><a class="hover:text-white" href="#como-funciona">Cómo reservar</a><a class="hover:text-white" href="#preguntas">Preguntas frecuentes</a><a class="hover:text-white" href="https://wa.me/?text=Hola%2C%20quiero%20reservar%20un%20manicure." target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="container-site mt-12 flex flex-col gap-2 border-t border-white/10 pt-5 text-xs md:flex-row md:justify-between"><span>© 2026 Salitre Nails</span><span>Salitre, Bogotá, Colombia</span></div>
+  </footer>
+
+  <a class="fixed bottom-2.5 left-2.5 right-2.5 z-[100] flex min-h-14 items-center justify-center gap-2 rounded-xl bg-burgundy px-5 text-sm font-bold text-white shadow-soft md:hidden" href="https://wa.me/?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20manicure%20a%20domicilio%20en%20Salitre%2C%20Bogot%C3%A1." target="_blank" rel="noopener">Reservar por WhatsApp ↗</a>
+</body>
+</html>
