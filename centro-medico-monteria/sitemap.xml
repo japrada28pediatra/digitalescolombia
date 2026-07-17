@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.femsalud.co/</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.femsalud.co/ginecologia-monteria.html</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.femsalud.co/embarazo-alto-riesgo-monteria.html</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.femsalud.co/medicina-materno-fetal-monteria.html</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.femsalud.co/psicologia-mujer-monteria.html</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.femsalud.co/bienestar-femenino-monteria.html</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.femsalud.co/control-prenatal-monteria.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/ginecologia-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/embarazo-alto-riesgo-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/medicina-materno-fetal-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/control-prenatal-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/consulta-preconcepcional-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/psicologia-mujer-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/psicologia-perinatal-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/bienestar-femenino-monteria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/especialistas/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/especialistas/ginecologia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/especialistas/materno-fetal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/especialistas/psicologia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/ansiedad-durante-embarazo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/consulta-preconcepcional.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/cuando-iniciar-control-prenatal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/depresion-posparto-senales.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/embarazo-alto-riesgo-significado.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/primera-consulta-ginecologica.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/que-es-medicina-materno-fetal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/blog/senales-consultar-ginecologo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/contacto.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://digitalescolombia.com/centro-medico-monteria/politica-privacidad.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

@@ -6,40 +6,95 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config={theme:{extend:{fontFamily:{sans:['DM Sans','sans-serif'],serif:['Playfair Display','serif']},colors:{fem:{50:'#fff7f8',100:'#fdecef',200:'#f9d5dc',500:'#d95775',600:'#bd3c5d',700:'#9d304d',800:'#842b45',900:'#70283e',cream:'#fbf7f2'}}}}}
+tailwind.config={theme:{extend:{
+fontFamily:{sans:['DM Sans','sans-serif'],serif:['Playfair Display','serif']},
+colors:{fem:{50:'#fff8f8',100:'#fbecef',200:'#f4d3da',300:'#e8acb9',500:'#cb6279',600:'#ad465f',700:'#8e354e',800:'#742d43',900:'#5d2839',cream:'#fbf7f2',sage:'#aab9ad',ink:'#292328'}}
+}}}
 </script>
-<style>
-html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif}h1,h2,h3,.font-serif{font-family:'Playfair Display',serif}.soft-shadow{box-shadow:0 20px 60px rgba(112,40,62,.10)}
-</style>
-<title>Ginecología en Montería | FEMSALUD</title><meta name="description" content="Atención ginecológica para prevención, diagnóstico y seguimiento."><link rel="canonical" href="https://www.femsalud.co/ginecologia-monteria.html"></head>
-<body class="text-gray-800">
+<link rel="stylesheet" href="/centro-medico-monteria/assets/styles.css">
+
+<title>Ginecología en Montería | FEMSALUD</title><meta name="description" content="Consulta ginecológica en Montería para prevención, valoración y seguimiento de la salud femenina.">
+<link rel="canonical" href="https://digitalescolombia.com/centro-medico-monteria/ginecologia-monteria.html">
+<meta property="og:title" content="Ginecología en Montería | FEMSALUD"><meta property="og:description" content="Consulta ginecológica en Montería para prevención, valoración y seguimiento de la salud femenina.">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_CO">
+</head><body class="bg-white">
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-fem-100">
-<div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-fem-600 text-white grid place-items-center font-bold">F</div>
-<div><div class="font-serif text-xl text-fem-800 leading-none">FEMSALUD</div><div class="text-[11px] tracking-[.18em] text-gray-500 uppercase">Salud y bienestar femenino</div></div>
-</a>
-<button id="menuBtn" class="md:hidden border rounded-lg px-3 py-2" aria-label="Abrir menú">☰</button>
-<nav class="hidden md:flex items-center gap-7 text-sm font-medium">
-<a href="index.html#servicios">Servicios</a><a href="index.html#nosotros">Nosotros</a><a href="index.html#especialistas">Especialistas</a><a href="index.html#preguntas">Preguntas frecuentes</a><a href="index.html#contacto" class="bg-fem-600 text-white px-5 py-3 rounded-full">Agendar cita</a>
-</nav>
-</div>
-<div id="mobileNav" class="hidden md:hidden px-5 pb-5 bg-white">
-<div class="flex flex-col gap-4 text-sm font-medium"><a href="index.html#servicios">Servicios</a><a href="index.html#nosotros">Nosotros</a><a href="index.html#especialistas">Especialistas</a><a href="index.html#preguntas">Preguntas frecuentes</a><a href="index.html#contacto" class="bg-fem-600 text-white px-5 py-3 rounded-full text-center">Agendar cita</a></div>
-</div>
+  <div class="bg-fem-900 text-white text-xs text-center py-2 px-4">
+    Consultas presenciales en Places Mall, Monter&iacute;a - Atenci&oacute;n online disponible
+  </div>
+  <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="/centro-medico-monteria/index.html" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-full bg-fem-600 text-white grid place-items-center font-bold">F</div>
+      <div>
+        <div class="font-serif text-xl text-fem-800 leading-none">FEMSALUD</div>
+        <div class="text-[10px] tracking-[.16em] text-gray-500 uppercase mt-1">Salud y bienestar femenino</div>
+      </div>
+    </a>
+    <button id="menuBtn" class="lg:hidden border rounded-lg px-3 py-2" aria-label="Abrir menú">☰</button>
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+      <a href="/centro-medico-monteria/index.html">Inicio</a>
+      <a href="/centro-medico-monteria/index.html#servicios">Servicios</a>
+      <a href="/centro-medico-monteria/especialistas/index.html">Especialistas</a>
+      <a href="/centro-medico-monteria/blog/index.html">Blog</a>
+      <a href="/centro-medico-monteria/index.html#nosotros">FEMSALUD</a>
+      <a href="/centro-medico-monteria/contacto.html" class="bg-fem-600 text-white px-5 py-3 rounded-full">Agendar cita</a>
+    </nav>
+  </div>
+  <div id="mobileNav" class="hidden lg:hidden px-5 pb-5 bg-white">
+    <div class="flex flex-col gap-4 text-sm font-medium">
+      <a href="/centro-medico-monteria/index.html">Inicio</a><a href="/centro-medico-monteria/index.html#servicios">Servicios</a>
+      <a href="/centro-medico-monteria/especialistas/index.html">Especialistas</a><a href="/centro-medico-monteria/blog/index.html">Blog</a>
+      <a href="/centro-medico-monteria/index.html#nosotros">FEMSALUD</a><a href="/centro-medico-monteria/contacto.html" class="bg-fem-600 text-white px-5 py-3 rounded-full text-center">Agendar cita</a>
+    </div>
+  </div>
 </header>
-<section class="bg-fem-50"><div class="max-w-5xl mx-auto px-5 py-20 text-center"><span class="text-fem-600 font-bold uppercase tracking-widest text-sm">FEMSALUD Montería</span><h1 class="mt-4 text-5xl md:text-6xl text-fem-900">Ginecología en Montería</h1><p class="mt-6 text-lg text-gray-600">Atención ginecológica para prevención, diagnóstico y seguimiento.</p><a href="index.html#contacto" class="mt-8 inline-block bg-fem-600 text-white px-7 py-4 rounded-full font-bold">Agendar cita</a></div></section>
-<section class="max-w-5xl mx-auto px-5 py-20 grid lg:grid-cols-3 gap-12"><article class="lg:col-span-2"><h2 class="text-3xl text-fem-900">Atención especializada y cercana</h2><p class="mt-5 text-gray-600 leading-8">Atención ginecológica para prevención, diagnóstico y seguimiento. En FEMSALUD buscamos brindar una experiencia clara, humana y centrada en cada paciente.</p><h2 class="mt-10 text-3xl text-fem-900">¿Cuándo solicitar una consulta?</h2><ul class="mt-5 list-disc pl-6 space-y-3 text-gray-600"><li>Cuando necesitas valoración especializada.</li><li>Cuando presentas síntomas o cambios que requieren revisión.</li><li>Cuando buscas prevención, seguimiento o una segunda opinión.</li></ul></article><aside class="bg-fem-cream rounded-3xl p-7 h-fit"><h3 class="text-2xl text-fem-900">Solicita información</h3><a href="https://wa.me/573000000000" class="mt-6 block text-center bg-green-500 text-white px-5 py-4 rounded-xl font-bold">WhatsApp</a></aside></section>
+
+<main>
+<section class="bg-fem-50"><div class="max-w-5xl mx-auto px-5 py-20 text-center">
+<span class="text-fem-600 font-bold uppercase tracking-widest text-sm">FEMSALUD Montería</span>
+<h1 class="mt-4 text-5xl md:text-6xl text-fem-900">Ginecología en Montería</h1><p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">Consulta ginecológica en Montería para prevención, valoración y seguimiento de la salud femenina.</p>
+<a href="/centro-medico-monteria/contacto.html" class="mt-8 inline-block bg-fem-600 text-white px-7 py-4 rounded-full font-bold">Agendar una valoración</a>
+</div></section>
+<section class="max-w-6xl mx-auto px-5 py-20 grid lg:grid-cols-3 gap-12">
+<article class="lg:col-span-2 prose-custom">
+<h2>Atención especializada y cercana</h2><p>Consulta ginecológica en Montería para prevención, valoración y seguimiento de la salud femenina. El enfoque de FEMSALUD busca ofrecer información clara, acompañamiento profesional y una atención centrada en cada paciente.</p>
+<h2>Motivos frecuentes de consulta</h2><ul><li>Consulta preventiva</li><li>Alteraciones del ciclo menstrual</li><li>Dolor pélvico</li><li>Menopausia y salud hormonal</li></ul>
+<h2>¿Qué puedes esperar de la consulta?</h2><p>La atención inicia con una revisión de antecedentes, síntomas y necesidades actuales. A partir de esta valoración, el profesional explica los pasos recomendados y el seguimiento correspondiente.</p>
+<h2>Consulta presencial y online</h2><p>La consulta presencial se realiza en el consultorio de FEMSALUD en CC Places Mall, Cra. 6 # 65-24, La Castellana, Montería. También puedes solicitar orientación sobre consultas online desde cualquier lugar del mundo.</p>
+<h2>Preguntas frecuentes</h2>
+<div class="space-y-4 not-prose"><details class="border border-fem-100 rounded-2xl p-5"><summary class="font-bold cursor-pointer text-fem-900">¿Quién realiza la consulta ginecológica?</summary><p class="mt-3 text-gray-600">La atención está a cargo del Dr. Hernándo Severiche Salazar, ginecólogo-obstetra y especialista en Medicina Materno Fetal (Perinatología).</p></details><details class="border border-fem-100 rounded-2xl p-5"><summary class="font-bold cursor-pointer text-fem-900">¿La consulta puede ser online?</summary><p class="mt-3 text-gray-600">Hay consultas online disponibles. Al solicitar la cita te orientaremos sobre la modalidad adecuada según el motivo de consulta.</p></details><details class="border border-fem-100 rounded-2xl p-5"><summary class="font-bold cursor-pointer text-fem-900">¿Cómo puedo agendar?</summary><p class="mt-3 text-gray-600">Puedes escribir al WhatsApp +57 318 234 8469 para consultar disponibilidad y modalidad de atención.</p></details></div>
+</article>
+<aside class="bg-fem-cream rounded-3xl p-7 h-fit"><h3 class="text-2xl text-fem-900">Solicita información</h3><p class="mt-3 text-gray-600">Consulta disponibilidad y agenda por WhatsApp.</p><a href="https://wa.me/573182348469" class="mt-6 block text-center bg-green-500 text-white px-5 py-4 rounded-xl font-bold">Escribir por WhatsApp</a>
+<div class="mt-8 border-t pt-6"><p class="text-sm font-bold text-fem-800">Servicios relacionados</p><a class="block mt-3 text-fem-600" href="/centro-medico-monteria/ginecologia-monteria.html">Ginecología</a><a class="block mt-2 text-fem-600" href="/centro-medico-monteria/control-prenatal-monteria.html">Control prenatal</a><a class="block mt-2 text-fem-600" href="/centro-medico-monteria/psicologia-mujer-monteria.html">Psicología</a></div></aside>
+</section></main>
 <footer class="bg-fem-900 text-white">
-<div class="max-w-7xl mx-auto px-5 py-14 grid md:grid-cols-4 gap-10">
-<div class="md:col-span-2"><div class="font-serif text-3xl">FEMSALUD</div><p class="mt-4 text-fem-100 max-w-xl">Atención integral para la mujer en Montería.</p></div>
-<div><h3 class="font-sans font-bold mb-4">Servicios</h3><div class="space-y-2 text-fem-100 text-sm"><a class="block" href="ginecologia-monteria.html">Ginecología</a><a class="block" href="embarazo-alto-riesgo-monteria.html">Embarazo de alto riesgo</a><a class="block" href="medicina-materno-fetal-monteria.html">Medicina materno fetal</a><a class="block" href="psicologia-mujer-monteria.html">Psicología</a></div></div>
-<div><h3 class="font-sans font-bold mb-4">Contacto</h3><div class="space-y-2 text-fem-100 text-sm"><p>Montería, Córdoba</p><p>WhatsApp: +57 300 000 0000</p><p>contacto@femsalud.co</p></div></div>
-</div>
-<div class="border-t border-white/10 py-5 text-center text-xs text-fem-100">© 2026 FEMSALUD.</div>
+  <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-2">
+      <div class="font-serif text-3xl">FEMSALUD</div>
+      <p class="mt-4 text-fem-100 max-w-xl">Centro integral de salud femenina en Montería. Ginecología, obstetricia, medicina materno fetal, psicología y bienestar.</p>
+      <p class="mt-5 text-xs text-fem-200">El contenido del sitio es informativo y no sustituye una valoración médica.</p>
+    </div>
+    <div>
+      <h3 class="font-sans font-bold mb-4">Servicios</h3>
+      <div class="space-y-2 text-fem-100 text-sm">
+        <a class="block" href="/centro-medico-monteria/ginecologia-monteria.html">Ginecología</a>
+        <a class="block" href="/centro-medico-monteria/embarazo-alto-riesgo-monteria.html">Embarazo de alto riesgo</a>
+        <a class="block" href="/centro-medico-monteria/medicina-materno-fetal-monteria.html">Medicina materno fetal</a>
+        <a class="block" href="/centro-medico-monteria/psicologia-mujer-monteria.html">Psicología</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-sans font-bold mb-4">Contacto</h3>
+      <div class="space-y-2 text-fem-100 text-sm">
+        <p>CC Places Mall, Cra. 6 # 65-24, La Castellana, Monter&iacute;a</p>
+        <p><a href="https://wa.me/573182348469">WhatsApp: +57 318 234 8469</a></p>
+        <p>Consultas presenciales y online</p>
+        <a class="block underline" href="/centro-medico-monteria/politica-privacidad.html">Política de privacidad</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-fem-100">© 2026 FEMSALUD. Todos los derechos reservados.</div>
 </footer>
-<a href="https://wa.me/573000000000?text=Hola%20FEMSALUD,%20quiero%20agendar%20una%20cita" class="fixed bottom-5 right-5 z-50 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg font-semibold" target="_blank">WhatsApp</a>
-<script>
-const b=document.getElementById('menuBtn'),n=document.getElementById('mobileNav');if(b){b.addEventListener('click',()=>n.classList.toggle('hidden'))}
-</script>
+<a href="https://wa.me/573182348469?text=Hola%20FEMSALUD,%20quiero%20agendar%20una%20cita" class="fixed bottom-5 right-5 z-50 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg font-semibold" target="_blank" rel="noopener">WhatsApp</a>
+<script src="/centro-medico-monteria/assets/site.js"></script>
 </body></html>
