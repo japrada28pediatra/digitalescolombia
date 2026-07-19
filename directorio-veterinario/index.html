@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veterinarias en Colombia | Directorio Veterinario</title>
+  <meta name="description" content="Encuentra veterinarias, clínicas veterinarias, servicios para mascotas, pet shops y profesionales veterinarios en Colombia. Busca por ciudad y categoría.">
+  <link rel="canonical" href="https://digitalescolombia.com/directorio-veterinario/">
+  <meta property="og:title" content="Directorio Veterinario de Colombia">
+  <meta property="og:description" content="Encuentra servicios veterinarios y para mascotas en Colombia.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Directorio Veterinario de Colombia","description":"Directorio de veterinarias y servicios para mascotas en Colombia","url":"https://digitalescolombia.com/directorio-veterinario/"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav"><a class="brand" href="./"><span class="brand-mark">✚</span><span>Directorio<strong>Veterinario</strong></span></a><a class="nav-link" href="#como-funciona">¿Cómo funciona?</a></div>
+  </header>
+  <main>
+    <section class="hero"><div class="container hero-inner"><div class="eyebrow">DIRECTORIO NACIONAL · COLOMBIA</div><h1>Encuentra la veterinaria ideal para tu mascota</h1><p class="hero-copy">Busca clínicas veterinarias, veterinarios, pet shops y servicios para mascotas por ciudad y categoría.</p><div class="hero-search"><label for="search">¿Qué necesitas?</label><input id="search" type="search" placeholder="Ej. clínica veterinaria, peluquería, pet shop…" autocomplete="off"><button id="searchBtn">Buscar</button></div><div class="quick-tags"><button data-quick="Clínica veterinaria">Clínicas veterinarias</button><button data-quick="Pet shop">Pet shops</button><button data-quick="Peluquería">Peluquerías</button><button data-quick="Adiestramiento">Adiestramiento</button></div></div></section>
+    <section class="container directory" id="directorio"><div class="directory-head"><div><p class="eyebrow dark">DIRECTORIO DE NEGOCIOS</p><h2>Veterinarias y servicios para mascotas</h2><p id="resultSummary" class="muted"></p></div><button class="filter-toggle" id="filterToggle">Filtros</button></div>
+      <div class="layout"><aside class="filters" id="filters"><div class="filter-title">Filtrar resultados <button id="clearFilters">Limpiar</button></div><label>Ciudad<select id="city"><option value="">Todas las ciudades</option></select></label><label>Categoría<select id="category"><option value="">Todas las categorías</option></select></label><label>Departamento<select id="department"><option value="">Todos los departamentos</option></select></label></aside><section class="results"><div id="cards" class="cards"></div><div id="empty" class="empty" hidden><h3>No encontramos resultados</h3><p>Prueba con otra ciudad, categoría o término de búsqueda.</p></div><nav class="pagination" aria-label="Paginación"><button id="prev">Anterior</button><span id="pageInfo"></span><button id="next">Siguiente</button></nav></section></div>
+    </section>
+    <section class="info" id="como-funciona"><div class="container info-grid"><div><p class="eyebrow dark">DIRECTORIOVETERINARIO.COM</p><h2>Todo para el cuidado de tu mascota, en un solo lugar</h2></div><div><p>Encuentra opciones de atención veterinaria, salud animal y servicios complementarios en diferentes ciudades de Colombia.</p><p>La información se presenta como referencia pública. Te recomendamos confirmar horarios, disponibilidad y datos de contacto directamente con cada establecimiento.</p></div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><span>© 2026 Directorio Veterinario Colombia</span><span>Un proyecto de Digitales Colombia</span></div></footer>
+  <div class="modal" id="modal" hidden><div class="modal-backdrop" data-close></div><article class="modal-card"><button class="modal-close" data-close aria-label="Cerrar">×</button><div id="modalContent"></div></article></div>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>

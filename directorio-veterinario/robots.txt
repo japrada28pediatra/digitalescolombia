@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digitalescolombia.com/directorio-veterinario/sitemap.xml

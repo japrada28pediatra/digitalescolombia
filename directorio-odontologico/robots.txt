@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /directorio-odontologico/
+Sitemap: https://digitalescolombia.com/directorio-odontologico/sitemap.xml
