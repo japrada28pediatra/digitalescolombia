@@ -11,6 +11,7 @@
   <meta property="og:description" content="Busca odontólogos y clínicas dentales por nombre y ciudad.">
   <meta property="og:url" content="https://digitalescolombia.com/directorio-odontologico/">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/extra.css">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -19,6 +20,18 @@
     "description":"Directorio público de odontólogos y clínicas dentales de Colombia.",
     "url":"https://digitalescolombia.com/directorio-odontologico/",
     "isPartOf":{"@type":"WebSite","name":"Digitales Colombia","url":"https://digitalescolombia.com/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"¿Qué puedo encontrar en este directorio?","acceptedAnswer":{"@type":"Answer","text":"Encontrarás nombres de odontólogos y clínicas dentales localizados en fuentes públicas, organizados por ciudad y departamento de Colombia."}},
+      {"@type":"Question","name":"¿Cómo busco un odontólogo o clínica?","acceptedAnswer":{"@type":"Answer","text":"Escribe el nombre en el buscador o selecciona una ciudad. También puedes ordenar los resultados por nombre o ubicación."}},
+      {"@type":"Question","name":"¿La información está verificada?","acceptedAnswer":{"@type":"Answer","text":"La existencia del registro se basa en una fuente pública, pero la actividad actual, los servicios y los datos de contacto deben confirmarse directamente."}},
+      {"@type":"Question","name":"¿Puedo registrar mi clínica?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes solicitar una revisión para agregar o actualizar una ficha con información pública verificable."}}
+    ]
   }
   </script>
 </head>
@@ -59,6 +72,30 @@
     <section class="shell cities-section" aria-labelledby="ciudades-titulo">
       <div class="section-heading"><div><p class="eyebrow">COBERTURA</p><h2 id="ciudades-titulo">Directorio por ciudad</h2></div></div>
       <div class="city-grid" id="city-grid"></div>
+    </section>
+
+    <section class="shell info-section" aria-labelledby="como-funciona">
+      <div class="section-heading"><div><p class="eyebrow">GUÍA DEL DIRECTORIO</p><h2 id="como-funciona">Cómo usar esta información</h2></div></div>
+      <div class="info-grid">
+        <article class="info-card"><span class="info-number">01</span><h3>Busca por ciudad</h3><p>Filtra los registros por ciudad o departamento para encontrar opciones cercanas a tu zona.</p></article>
+        <article class="info-card"><span class="info-number">02</span><h3>Revisa la ficha</h3><p>Cada ficha muestra el nombre, ubicación disponible, fuente pública y estado del registro.</p></article>
+        <article class="info-card"><span class="info-number">03</span><h3>Confirma directamente</h3><p>Antes de agendar, confirma con el profesional sus servicios, horarios, dirección y canales de contacto.</p></article>
+      </div>
+      <div class="notice"><strong>Importante:</strong> este es un directorio informativo construido a partir de fuentes públicas. No constituye una recomendación médica, no reemplaza la verificación profesional y no publica datos que no estén disponibles en la fuente.</div>
+    </section>
+
+    <section class="shell faq-section" aria-labelledby="faq-titulo">
+      <div class="section-heading"><div><p class="eyebrow">PREGUNTAS FRECUENTES</p><h2 id="faq-titulo">Sobre el directorio odontológico</h2></div></div>
+      <div class="faq-grid">
+        <details open><summary>¿Qué puedo encontrar en este directorio?</summary><p>Encontrarás nombres de odontólogos y clínicas dentales localizados en fuentes públicas, organizados por ciudad y departamento de Colombia.</p></details>
+        <details><summary>¿Cómo busco un odontólogo o clínica?</summary><p>Escribe el nombre en el buscador o selecciona una ciudad. También puedes ordenar los resultados por nombre o ubicación.</p></details>
+        <details><summary>¿La información está verificada?</summary><p>La existencia del registro se basa en una fuente pública, pero la actividad actual, los servicios y los datos de contacto deben confirmarse directamente.</p></details>
+        <details><summary>¿El directorio incluye teléfonos y WhatsApp?</summary><p>No se muestran datos de contacto que no hayan sido recopilados y comprobados. Las fichas enlazan a la fuente pública disponible.</p></details>
+        <details><summary>¿Puedo buscar por especialidad?</summary><p>Esta primera versión está organizada por nombre, ciudad y departamento. La clasificación por especialidades se incorporará cuando cada dato pueda verificarse en una fuente.</p></details>
+        <details><summary>¿Cómo se actualizan los registros?</summary><p>Los registros se revisan progresivamente. Si un dato cambió o una ficha debe corregirse, la actualización debe contrastarse con una fuente pública confiable.</p></details>
+        <details><summary>¿Puedo registrar mi clínica?</summary><p>Sí. Puedes solicitar una revisión para agregar o actualizar una ficha con información pública verificable.</p></details>
+        <details><summary>¿Este sitio ofrece asesoría odontológica?</summary><p>No. Digitales Colombia administra el directorio; las consultas clínicas deben realizarse directamente con un profesional habilitado.</p></details>
+      </div>
     </section>
 
     <section class="shell trust-section"><div class="trust-box"><div><p class="eyebrow">PARA PROFESIONALES</p><h2>¿Quieres mejorar la presencia digital de tu clínica?</h2><p>Digitales Colombia ayuda a profesionales de la salud a crear sitios web, posicionarse en Google y recibir más consultas.</p></div><a class="button" href="https://digitalescolombia.com/">Conocer Digitales Colombia <span>↗</span></a></div></section>
