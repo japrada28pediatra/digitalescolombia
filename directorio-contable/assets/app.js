@@ -1,5 +1,5 @@
 
-const DATA_URL='/data/contadores.json';
+const DATA_URL='/directorio-contable/data/contadores.json';
 const PAGE_SIZE=18;
 let all=[], filtered=[], page=1;
 function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}

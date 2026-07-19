@@ -1,0 +1,12 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{THE_REQUEST} \s/+index\.html[?\s]
+RewriteRule ^index\.html$ / [R=301,L]
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType application/json "access plus 1 day"
+</IfModule>
