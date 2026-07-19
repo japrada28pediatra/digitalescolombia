@@ -9,7 +9,7 @@
   <meta property="og:title" content="Directorio Veterinario de Colombia">
   <meta property="og:description" content="Encuentra servicios veterinarios y para mascotas en Colombia.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="enhancements.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Directorio Veterinario de Colombia","description":"Directorio de veterinarias y servicios para mascotas en Colombia","url":"https://digitalescolombia.com/directorio-veterinario/"}</script>
 </head>
 <body>
@@ -21,7 +21,8 @@
     <section class="container directory" id="directorio"><div class="directory-head"><div><p class="eyebrow dark">DIRECTORIO DE NEGOCIOS</p><h2>Veterinarias y servicios para mascotas</h2><p id="resultSummary" class="muted"></p></div><button class="filter-toggle" id="filterToggle">Filtros</button></div>
       <div class="layout"><aside class="filters" id="filters"><div class="filter-title">Filtrar resultados <button id="clearFilters">Limpiar</button></div><label>Ciudad<select id="city"><option value="">Todas las ciudades</option></select></label><label>Categoría<select id="category"><option value="">Todas las categorías</option></select></label><label>Departamento<select id="department"><option value="">Todos los departamentos</option></select></label></aside><section class="results"><div id="cards" class="cards"></div><div id="empty" class="empty" hidden><h3>No encontramos resultados</h3><p>Prueba con otra ciudad, categoría o término de búsqueda.</p></div><nav class="pagination" aria-label="Paginación"><button id="prev">Anterior</button><span id="pageInfo"></span><button id="next">Siguiente</button></nav></section></div>
     </section>
-    <section class="info" id="como-funciona"><div class="container info-grid"><div><p class="eyebrow dark">DIRECTORIOVETERINARIO.COM</p><h2>Todo para el cuidado de tu mascota, en un solo lugar</h2></div><div><p>Encuentra opciones de atención veterinaria, salud animal y servicios complementarios en diferentes ciudades de Colombia.</p><p>La información se presenta como referencia pública. Te recomendamos confirmar horarios, disponibilidad y datos de contacto directamente con cada establecimiento.</p></div></div></section>
+    <section class="seo-block"><div class="container"><p class="eyebrow dark">EXPLORA POR UBICACIÓN</p><h2>Veterinarias por ciudad</h2><div id="cityLinks" class="link-grid"></div></div></section>
+    <section class="info" id="como-funciona"><div class="container info-grid"><div><p class="eyebrow dark">DIRECTORIO VETERINARIO COLOMBIA</p><h2>Todo para el cuidado de tu mascota, en un solo lugar</h2></div><div><p>Encuentra opciones de atención veterinaria, salud animal y servicios complementarios en diferentes ciudades de Colombia.</p><p>La información se presenta como referencia pública. Te recomendamos confirmar horarios, disponibilidad y datos de contacto directamente con cada establecimiento.</p><h3>¿Cómo funciona?</h3><p>Busca por nombre, ciudad, departamento o categoría. Abre la ficha para consultar los datos públicos disponibles y contacta directamente con el establecimiento.</p></div></div></section>
   </main>
   <footer><div class="container footer-inner"><span>© 2026 Directorio Veterinario Colombia</span><span>Un proyecto de Digitales Colombia</span></div></footer>
   <div class="modal" id="modal" hidden><div class="modal-backdrop" data-close></div><article class="modal-card"><button class="modal-close" data-close aria-label="Cerrar">×</button><div id="modalContent"></div></article></div>
