@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directorio de Colegios e Instituciones Educativas en Colombia</title>
+  <meta name="description" content="Encuentra colegios e instituciones educativas de Colombia por ciudad, departamento y categoría. Directorio nacional con 900 registros y datos de contacto disponibles.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://digitalescolombia.com/directorio-colegios/">
+  <meta property="og:title" content="Directorio de Colegios e Instituciones Educativas en Colombia">
+  <meta property="og:description" content="Busca colegios e instituciones educativas de Colombia por ubicación y categoría.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digitalescolombia.com/directorio-colegios/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Directorio de Colegios e Instituciones Educativas en Colombia",
+    "url":"https://digitalescolombia.com/directorio-colegios/",
+    "description":"Directorio nacional de colegios e instituciones educativas de Colombia.",
+    "isPartOf":{"@type":"WebSite","name":"Digitales Colombia","url":"https://digitalescolombia.com/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="https://digitalescolombia.com/" aria-label="Digitales Colombia inicio"><span class="brand-mark">D</span><span>Digitales<span>Colombia</span></span></a>
+      <a class="header-link" href="#directorio">Explorar directorio <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Directorio nacional · Colombia</p>
+          <h1>Encuentra colegios e instituciones educativas en Colombia</h1>
+          <p class="hero-copy">Explora establecimientos educativos por nombre, ciudad, departamento y categoría. Una base organizada para familias, estudiantes y organizaciones.</p>
+          <a class="hero-cta" href="#directorio">Buscar una institución <span>↓</span></a>
+        </div>
+        <div class="hero-card" aria-label="Resumen del directorio">
+          <div class="hero-card-top"><span class="pulse"></span><span>Directorio abierto</span><span class="hero-card-year">2026</span></div>
+          <div class="hero-number" id="heroCount">900</div>
+          <div class="hero-label">registros educativos</div>
+          <div class="hero-rule"></div>
+          <div class="hero-meta"><span><strong id="heroCities">—</strong> municipios</span><span><strong id="heroDepartments">—</strong> departamentos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="directory-section" id="directorio">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow dark">Explorar instituciones</p><h2>Directorio de colegios</h2></div>
+          <p class="result-summary" id="resultSummary">Cargando registros…</p>
+        </div>
+
+        <div class="search-panel">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar por nombre, ciudad o departamento…" autocomplete="off"><button id="clearSearch" class="clear-search" type="button" aria-label="Limpiar búsqueda">×</button></label>
+          <div class="filters">
+            <label><span>Departamento</span><select id="departmentFilter"><option value="">Todos los departamentos</option></select></label>
+            <label><span>Ciudad / municipio</span><select id="cityFilter"><option value="">Todas las ciudades</option></select></label>
+            <label><span>Categoría</span><select id="categoryFilter"><option value="">Todas las categorías</option></select></label>
+            <button id="resetFilters" class="reset-button" type="button">Limpiar filtros</button>
+          </div>
+        </div>
+
+        <div class="active-row"><div id="activeFilters" class="active-filters"></div><label class="sort-label">Ordenar <select id="sortSelect"><option value="name">Nombre A–Z</option><option value="city">Ciudad A–Z</option><option value="department">Departamento A–Z</option></select></label></div>
+        <div id="directoryGrid" class="directory-grid" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state" hidden><div class="empty-icon">⌕</div><h3>No encontramos resultados</h3><p>Prueba con otro nombre o elimina alguno de los filtros.</p><button id="emptyReset" class="hero-cta" type="button">Ver todos los registros</button></div>
+        <nav id="pagination" class="pagination" aria-label="Paginación del directorio"></nav>
+      </div>
+    </section>
+
+    <section class="about-section"><div class="container about-grid"><div><p class="eyebrow dark">Sobre este directorio</p><h2>Información educativa organizada para todo el país</h2></div><div class="about-copy"><p>Este directorio reúne colegios, centros e instituciones educativas ubicados en diferentes departamentos y municipios de Colombia. Puedes usar los filtros para encontrar opciones en una zona específica y consultar los datos disponibles de cada registro.</p><p class="source-note">Fuente principal: Ministerio de Educación Nacional / Datos Abiertos Colombia. Los campos que no están publicados en la fuente se mantienen vacíos.</p></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><a class="brand footer-brand" href="https://digitalescolombia.com/"><span class="brand-mark">D</span><span>Digitales<span>Colombia</span></span></a><p>Directorio de colegios e instituciones educativas · Colombia</p><a href="#directorio">Volver arriba ↑</a></div></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
